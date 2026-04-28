@@ -8,7 +8,7 @@
 
 ## 📋 Table of Contents
 
--ic 1: Society](#-topic-1-society-)
+- 1: Society](#-topic-1-society-)
 - 2: Money](#-topic-2-money-)
 - [Mini Paragraph](#-mini-paragraph-combined)
 - [Speaking Challenge](#-speaking-challenge)
