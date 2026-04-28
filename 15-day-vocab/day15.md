@@ -270,7 +270,8 @@ Answer these using Day 1–15 vocabulary:
 ---
 
 ## 🎖️ CERTIFICATE OF ACHIEVEMENT 🏆
-╔══════════════════════════════════════════════════╗ ║ ║ ║ 🏆 CERTIFICATE OF COMPLETION 🏆 ║ ║ ║ ║ This certifies that YOU have completed ║ ║ the 15-Day IELTS Band 7+ Program ║ ║ ║ ║ ✅ 140+ Advanced Vocabulary Words ║ ║ ✅ 26 IELTS Topics Covered ║ ║ ✅ 7 Sentence Structure Types Mastered ║ ║ ✅ 15 Storytelling Sentences Crafted ║ ║ ✅ Full Mock Test Completed ║ ║ ║ ║ Date: April 28, 2026 ║ ║ ║ ║ 🎯 READY FOR BAND 7+ SUCCESS! 🎯 ║ ║ ║ ╚══════════════════════════════════════════════════╝
+╔══════════════════════════════════════════════════╗
+║ ║ ║ 🏆 CERTIFICATE OF COMPLETION 🏆 ║ ║ ║ ║ This certifies that YOU have completed ║ ║ the 15-Day IELTS Band 7+ Program ║ ║ ║ ║ ✅ 140+ Advanced Vocabulary Words ║ ║ ✅ 26 IELTS Topics Covered ║ ║ ✅ 7 Sentence Structure Types Mastered ║ ║ ✅ 15 Storytelling Sentences Crafted ║ ║ ✅ Full Mock Test Completed ║ ║ ║ ║ Date: April 28, 2026 ║ ║ ║ ║ 🎯 READY FOR BAND 7+ SUCCESS! 🎯 ║ ║ ║ ╚══════════════════════════════════════════════════╝
 
 
 ---
