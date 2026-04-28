@@ -130,7 +130,7 @@
 
 Using vocabulary from all 3 topics:
 
-```markdown
+markdown
 1. Simple            → The digital age has changed everything.
 2. Compound          → Books are enlightening, but social media is addictive.
 3. Complex           → Although fast fashion is cheap, it harms the environment.
