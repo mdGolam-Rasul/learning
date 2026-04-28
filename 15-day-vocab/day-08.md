@@ -164,7 +164,7 @@ where perseverance and teamwork led to an unforgettable victory..."
 
 ## 🏆 Progress Tracker
 
-```
+
 [ ██████████░░░░░░░░░░ ]  53%  (8/15 days)
 
 | Day | Topics | Status |
@@ -199,7 +199,7 @@ where perseverance and teamwork led to an unforgettable victory..."
 Reply **`Day 9`** when you're ready to continue! 💪
 
 ---
-
+```
 ### 📖 License
 > Free to use for personal IELTS preparation. Keep grinding! 🎯
 
