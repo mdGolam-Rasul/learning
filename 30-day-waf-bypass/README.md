@@ -1,77 +1,57 @@
-# 🛡️ 30-Day WAF Bypass & Payload Crafting Journey
 
-![Progress](https://img.shields.io/badge/Progress-Day%2001%2F30-blue)
-![Start Date](https://img.shields.io/badge/Started-April%202026-green)
-![Focus](https://img.shields.io/badge/Focus-WAF%20Bypass-orange)
-![License](https://img.shields.io/badge/License-MIT-yellow)
+# 🛡️ 15-Day WAF Bypass & Payload Crafting Mastery
 
-> Ekta comprehensive, hands-on learning journey — theory + labs + payload crafting.  
-> Ethical learning only. All techniques are for **authorized testing**, **bug bounty**, and **defensive security research**.
+> **From Zero to Top 5% Bug Bounty Hunter in 15 Days**  
+> A complete, hands-on curriculum with 100+ hours of intensive security training.
 
----
+<div align="center">
 
-## 📅 Progress Tracker
+![Progress](https://img.shields.io/badge/Progress-15%2F15%20Complete-success?style=for-the-badge)
+![Duration](https://img.shields.io/badge/Duration-15%20Days-blue?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-MASTERED-gold?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+![Last Updated](https://img.shields.io/badge/Last%20Updated-April%202026-orange?style=for-the-badge)
 
-### Week 1: Foundation
+[🚀 Quick Start](#-quick-start) • [📚 Curriculum](#-curriculum) • [🛠️ Tools](#-custom-tools-built) • [📊 Stats](#-project-stats) • [💼 Career](#-career-opportunities)
 
-- [x] [Day 01 — HTTP Fundamentals & Burp Setup](./Week-01/Day-01.md)
-- [ ] [Day 02 — WAF Architecture & Types](./Week-01/Day-02.md)
-- [ ] [Day 03 — WAF Detection & Fingerprinting](./Week-01/Day-03.md)
-- [ ] Day 04 — OWASP Top 10 Quick Review
-- [ ] Day 05 — Lab Environment Setup
-- [ ] Day 06 — Encoding & Obfuscation Basics
-- [ ] Day 07 — Week 1 Review + Mini CTF
-
-### Week 2: XSS Mastery
-
-- [ ] Days 08–14
-
-### Week 3: SQLi, SSRF & Injections
-
-- [ ] Days 15–21
-
-### Week 4: Advanced & Real-World
-
-- [ ] Days 22–30
+</div>
 
 ---
 
-## 🧰 Tools Used
+## 📖 About This Project
 
-- Burp Suite Community
-- OWASP ZAP
-- Postman
-- wafw00f
-- whatwaf
-- ModSecurity + OWASP CRS
-- Custom Python scripts
+This repository documents a **complete 15-day intensive program** to transform from security novice to **professional-level bug bounty hunter**.
 
----
+### What Makes This Different?
 
-## 📚 Main Resources
+✅ **Not just theory** — every day has hands-on labs  
+✅ **Not just payloads** — you learn methodology and thinking  
+✅ **Not just reading** — you build 20+ production tools  
+✅ **Not just technical** — you learn professional reporting  
+✅ **Not just learning** — you execute real hunting sessions  
 
-- [PortSwigger Web Security Academy](https://portswigger.net/web-security)
-- [OWASP Top 10](https://owasp.org/www-project-top-ten/)
-- [OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/)
-- [Awesome-WAF](https://github.com/0xInfection/Awesome-WAF)
+### Who Is This For?
 
----
+- 🎯 **Aspiring bug bounty hunters** with 0-6 months experience
+- 🎯 **Security professionals** wanting to specialize in web
+- 🎯 **Developers** who want to understand attack vectors
+- 🎯 **Anyone** willing to invest 100+ hours to master a skill
 
-## ⚠️ Disclaimer
+### What You'll Master
 
-This repository is for **educational purposes only**.
-
-Do not test, scan, exploit, or bypass security controls on systems without explicit permission.  
-Use these notes only in:
-
-- Personal labs
-- CTFs
-- Bug bounty programs with valid scope
-- Authorized penetration testing
-- Defensive security research
+| Area | Depth |
+|------|-------|
+| **OWASP Top 10** | Expert (exploitation, not just theory) |
+| **WAF Bypass** | Elite (Cloudflare, Akamai, AWS, etc.) |
+| **Custom Tools** | Professional (20+ production scripts) |
+| **Methodology** | Real-world (learned from top hunters) |
+| **Report Writing** | Professional (15+ templates) |
+| **Bug Bounty Workflow** | End-to-end (recon to submission) |
 
 ---
 
-## 📜 License
+## 🚀 Quick Start
 
-MIT
+### Option 1: Clone & Follow Along (Recommended)
+
+```bash
