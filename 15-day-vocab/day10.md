@@ -214,47 +214,4 @@ Reply **`Day 11`** when you're ready to continue! 🔥
 > Free to use for personal IELTS preparation. Keep grinding! 🎯
 
 **⭐ If this plan helps you, give yourself a star — you've earned it!**
-
-| Day | Topics | Status |
-|:---:|--------|:------:|
-| 1–9 | Education → Science | ✅ |
-| **10** | **Society + Money** | 🔄 |
-| 11 | Crime + Government | ⏳ |
-| 12 | Globalization + Language | ⏳ |
-| 13 | Youth + Elderly + Housing | ⏳ |
-| 14 | Transport + Tourism + Advertising | ⏳ |
-| 15 | Internet + Books + Fashion + 🏆 Mock Test | ⏳ |
-
----
-
-## 💡 Pro Tips for Day 10
-
-- [ ] 👥 Read a **BBC / Al Jazeera social issues article** — spot Band 7+ words
-- [ ] 💰 Watch a **personal finance video** (5 min) — note money vocabulary
-- [ ] 🗣️ Record yourself answering both cue cards (2 min each)
-- [ ] 📓 Update your **topic-wise vocab notebook** — a proven Band 7+ habit [[2]](https://www.aviontus.com/post/30-day-ielts-study-plan-for-7-band-step-by-step-guide)
-- [ ] 🧠 Review Days 1–9 words before sleeping
-- [ ] ✍️ Write the mini paragraph from memory
-
----
-
-## 🎖️ DOUBLE-DIGIT MILESTONE! 🎉
-
-> 🏆 **10 DAYS DONE!** You've crossed the double-digit mark with **75 Band 7+ words** mastered!  
-> Only **5 days left** — the finish line is in sight! 💪🔥
-
----
-
-## 🚀 What's Next?
-
-**Day 11 Preview:** Crime 🚨 + Government 🏛️ — 10 more Band 7+ words!
-
-Reply **`Day 11`** when you're ready to continue! 🔥
-
----
-
-### 📖 License
-> Free to use for personal IELTS preparation. Keep grinding! 🎯
-
-**⭐ If this plan helps you, give yourself a star — you've earned it!**
 ```
