@@ -1,0 +1,4355 @@
+# ১৯তম নিবন্ধন — প্রভাষক ICT
+
+## Complete Computer Networking Section — Question 981–1120
+
+**Subject Code:** 452  
+**Section Target:** 140 MCQ  
+**Theory/Concept:** 80  
+**Calculation/Code/Tracing:** 60
+
+---
+
+# Section Distribution
+
+```text
+Question Range       = 981–1120
+Total Questions      = 140
+
+Theory/Scenario      = 80
+Calculation/Tracing  = 60
+
+Easy                 = 35
+Medium               = 70
+Hard                 = 35
+
+Correct Answer A     = 36
+Correct Answer B     = 36
+Correct Answer C     = 34
+Correct Answer D     = 34
+```
+
+# Covered Networking Areas
+
+- Networking, OSI এবং TCP/IP fundamentals
+- Bandwidth, throughput, latency ও duplex mode
+- Signals, transmission media ও multiplexing
+- Framing, parity, CRC, Hamming এবং ARQ
+- Ethernet, MAC, VLAN, STP এবং Wi-Fi access
+- IPv4, subnetting, VLSM, CIDR ও route summarization
+- NAT/PAT, ARP, DHCP, ICMP ও TTL
+- Static routing, RIP, OSPF ও BGP
+- TCP, UDP, ports, sequence/ACK ও sliding window
+- Flow control এবং congestion control
+- DNS, HTTP, FTP, email, SNMP, NTP ও SSH
+- Wireless, cellular, cloud, SDN ও NFV
+- Firewall, VPN, TLS, IDS/IPS এবং segmentation
+- Monitoring, ping, traceroute, packet loss ও MTU
+
+---
+
+
+# Chapter Theory 88: Networking Fundamentals, OSI এবং Devices
+
+## বিস্তারিত Theory Note
+
+Layering complex communicationকে modular করে। Sender application data নিচের দিকে encapsulate করে; receiver reverse order-এ header process করে। Protocol peer entity-এর rule, service adjacent layer-এর interface।
+
+Hub signal repeat করে, switch frame forward করে, router packet route করে। Device capability implementationভেদে multi-layer হতে পারে, তবে exam-এ primary layer/function ধরতে হয়।
+
+## মূল ধারণার মানচিত্র
+
+- **Computer Network:** দুই বা ততোধিক device communication link ও protocol দিয়ে data/resource exchange করা system।
+- **Protocol:** Communication entity-এর message format, order, meaning ও action-এর rule set।
+- **OSI Model:** Networking function সাতটি conceptual layer-এ ভাগ করা reference model।
+- **TCP/IP Model:** Internet protocol suite-এর practical layered architecture।
+- **Encapsulation:** Upper-layer data-তে প্রতিটি lower layer control header/trailer যোগ করে transmission unit তৈরি।
+- **Router:** Network-layer address ও routing table ব্যবহার করে ভিন্ন IP network-এর মধ্যে packet forward করে।
+- **Switch:** সাধারণ Ethernet LAN-এ MAC address table দিয়ে frame forward করে।
+- **Hub:** Physical-layer multiport repeater যা signal সব port-এ ছড়ায়।
+- **Gateway:** ভিন্ন protocol/system-এর মধ্যে translation বা application-level interconnection করতে পারে general device/service।
+- **NIC:** Device-কে network link-এ যুক্ত করা hardware/interface, MAC address ধারণ করতে পারে।
+
+## পরীক্ষায় গুরুত্বপূর্ণ সংযোগ
+
+- Definition, purpose, limitation ও application—চার দিক থেকে concept চিনুন।
+- Calculation/Tracing প্রশ্নে Formula → Given Data → Substitution → State Update → Final Answer অনুসরণ করুন।
+- কাছাকাছি term-এর পার্থক্য option analysis থেকে পুনরাবৃত্তি করুন।
+
+---
+
+# MCQ Practice: Networking Fundamentals, OSI এবং Devices
+
+## প্রশ্ন 981 | Topic: Computer Networking > Network Basics | Difficulty: Medium | Type: Theory
+
+Q. নিচের বর্ণনাটি কোন ধারণাকে নির্দেশ করে?
+
+`দুই বা ততোধিক device communication link ও protocol দিয়ে data/resource exchange করা system।`
+
+A) Computer Network
+B) TCP/IP Model
+C) Hub
+D) Router
+
+**সঠিক উত্তর: A) Computer Network**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** দুই বা ততোধিক device communication link ও protocol দিয়ে data/resource exchange করা system।
+- **A option:** এটি সঠিক উত্তর।
+- **B option কেন ভুল:** `TCP/IP Model` বলতে Internet protocol suite-এর practical layered architecture। বোঝায়; প্রশ্নের বর্ণনা `Computer Network`-এর।
+- **C option কেন ভুল:** `Hub` বলতে Physical-layer multiport repeater যা signal সব port-এ ছড়ায়। বোঝায়; প্রশ্নের বর্ণনা `Computer Network`-এর।
+- **D option কেন ভুল:** `Router` বলতে Network-layer address ও routing table ব্যবহার করে ভিন্ন IP network-এর মধ্যে packet forward করে। বোঝায়; প্রশ্নের বর্ণনা `Computer Network`-এর।
+- **Related Concept:** LAN, WAN ইত্যাদি scope।
+- **মনে রাখার টিপস:** Connected devices exchanging data।
+
+---
+
+## প্রশ্ন 982 | Topic: Computer Networking > Network Basics | Difficulty: Hard | Type: Theory
+
+Q. `Protocol` সম্পর্কে কোন statement সঠিক?
+
+A) Device-কে network link-এ যুক্ত করা hardware/interface, MAC address ধারণ করতে পারে।
+B) Network-layer address ও routing table ব্যবহার করে ভিন্ন IP network-এর মধ্যে packet forward করে।
+C) Communication entity-এর message format, order, meaning ও action-এর rule set।
+D) Networking function সাতটি conceptual layer-এ ভাগ করা reference model।
+
+**সঠিক উত্তর: C) Communication entity-এর message format, order, meaning ও action-এর rule set।**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Communication entity-এর message format, order, meaning ও action-এর rule set।
+- **A option কেন ভুল:** এই statementটি `NIC` ধারণাকে বর্ণনা করে; `Protocol`-কে নয়।
+- **B option কেন ভুল:** এই statementটি `Router` ধারণাকে বর্ণনা করে; `Protocol`-কে নয়।
+- **C option:** এটি সঠিক উত্তর।
+- **D option কেন ভুল:** এই statementটি `OSI Model` ধারণাকে বর্ণনা করে; `Protocol`-কে নয়।
+- **Related Concept:** Syntax, semantics, timing।
+- **মনে রাখার টিপস:** Rules of communication।
+
+---
+
+## প্রশ্ন 983 | Topic: Computer Networking > Network Basics | Difficulty: Easy | Type: Calculation
+
+Q. OSI model-এ মোট layer কতটি?
+
+A) 7
+B) 4
+C) 5
+D) 8
+
+**সঠিক উত্তর: A) 7**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** OSI reference model Physical, Data Link, Network, Transport, Session, Presentation ও Application—৭ layer।
+
+#### Step-by-step সমাধান
+
+```text
+1 Physical
+2 Data Link
+3 Network
+4 Transport
+5 Session
+6 Presentation
+7 Application
+```
+- **A option:** এটি সঠিক উত্তর।
+- **B option কেন ভুল:** Simplified TCP/IP model-এর common count।
+- **C option কেন ভুল:** Hybrid Internet model count হতে পারে।
+- **D option কেন ভুল:** একটি extra layer।
+- **Related Concept:** Layer order ও function আলাদা করে পড়ুন।
+- **মনে রাখার টিপস:** OSI = 7।
+
+---
+
+## প্রশ্ন 984 | Topic: Computer Networking > Network Basics | Difficulty: Medium | Type: Theory
+
+Q. নিচের বর্ণনাটি কোন ধারণাকে নির্দেশ করে?
+
+`Internet protocol suite-এর practical layered architecture।`
+
+A) Encapsulation
+B) Computer Network
+C) Switch
+D) TCP/IP Model
+
+**সঠিক উত্তর: D) TCP/IP Model**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Internet protocol suite-এর practical layered architecture।
+- **A option কেন ভুল:** `Encapsulation` বলতে Upper-layer data-তে প্রতিটি lower layer control header/trailer যোগ করে transmission unit তৈরি। বোঝায়; প্রশ্নের বর্ণনা `TCP/IP Model`-এর।
+- **B option কেন ভুল:** `Computer Network` বলতে দুই বা ততোধিক device communication link ও protocol দিয়ে data/resource exchange করা system। বোঝায়; প্রশ্নের বর্ণনা `TCP/IP Model`-এর।
+- **C option কেন ভুল:** `Switch` বলতে সাধারণ Ethernet LAN-এ MAC address table দিয়ে frame forward করে। বোঝায়; প্রশ্নের বর্ণনা `TCP/IP Model`-এর।
+- **D option:** এটি সঠিক উত্তর।
+- **Related Concept:** Link, Internet, Transport, Application common mapping।
+- **মনে রাখার টিপস:** Internet stack।
+
+---
+
+## প্রশ্ন 985 | Topic: Computer Networking > Network Basics | Difficulty: Hard | Type: Calculation
+
+Q. Application data 1000 byte; transport header 20 byte এবং network header 20 byte। Link overhead বাদে IP packet size কত?
+
+A) 1000 byte
+B) 1040 byte
+C) 1020 byte
+D) 2040 byte
+
+**সঠিক উত্তর: B) 1040 byte**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Data+transport header+network header=1000+20+20=1040।
+
+#### Step-by-step সমাধান
+
+```text
+Application data=1000
+Transport header=20
+Network header=20
+Packet=1000+20+20=1040 byte
+```
+- **A option কেন ভুল:** Header বাদ।
+- **B option:** এটি সঠিক উত্তর।
+- **C option কেন ভুল:** একটি header মাত্র।
+- **D option কেন ভুল:** Data দ্বিগুণ।
+- **Related Concept:** Encapsulation overhead payload-এর সঙ্গে যোগ হয়।
+- **মনে রাখার টিপস:** প্রতি layer header যোগ।
+
+---
+
+## প্রশ্ন 986 | Topic: Computer Networking > Network Basics | Difficulty: Medium | Type: Tracing
+
+Q. Host A network `192.168.1.0/24` এবং Host B `192.168.2.0/24`। তাদের মধ্যে packet forward করতে কোন device প্রয়োজন?
+
+A) Hub
+B) Layer-2 repeater
+C) Passive splitter
+D) Router
+
+**সঠিক উত্তর: D) Router**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** দুটি পৃথক IP network-এর মধ্যে network-layer forwarding দরকার।
+
+#### Step-by-step সমাধান
+
+```text
+A subnet=192.168.1.0/24
+B subnet=192.168.2.0/24
+Subnets differ
+Need Layer-3 forwarding
+```
+- **A option কেন ভুল:** এক LAN signal repeat করে।
+- **B option কেন ভুল:** IP subnet route করে না।
+- **C option কেন ভুল:** Address-based forwarding নয়।
+- **D option:** এটি সঠিক উত্তর।
+- **Related Concept:** Default gateway সাধারণত router interface।
+- **মনে রাখার টিপস:** Different subnet → Router।
+
+---
+
+## প্রশ্ন 987 | Topic: Computer Networking > Network Basics | Difficulty: Medium | Type: Calculation
+
+Q. এক switch 8টি active port ব্যবহার করছে। প্রতিটি port পৃথক collision domain হলে collision domain কত?
+
+A) 1
+B) 4
+C) 16
+D) 8
+
+**সঠিক উত্তর: D) 8**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Modern switch-এর প্রতিটি port আলাদা collision domain।
+
+#### Step-by-step সমাধান
+
+```text
+Active switch ports=8
+Domains/port=1
+Total=8
+```
+- **A option কেন ভুল:** Hub-এর মতো shared domain।
+- **B option কেন ভুল:** অর্ধেক।
+- **C option কেন ভুল:** প্রতি port দুই domain নয়।
+- **D option:** এটি সঠিক উত্তর।
+- **Related Concept:** VLAN/broadcast domain আলাদা concept।
+- **মনে রাখার টিপস:** One switch port = one collision domain।
+
+---
+
+## প্রশ্ন 988 | Topic: Computer Networking > Network Basics | Difficulty: Hard | Type: Theory
+
+Q. `Hub` সম্পর্কে কোন statement সঠিক?
+
+A) Networking function সাতটি conceptual layer-এ ভাগ করা reference model।
+B) Device-কে network link-এ যুক্ত করা hardware/interface, MAC address ধারণ করতে পারে।
+C) Physical-layer multiport repeater যা signal সব port-এ ছড়ায়।
+D) দুই বা ততোধিক device communication link ও protocol দিয়ে data/resource exchange করা system।
+
+**সঠিক উত্তর: C) Physical-layer multiport repeater যা signal সব port-এ ছড়ায়।**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Physical-layer multiport repeater যা signal সব port-এ ছড়ায়।
+- **A option কেন ভুল:** এই statementটি `OSI Model` ধারণাকে বর্ণনা করে; `Hub`-কে নয়।
+- **B option কেন ভুল:** এই statementটি `NIC` ধারণাকে বর্ণনা করে; `Hub`-কে নয়।
+- **C option:** এটি সঠিক উত্তর।
+- **D option কেন ভুল:** এই statementটি `Computer Network` ধারণাকে বর্ণনা করে; `Hub`-কে নয়।
+- **Related Concept:** Single collision domain, no address learning।
+- **মনে রাখার টিপস:** Repeats to all ports।
+
+---
+
+## প্রশ্ন 989 | Topic: Computer Networking > Network Basics | Difficulty: Easy | Type: Theory
+
+Q. একটি system বা scenario-তে `ভিন্ন protocol/system-এর মধ্যে translation বা application-level interconnection করতে পারে general device/service।`—এখানে কোন concept প্রযোজ্য?
+
+A) Router
+B) OSI Model
+C) Gateway
+D) Hub
+
+**সঠিক উত্তর: C) Gateway**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** ভিন্ন protocol/system-এর মধ্যে translation বা application-level interconnection করতে পারে general device/service।
+- **A option কেন ভুল:** `Router` বলতে Network-layer address ও routing table ব্যবহার করে ভিন্ন IP network-এর মধ্যে packet forward করে। বোঝায়; প্রশ্নের বর্ণনা `Gateway`-এর।
+- **B option কেন ভুল:** `OSI Model` বলতে Networking function সাতটি conceptual layer-এ ভাগ করা reference model। বোঝায়; প্রশ্নের বর্ণনা `Gateway`-এর।
+- **C option:** এটি সঠিক উত্তর।
+- **D option কেন ভুল:** `Hub` বলতে Physical-layer multiport repeater যা signal সব port-এ ছড়ায়। বোঝায়; প্রশ্নের বর্ণনা `Gateway`-এর।
+- **Related Concept:** Default gateway routerও হতে পারে।
+- **মনে রাখার টিপস:** Protocol/inter-system bridge।
+
+---
+
+## প্রশ্ন 990 | Topic: Computer Networking > Network Basics | Difficulty: Easy | Type: Theory
+
+Q. নিচের বর্ণনাটি কোন ধারণাকে নির্দেশ করে?
+
+`Device-কে network link-এ যুক্ত করা hardware/interface, MAC address ধারণ করতে পারে।`
+
+A) TCP/IP Model
+B) NIC
+C) OSI Model
+D) Switch
+
+**সঠিক উত্তর: B) NIC**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Device-কে network link-এ যুক্ত করা hardware/interface, MAC address ধারণ করতে পারে।
+- **A option কেন ভুল:** `TCP/IP Model` বলতে Internet protocol suite-এর practical layered architecture। বোঝায়; প্রশ্নের বর্ণনা `NIC`-এর।
+- **B option:** এটি সঠিক উত্তর।
+- **C option কেন ভুল:** `OSI Model` বলতে Networking function সাতটি conceptual layer-এ ভাগ করা reference model। বোঝায়; প্রশ্নের বর্ণনা `NIC`-এর।
+- **D option কেন ভুল:** `Switch` বলতে সাধারণ Ethernet LAN-এ MAC address table দিয়ে frame forward করে। বোঝায়; প্রশ্নের বর্ণনা `NIC`-এর।
+- **Related Concept:** Wired বা wireless।
+- **মনে রাখার টিপস:** Network interface।
+
+---
+
+
+# Chapter Theory 89: Bandwidth, Throughput এবং Delay
+
+## বিস্তারিত Theory Note
+
+Bandwidth capacity; throughput actual achieved rate; goodput application-useful payload rate। Latency component আলাদা করলে bottleneck বোঝা যায়।
+
+Propagation distance/speed নির্ভর, transmission packet size/rate নির্ভর। Queueing traffic-এর সঙ্গে nonlinearভাবে বাড়তে পারে। Duplex mode direction ও simultaneous transmission capability বোঝায়।
+
+## মূল ধারণার মানচিত্র
+
+- **Bandwidth:** Communication channel-এর theoretical capacity বা frequency range; networking-এ প্রায়ই bit/s capacity বোঝায়।
+- **Throughput:** বাস্তবে unit time-এ successfully delivered data rate।
+- **Latency:** Source থেকে destination-এ data পৌঁছাতে total delay।
+- **Propagation Delay:** Signal medium-এর distance অতিক্রম করতে সময়; distance/propagation speed।
+- **Transmission Delay:** সব packet bit link-এ push করতে সময়; packet size/data rate।
+- **Queueing Delay:** Router/switch buffer-এ service-এর অপেক্ষা।
+- **Simplex:** Communication শুধু এক direction-এ।
+- **Half-duplex:** দুই direction-এ communication সম্ভব, কিন্তু একই সময়ে নয়।
+- **Full-duplex:** দুই direction-এ একই সময়ে communication।
+- **Packet Switching:** Data packet-এ ভাগ হয়ে shared network link দিয়ে store-and-forward হতে পারে।
+
+## পরীক্ষায় গুরুত্বপূর্ণ সংযোগ
+
+- Definition, purpose, limitation ও application—চার দিক থেকে concept চিনুন।
+- Calculation/Tracing প্রশ্নে Formula → Given Data → Substitution → State Update → Final Answer অনুসরণ করুন।
+- কাছাকাছি term-এর পার্থক্য option analysis থেকে পুনরাবৃত্তি করুন।
+
+---
+
+# MCQ Practice: Bandwidth, Throughput এবং Delay
+
+## প্রশ্ন 991 | Topic: Computer Networking > Data Communication Performance | Difficulty: Medium | Type: Calculation
+
+Q. Link capacity 100 Mbps, measured useful throughput 80 Mbps। Utilization কত?
+
+A) 20%
+B) 80%
+C) 100%
+D) 125%
+
+**সঠিক উত্তর: B) 80%**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Throughput/bandwidth×100=80/100×100=80%।
+
+#### Step-by-step সমাধান
+
+```text
+Utilization=80/100 x100=80%
+```
+- **A option কেন ভুল:** Unused fraction।
+- **B option:** এটি সঠিক উত্তর।
+- **C option কেন ভুল:** Measured rate capacity নয়।
+- **D option কেন ভুল:** Formula উল্টো।
+- **Related Concept:** Protocol overhead থাকায় utilization 100%-এর কম হতে পারে।
+- **মনে রাখার টিপস:** Actual ÷ capacity।
+
+---
+
+## প্রশ্ন 992 | Topic: Computer Networking > Data Communication Performance | Difficulty: Medium | Type: Theory
+
+Q. `Throughput` সম্পর্কে কোন statement সঠিক?
+
+A) সব packet bit link-এ push করতে সময়; packet size/data rate।
+B) Source থেকে destination-এ data পৌঁছাতে total delay।
+C) Signal medium-এর distance অতিক্রম করতে সময়; distance/propagation speed।
+D) বাস্তবে unit time-এ successfully delivered data rate।
+
+**সঠিক উত্তর: D) বাস্তবে unit time-এ successfully delivered data rate।**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** বাস্তবে unit time-এ successfully delivered data rate।
+- **A option কেন ভুল:** এই statementটি `Transmission Delay` ধারণাকে বর্ণনা করে; `Throughput`-কে নয়।
+- **B option কেন ভুল:** এই statementটি `Latency` ধারণাকে বর্ণনা করে; `Throughput`-কে নয়।
+- **C option কেন ভুল:** এই statementটি `Propagation Delay` ধারণাকে বর্ণনা করে; `Throughput`-কে নয়।
+- **D option:** এটি সঠিক উত্তর।
+- **Related Concept:** Overhead, congestion ও loss-এ bandwidth-এর কম।
+- **মনে রাখার টিপস:** Actual data rate।
+
+---
+
+## প্রশ্ন 993 | Topic: Computer Networking > Data Communication Performance | Difficulty: Medium | Type: Calculation
+
+Q. Propagation delay 5 ms, transmission delay 2 ms, processing 1 ms, queueing 4 ms। One-way latency কত?
+
+A) 7 ms
+B) 10 ms
+C) 20 ms
+D) 12 ms
+
+**সঠিক উত্তর: D) 12 ms**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** সব delay component যোগ:5+2+1+4=12।
+
+#### Step-by-step সমাধান
+
+```text
+5+2+1+4=12 ms
+```
+- **A option কেন ভুল:** Propagation+transmission মাত্র।
+- **B option কেন ভুল:** এক component বাদ।
+- **C option কেন ভুল:** অতিরিক্ত।
+- **D option:** এটি সঠিক উত্তর।
+- **Related Concept:** End-to-end delay component sum।
+- **মনে রাখার টিপস:** সব delay যোগ।
+
+---
+
+## প্রশ্ন 994 | Topic: Computer Networking > Data Communication Performance | Difficulty: Medium | Type: Calculation
+
+Q. Distance 2000 km, propagation speed 2×10^8 m/s। Propagation delay কত?
+
+A) 1 ms
+B) 10 ms
+C) 100 ms
+D) 0.1 ms
+
+**সঠিক উত্তর: B) 10 ms**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** 2000 km=2×10^6 m; delay=2×10^6/(2×10^8)=0.01 s=10 ms।
+
+#### Step-by-step সমাধান
+
+```text
+Distance=2000 km=2,000,000 m
+Speed=200,000,000 m/s
+Delay=2,000,000/200,000,000=0.01 s=10 ms
+```
+- **A option কেন ভুল:** Distance এক order কম।
+- **B option:** এটি সঠিক উত্তর।
+- **C option কেন ভুল:** এক order বেশি।
+- **D option কেন ভুল:** দুই order কম।
+- **Related Concept:** Distance/speed, unit convert।
+- **মনে রাখার টিপস:** km→m এবং s→ms।
+
+---
+
+## প্রশ্ন 995 | Topic: Computer Networking > Data Communication Performance | Difficulty: Medium | Type: Calculation
+
+Q. 1500-byte packet 10 Mbps link-এ transmit করতে কত সময়? 1 byte=8 bit।
+
+A) 1.2 ms
+B) 0.12 ms
+C) 12 ms
+D) 120 ms
+
+**সঠিক উত্তর: A) 1.2 ms**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Bits=12000; 12000/10,000,000 s=0.0012 s=1.2 ms।
+
+#### Step-by-step সমাধান
+
+```text
+Packet bits=1500x8=12000
+Rate=10,000,000 bit/s
+Delay=12000/10,000,000 s
+     =0.0012 s
+     =1.2 ms
+```
+- **A option:** এটি সঠিক উত্তর।
+- **B option কেন ভুল:** Rate/bit conversionে এক zero ভুল।
+- **C option কেন ভুল:** এক order বেশি।
+- **D option কেন ভুল:** দুই order বেশি।
+- **Related Concept:** Transmission=packet bits/link rate।
+- **মনে রাখার টিপস:** Byte×8 আগে।
+
+---
+
+## প্রশ্ন 996 | Topic: Computer Networking > Data Communication Performance | Difficulty: Medium | Type: Theory
+
+Q. একটি system বা scenario-তে `Router/switch buffer-এ service-এর অপেক্ষা।`—এখানে কোন concept প্রযোজ্য?
+
+A) Bandwidth
+B) Half-duplex
+C) Queueing Delay
+D) Full-duplex
+
+**সঠিক উত্তর: C) Queueing Delay**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Router/switch buffer-এ service-এর অপেক্ষা।
+- **A option কেন ভুল:** `Bandwidth` বলতে Communication channel-এর theoretical capacity বা frequency range; networking-এ প্রায়ই bit/s capacity বোঝায়। বোঝায়; প্রশ্নের বর্ণনা `Queueing Delay`-এর।
+- **B option কেন ভুল:** `Half-duplex` বলতে দুই direction-এ communication সম্ভব, কিন্তু একই সময়ে নয়। বোঝায়; প্রশ্নের বর্ণনা `Queueing Delay`-এর।
+- **C option:** এটি সঠিক উত্তর।
+- **D option কেন ভুল:** `Full-duplex` বলতে দুই direction-এ একই সময়ে communication। বোঝায়; প্রশ্নের বর্ণনা `Queueing Delay`-এর।
+- **Related Concept:** Traffic load অনুযায়ী variable।
+- **মনে রাখার টিপস:** Waiting in buffer।
+
+---
+
+## প্রশ্ন 997 | Topic: Computer Networking > Data Communication Performance | Difficulty: Hard | Type: Theory
+
+Q. নিচের বর্ণনাটি কোন ধারণাকে নির্দেশ করে?
+
+`Communication শুধু এক direction-এ।`
+
+A) Full-duplex
+B) Simplex
+C) Propagation Delay
+D) Bandwidth
+
+**সঠিক উত্তর: B) Simplex**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Communication শুধু এক direction-এ।
+- **A option কেন ভুল:** `Full-duplex` বলতে দুই direction-এ একই সময়ে communication। বোঝায়; প্রশ্নের বর্ণনা `Simplex`-এর।
+- **B option:** এটি সঠিক উত্তর।
+- **C option কেন ভুল:** `Propagation Delay` বলতে Signal medium-এর distance অতিক্রম করতে সময়; distance/propagation speed। বোঝায়; প্রশ্নের বর্ণনা `Simplex`-এর।
+- **D option কেন ভুল:** `Bandwidth` বলতে Communication channel-এর theoretical capacity বা frequency range; networking-এ প্রায়ই bit/s capacity বোঝায়। বোঝায়; প্রশ্নের বর্ণনা `Simplex`-এর।
+- **Related Concept:** Broadcast sensor example।
+- **মনে রাখার টিপস:** One-way only।
+
+---
+
+## প্রশ্ন 998 | Topic: Computer Networking > Data Communication Performance | Difficulty: Easy | Type: Theory
+
+Q. `Half-duplex` সম্পর্কে কোন statement সঠিক?
+
+A) সব packet bit link-এ push করতে সময়; packet size/data rate।
+B) Communication channel-এর theoretical capacity বা frequency range; networking-এ প্রায়ই bit/s capacity বোঝায়।
+C) দুই direction-এ communication সম্ভব, কিন্তু একই সময়ে নয়।
+D) Data packet-এ ভাগ হয়ে shared network link দিয়ে store-and-forward হতে পারে।
+
+**সঠিক উত্তর: C) দুই direction-এ communication সম্ভব, কিন্তু একই সময়ে নয়।**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** দুই direction-এ communication সম্ভব, কিন্তু একই সময়ে নয়।
+- **A option কেন ভুল:** এই statementটি `Transmission Delay` ধারণাকে বর্ণনা করে; `Half-duplex`-কে নয়।
+- **B option কেন ভুল:** এই statementটি `Bandwidth` ধারণাকে বর্ণনা করে; `Half-duplex`-কে নয়।
+- **C option:** এটি সঠিক উত্তর।
+- **D option কেন ভুল:** এই statementটি `Packet Switching` ধারণাকে বর্ণনা করে; `Half-duplex`-কে নয়।
+- **Related Concept:** Walkie-talkie।
+- **মনে রাখার টিপস:** Both ways, take turns।
+
+---
+
+## প্রশ্ন 999 | Topic: Computer Networking > Data Communication Performance | Difficulty: Hard | Type: Theory
+
+Q. একটি system বা scenario-তে `দুই direction-এ একই সময়ে communication।`—এখানে কোন concept প্রযোজ্য?
+
+A) Full-duplex
+B) Bandwidth
+C) Propagation Delay
+D) Queueing Delay
+
+**সঠিক উত্তর: A) Full-duplex**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** দুই direction-এ একই সময়ে communication।
+- **A option:** এটি সঠিক উত্তর।
+- **B option কেন ভুল:** `Bandwidth` বলতে Communication channel-এর theoretical capacity বা frequency range; networking-এ প্রায়ই bit/s capacity বোঝায়। বোঝায়; প্রশ্নের বর্ণনা `Full-duplex`-এর।
+- **C option কেন ভুল:** `Propagation Delay` বলতে Signal medium-এর distance অতিক্রম করতে সময়; distance/propagation speed। বোঝায়; প্রশ্নের বর্ণনা `Full-duplex`-এর।
+- **D option কেন ভুল:** `Queueing Delay` বলতে Router/switch buffer-এ service-এর অপেক্ষা। বোঝায়; প্রশ্নের বর্ণনা `Full-duplex`-এর।
+- **Related Concept:** Switched Ethernet link।
+- **মনে রাখার টিপস:** Both ways simultaneously।
+
+---
+
+## প্রশ্ন 1000 | Topic: Computer Networking > Data Communication Performance | Difficulty: Hard | Type: Theory
+
+Q. নিচের বর্ণনাটি কোন ধারণাকে নির্দেশ করে?
+
+`Data packet-এ ভাগ হয়ে shared network link দিয়ে store-and-forward হতে পারে।`
+
+A) Packet Switching
+B) Half-duplex
+C) Full-duplex
+D) Latency
+
+**সঠিক উত্তর: A) Packet Switching**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Data packet-এ ভাগ হয়ে shared network link দিয়ে store-and-forward হতে পারে।
+- **A option:** এটি সঠিক উত্তর।
+- **B option কেন ভুল:** `Half-duplex` বলতে দুই direction-এ communication সম্ভব, কিন্তু একই সময়ে নয়। বোঝায়; প্রশ্নের বর্ণনা `Packet Switching`-এর।
+- **C option কেন ভুল:** `Full-duplex` বলতে দুই direction-এ একই সময়ে communication। বোঝায়; প্রশ্নের বর্ণনা `Packet Switching`-এর।
+- **D option কেন ভুল:** `Latency` বলতে Source থেকে destination-এ data পৌঁছাতে total delay। বোঝায়; প্রশ্নের বর্ণনা `Packet Switching`-এর।
+- **Related Concept:** Internet foundation।
+- **মনে রাখার টিপস:** Shared links, packets।
+
+---
+
+# Chapter Theory 90: Signals, Transmission Media এবং Multiplexing
+
+## বিস্তারিত Theory Note
+
+Physical layer raw bit-কে electromagnetic signal-এ রূপান্তর করে। Signal quality attenuation, noise, distortion এবং medium characteristic দ্বারা প্রভাবিত হয়। Bit rate data quantity, আর baud rate symbol rate; modulation scheme এক symbol-এ একাধিক bit encode করতে পারে।
+
+Guided medium-এর মধ্যে twisted pair সস্তা ও সহজ, coaxial shielding ভালো, optical fiber উচ্চ bandwidth, low attenuation এবং electromagnetic interference resistance দেয়। Unguided medium mobility দেয়, কিন্তু interference ও shared spectrum challenge তৈরি করে।
+
+Multiplexing-এর মূল লক্ষ্য একই expensive link বহু source-এর মধ্যে ভাগ করা:
+
+```text
+FDM  : আলাদা frequency band
+TDM  : আলাদা time slot
+WDM  : optical wavelength
+```
+
+## মূল ধারণার মানচিত্র
+
+- **Analog Signal:** সময় ও amplitude-এ continuousভাবে পরিবর্তিত signal।
+- **Digital Signal:** Discrete level বা symbol দিয়ে information প্রকাশ করা signal।
+- **Bit Rate:** প্রতি second-এ transmitted bit সংখ্যা, unit bit/s।
+- **Baud Rate:** প্রতি second-এ signal symbol change বা symbol transmission সংখ্যা।
+- **Bandwidth:** Signal frequency range বা link capacity বোঝাতে ব্যবহৃত term।
+- **Attenuation:** Distance-এর সঙ্গে signal power কমে যাওয়া।
+- **Noise:** Unwanted electrical/electromagnetic energy যা received signal বিকৃত করে।
+- **Multiplexing:** এক physical link-এ বহু independent signal/channel combine করা।
+- **Guided Media:** Copper বা fiber-এর মতো physical path-এর ভিতর signal guided হয়।
+- **Unguided Media:** Radio, microwave বা infrared-এর মতো free-space electromagnetic transmission।
+
+## পরীক্ষায় গুরুত্বপূর্ণ সংযোগ
+
+- Definition, purpose, limitation ও application—চার দিক থেকে concept চিনুন।
+- Calculation/Tracing প্রশ্নে Formula → Given Data → Substitution → State Update → Final Answer অনুসরণ করুন।
+- কাছাকাছি term-এর পার্থক্য option analysis থেকে পুনরাবৃত্তি করুন।
+
+---
+
+# MCQ Practice: Signals, Transmission Media এবং Multiplexing
+
+## প্রশ্ন 1001 | Topic: Computer Networking > Physical Layer I | Difficulty: Hard | Type: Theory
+
+Q. নিচের বর্ণনাটি কোন ধারণাকে নির্দেশ করে?
+
+`সময় ও amplitude-এ continuousভাবে পরিবর্তিত signal।`
+
+A) Noise
+B) Baud Rate
+C) Analog Signal
+D) Attenuation
+
+**সঠিক উত্তর: C) Analog Signal**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** সময় ও amplitude-এ continuousভাবে পরিবর্তিত signal।
+- **A option কেন ভুল:** `Noise` বলতে Unwanted electrical/electromagnetic energy যা received signal বিকৃত করে। বোঝায়; প্রশ্নের বর্ণনা `Analog Signal`-এর।
+- **B option কেন ভুল:** `Baud Rate` বলতে প্রতি second-এ signal symbol change বা symbol transmission সংখ্যা। বোঝায়; প্রশ্নের বর্ণনা `Analog Signal`-এর।
+- **C option:** এটি সঠিক উত্তর।
+- **D option কেন ভুল:** `Attenuation` বলতে Distance-এর সঙ্গে signal power কমে যাওয়া। বোঝায়; প্রশ্নের বর্ণনা `Analog Signal`-এর।
+- **Related Concept:** Voice waveform analog হতে পারে।
+- **মনে রাখার টিপস:** Continuous waveform।
+
+---
+
+## প্রশ্ন 1002 | Topic: Computer Networking > Physical Layer I | Difficulty: Hard | Type: Theory
+
+Q. `Digital Signal` সম্পর্কে কোন statement সঠিক?
+
+A) Signal frequency range বা link capacity বোঝাতে ব্যবহৃত term।
+B) Discrete level বা symbol দিয়ে information প্রকাশ করা signal।
+C) Copper বা fiber-এর মতো physical path-এর ভিতর signal guided হয়।
+D) Radio, microwave বা infrared-এর মতো free-space electromagnetic transmission।
+
+**সঠিক উত্তর: B) Discrete level বা symbol দিয়ে information প্রকাশ করা signal।**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Discrete level বা symbol দিয়ে information প্রকাশ করা signal।
+- **A option কেন ভুল:** এই statementটি `Bandwidth` ধারণাকে বর্ণনা করে; `Digital Signal`-কে নয়।
+- **B option:** এটি সঠিক উত্তর।
+- **C option কেন ভুল:** এই statementটি `Guided Media` ধারণাকে বর্ণনা করে; `Digital Signal`-কে নয়।
+- **D option কেন ভুল:** এই statementটি `Unguided Media` ধারণাকে বর্ণনা করে; `Digital Signal`-কে নয়।
+- **Related Concept:** Binary transmissionে two-level common।
+- **মনে রাখার টিপস:** Discrete levels।
+
+---
+
+## প্রশ্ন 1003 | Topic: Computer Networking > Physical Layer I | Difficulty: Medium | Type: Calculation
+
+Q. একটি link 8 second-এ 16,000 bit পাঠায়। Bit rate কত?
+
+A) 1,000 bit/s
+B) 8,000 bit/s
+C) 16,000 bit/s
+D) 2,000 bit/s
+
+**সঠিক উত্তর: D) 2,000 bit/s**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Bit rate = transmitted bits / time = 16000/8 = 2000 bit/s।
+
+#### Step-by-step সমাধান
+
+```text
+Bits = 16,000
+Time = 8 s
+Bit rate = 16,000 / 8
+         = 2,000 bit/s
+```
+- **A option কেন ভুল:** Time বা bit count অর্ধেক ধরা হয়েছে।
+- **B option কেন ভুল:** শুধু 2 second ধরে division হয়েছে।
+- **C option কেন ভুল:** Time দিয়ে ভাগ করা হয়নি।
+- **D option:** এটি সঠিক উত্তর।
+- **Related Concept:** Bit rate data quantity-এর time-normalized measure।
+- **মনে রাখার টিপস:** Bits ÷ seconds।
+
+---
+
+## প্রশ্ন 1004 | Topic: Computer Networking > Physical Layer I | Difficulty: Hard | Type: Calculation
+
+Q. প্রতি symbol 4 bit বহন করে এবং baud rate 2,400 symbol/s। Bit rate কত?
+
+A) 600 bit/s
+B) 2,400 bit/s
+C) 4,800 bit/s
+D) 9,600 bit/s
+
+**সঠিক উত্তর: D) 9,600 bit/s**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Bit rate = baud rate × bits per symbol = 2400×4 = 9600 bit/s।
+
+#### Step-by-step সমাধান
+
+```text
+Baud rate = 2,400 symbol/s
+Bits/symbol = 4
+Bit rate = 2,400 x 4
+         = 9,600 bit/s
+```
+- **A option কেন ভুল:** উল্টো division করা হয়েছে।
+- **B option কেন ভুল:** প্রতি symbol এক bit ধরে নেওয়া হয়েছে।
+- **C option কেন ভুল:** দুই bit per symbol ধরা হয়েছে।
+- **D option:** এটি সঠিক উত্তর।
+- **Related Concept:** যদি M signal level থাকে, ideal bits/symbol = log2(M)।
+- **মনে রাখার টিপস:** Baud × bits per symbol।
+
+---
+
+## প্রশ্ন 1005 | Topic: Computer Networking > Physical Layer I | Difficulty: Easy | Type: Calculation
+
+Q. এক signal-এর highest frequency 9 kHz এবং lowest frequency 3 kHz। Analog bandwidth কত?
+
+A) 6 kHz
+B) 3 kHz
+C) 9 kHz
+D) 12 kHz
+
+**সঠিক উত্তর: A) 6 kHz**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Bandwidth = highest − lowest = 9−3 = 6 kHz।
+
+#### Step-by-step সমাধান
+
+```text
+f_high = 9 kHz
+f_low  = 3 kHz
+Bandwidth = 9 - 3
+          = 6 kHz
+```
+- **A option:** এটি সঠিক উত্তর।
+- **B option কেন ভুল:** Lowest frequency নেওয়া হয়েছে।
+- **C option কেন ভুল:** Highest frequency সরাসরি নেওয়া হয়েছে।
+- **D option কেন ভুল:** দুই frequency যোগ করা হয়েছে।
+- **Related Concept:** Frequency bandwidth Hz-এ মাপা হয়।
+- **মনে রাখার টিপস:** High − Low।
+
+---
+
+## প্রশ্ন 1006 | Topic: Computer Networking > Physical Layer I | Difficulty: Easy | Type: Theory
+
+Q. একটি system বা scenario-তে `Distance-এর সঙ্গে signal power কমে যাওয়া।`—এখানে কোন concept প্রযোজ্য?
+
+A) Multiplexing
+B) Attenuation
+C) Guided Media
+D) Unguided Media
+
+**সঠিক উত্তর: B) Attenuation**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Distance-এর সঙ্গে signal power কমে যাওয়া।
+- **A option কেন ভুল:** `Multiplexing` বলতে এক physical link-এ বহু independent signal/channel combine করা। বোঝায়; প্রশ্নের বর্ণনা `Attenuation`-এর।
+- **B option:** এটি সঠিক উত্তর।
+- **C option কেন ভুল:** `Guided Media` বলতে Copper বা fiber-এর মতো physical path-এর ভিতর signal guided হয়। বোঝায়; প্রশ্নের বর্ণনা `Attenuation`-এর।
+- **D option কেন ভুল:** `Unguided Media` বলতে Radio, microwave বা infrared-এর মতো free-space electromagnetic transmission। বোঝায়; প্রশ্নের বর্ণনা `Attenuation`-এর।
+- **Related Concept:** Amplifier/repeater দরকার হতে পারে।
+- **মনে রাখার টিপস:** Signal weakens।
+
+---
+
+## প্রশ্ন 1007 | Topic: Computer Networking > Physical Layer I | Difficulty: Medium | Type: Theory
+
+Q. নিচের বর্ণনাটি কোন ধারণাকে নির্দেশ করে?
+
+`Unwanted electrical/electromagnetic energy যা received signal বিকৃত করে।`
+
+A) Noise
+B) Analog Signal
+C) Bandwidth
+D) Digital Signal
+
+**সঠিক উত্তর: A) Noise**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Unwanted electrical/electromagnetic energy যা received signal বিকৃত করে।
+- **A option:** এটি সঠিক উত্তর।
+- **B option কেন ভুল:** `Analog Signal` বলতে সময় ও amplitude-এ continuousভাবে পরিবর্তিত signal। বোঝায়; প্রশ্নের বর্ণনা `Noise`-এর।
+- **C option কেন ভুল:** `Bandwidth` বলতে Signal frequency range বা link capacity বোঝাতে ব্যবহৃত term। বোঝায়; প্রশ্নের বর্ণনা `Noise`-এর।
+- **D option কেন ভুল:** `Digital Signal` বলতে Discrete level বা symbol দিয়ে information প্রকাশ করা signal। বোঝায়; প্রশ্নের বর্ণনা `Noise`-এর।
+- **Related Concept:** Thermal, impulse, crosstalk noise আছে।
+- **মনে রাখার টিপস:** Unwanted disturbance।
+
+---
+
+## প্রশ্ন 1008 | Topic: Computer Networking > Physical Layer I | Difficulty: Easy | Type: Calculation
+
+Q. TDM frame-এ 8টি channel, প্রতিটি channel প্রতি frame-এ 1 byte দেয়। Frame payload কত bit?
+
+A) 8 bit
+B) 64 bit
+C) 16 bit
+D) 128 bit
+
+**সঠিক উত্তর: B) 64 bit**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** 8 channel × 1 byte × 8 bit = 64 bit।
+
+#### Step-by-step সমাধান
+
+```text
+Channels = 8
+Bytes/channel = 1
+Frame bytes = 8 x 1 = 8
+Frame bits  = 8 x 8 = 64
+```
+- **A option কেন ভুল:** শুধু এক byte।
+- **B option:** এটি সঠিক উত্তর।
+- **C option কেন ভুল:** দুই byte-এর সমান।
+- **D option কেন ভুল:** প্রতি channel দুই byte ধরা হয়েছে।
+- **Related Concept:** TDM frame overhead প্রশ্নে না দিলে payload আলাদা ধরে হিসাব করুন।
+- **মনে রাখার টিপস:** Channel × bytes × 8।
+
+---
+
+## প্রশ্ন 1009 | Topic: Computer Networking > Physical Layer I | Difficulty: Hard | Type: Theory
+
+Q. একটি system বা scenario-তে `Copper বা fiber-এর মতো physical path-এর ভিতর signal guided হয়।`—এখানে কোন concept প্রযোজ্য?
+
+A) Bandwidth
+B) Attenuation
+C) Guided Media
+D) Unguided Media
+
+**সঠিক উত্তর: C) Guided Media**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Copper বা fiber-এর মতো physical path-এর ভিতর signal guided হয়।
+- **A option কেন ভুল:** `Bandwidth` বলতে Signal frequency range বা link capacity বোঝাতে ব্যবহৃত term। বোঝায়; প্রশ্নের বর্ণনা `Guided Media`-এর।
+- **B option কেন ভুল:** `Attenuation` বলতে Distance-এর সঙ্গে signal power কমে যাওয়া। বোঝায়; প্রশ্নের বর্ণনা `Guided Media`-এর।
+- **C option:** এটি সঠিক উত্তর।
+- **D option কেন ভুল:** `Unguided Media` বলতে Radio, microwave বা infrared-এর মতো free-space electromagnetic transmission। বোঝায়; প্রশ্নের বর্ণনা `Guided Media`-এর।
+- **Related Concept:** Twisted pair, coaxial, optical fiber।
+- **মনে রাখার টিপস:** Signal follows cable।
+
+---
+
+## প্রশ্ন 1010 | Topic: Computer Networking > Physical Layer I | Difficulty: Hard | Type: Calculation
+
+Q. Radio signal 3×10^8 m/s বেগে 300 km অতিক্রম করে। Propagation delay কত?
+
+A) 1 ms
+B) 0.1 ms
+C) 10 ms
+D) 100 ms
+
+**সঠিক উত্তর: A) 1 ms**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** 300 km = 300,000 m; delay = 300000/(3×10^8) = 0.001 s = 1 ms।
+
+#### Step-by-step সমাধান
+
+```text
+Distance = 300 km = 300,000 m
+Speed = 300,000,000 m/s
+Delay = 300,000 / 300,000,000
+      = 0.001 s
+      = 1 ms
+```
+- **A option:** এটি সঠিক উত্তর।
+- **B option কেন ভুল:** Distance এক order কম ধরা হয়েছে।
+- **C option কেন ভুল:** এক order বেশি।
+- **D option কেন ভুল:** দুই order বেশি।
+- **Related Concept:** Propagation delay packet size নয়, distance ও speed-এর ওপর নির্ভর।
+- **মনে রাখার টিপস:** Distance/speed এবং unit convert।
+
+---
+
+
+# Chapter Theory 91: Framing, Error Control এবং ARQ
+
+## বিস্তারিত Theory Note
+
+Data-link layer adjacent node-এর মধ্যে frame delivery করে। Framing boundary হারালে receiver bit stream-এর অর্থ বুঝতে পারে না। Byte stuffing reserved flag byte escape করে, bit stuffing flag pattern এড়াতে নির্দিষ্ট 1 sequence-এর পরে 0 যোগ করে।
+
+Error detection redundancy corruption শনাক্ত করে; correction আরও redundancy দিয়ে error location অনুমান করে। CRC burst error detection-এ শক্তিশালী। Reliable link protocol sequence number, ACK, timeout এবং retransmission ব্যবহার করে।
+
+Sliding-window ARQ link utilization বাড়ায়:
+
+```text
+Stop-and-Wait   : এক outstanding frame
+Go-Back-N       : cumulative ACK, error থেকে পুনরায়
+Selective Repeat: individual ACK, শুধু missing frame
+```
+
+## মূল ধারণার মানচিত্র
+
+- **Framing:** Continuous bit stream-কে identifiable data-link frame-এ ভাগ করার process।
+- **Error Detection:** Received data corrupt হয়েছে কি না redundancy দিয়ে শনাক্ত করা।
+- **Parity Bit:** Data bit-এর 1 count even/odd করতে অতিরিক্ত bit।
+- **CRC:** Polynomial division remainder frame-এ যোগ করে burst error detection।
+- **Hamming Distance:** দুটি equal-length codeword-এর differing bit position সংখ্যা।
+- **Hamming Code:** Redundant parity position ব্যবহার করে single-bit error locate/correct করা code family।
+- **Stop-and-Wait ARQ:** এক frame পাঠিয়ে ACK/timeout পর্যন্ত অপেক্ষা করা reliable protocol।
+- **Go-Back-N ARQ:** Sliding window sender; error হলে missing frame থেকে পরবর্তী outstanding frame পুনরায় পাঠায়।
+- **Selective Repeat ARQ:** শুধু হারানো/ক্ষতিগ্রস্ত frame retransmit এবং out-of-order frame buffer করে।
+- **Flow Control:** Fast sender যেন slow receiver-এর buffer overflow না করে, transmission rate/window নিয়ন্ত্রণ।
+
+## পরীক্ষায় গুরুত্বপূর্ণ সংযোগ
+
+- Definition, purpose, limitation ও application—চার দিক থেকে concept চিনুন।
+- Calculation/Tracing প্রশ্নে Formula → Given Data → Substitution → State Update → Final Answer অনুসরণ করুন।
+- কাছাকাছি term-এর পার্থক্য option analysis থেকে পুনরাবৃত্তি করুন।
+
+---
+
+# MCQ Practice: Framing, Error Control এবং ARQ
+
+## প্রশ্ন 1011 | Topic: Computer Networking > Data Link Layer I | Difficulty: Medium | Type: Theory
+
+Q. নিচের বর্ণনাটি কোন ধারণাকে নির্দেশ করে?
+
+`Continuous bit stream-কে identifiable data-link frame-এ ভাগ করার process।`
+
+A) Framing
+B) Hamming Distance
+C) Stop-and-Wait ARQ
+D) Go-Back-N ARQ
+
+**সঠিক উত্তর: A) Framing**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Continuous bit stream-কে identifiable data-link frame-এ ভাগ করার process।
+- **A option:** এটি সঠিক উত্তর।
+- **B option কেন ভুল:** `Hamming Distance` বলতে দুটি equal-length codeword-এর differing bit position সংখ্যা। বোঝায়; প্রশ্নের বর্ণনা `Framing`-এর।
+- **C option কেন ভুল:** `Stop-and-Wait ARQ` বলতে এক frame পাঠিয়ে ACK/timeout পর্যন্ত অপেক্ষা করা reliable protocol। বোঝায়; প্রশ্নের বর্ণনা `Framing`-এর।
+- **D option কেন ভুল:** `Go-Back-N ARQ` বলতে Sliding window sender; error হলে missing frame থেকে পরবর্তী outstanding frame পুনরায় পাঠায়। বোঝায়; প্রশ্নের বর্ণনা `Framing`-এর।
+- **Related Concept:** Length field, flag byte বা bit stuffing ব্যবহার হতে পারে।
+- **মনে রাখার টিপস:** Define frame boundaries।
+
+---
+
+## প্রশ্ন 1012 | Topic: Computer Networking > Data Link Layer I | Difficulty: Medium | Type: Theory
+
+Q. `Error Detection` সম্পর্কে কোন statement সঠিক?
+
+A) Continuous bit stream-কে identifiable data-link frame-এ ভাগ করার process।
+B) শুধু হারানো/ক্ষতিগ্রস্ত frame retransmit এবং out-of-order frame buffer করে।
+C) দুটি equal-length codeword-এর differing bit position সংখ্যা।
+D) Received data corrupt হয়েছে কি না redundancy দিয়ে শনাক্ত করা।
+
+**সঠিক উত্তর: D) Received data corrupt হয়েছে কি না redundancy দিয়ে শনাক্ত করা।**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Received data corrupt হয়েছে কি না redundancy দিয়ে শনাক্ত করা।
+- **A option কেন ভুল:** এই statementটি `Framing` ধারণাকে বর্ণনা করে; `Error Detection`-কে নয়।
+- **B option কেন ভুল:** এই statementটি `Selective Repeat ARQ` ধারণাকে বর্ণনা করে; `Error Detection`-কে নয়।
+- **C option কেন ভুল:** এই statementটি `Hamming Distance` ধারণাকে বর্ণনা করে; `Error Detection`-কে নয়।
+- **D option:** এটি সঠিক উত্তর।
+- **Related Concept:** Parity, checksum, CRC।
+- **মনে রাখার টিপস:** Detect corruption।
+
+---
+
+## প্রশ্ন 1013 | Topic: Computer Networking > Data Link Layer I | Difficulty: Easy | Type: Theory
+
+Q. Data bits `1011001`-এ even parity bit কত হবে?
+
+A) 0
+B) 1
+C) 2
+D) 7
+
+**সঠিক উত্তর: A) 0**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Data-তে চারটি 1 আছে, যা ইতিমধ্যে even; parity bit 0।
+
+#### Step-by-step সমাধান
+
+```text
+Data = 1011001
+Number of 1s = 4
+4 is even
+Parity bit = 0
+```
+- **A option:** এটি সঠিক উত্তর।
+- **B option কেন ভুল:** এতে total 1 count 5, odd হবে।
+- **C option কেন ভুল:** Parity bit binary 0 বা1।
+- **D option কেন ভুল:** Bit count, parity value নয়।
+- **Related Concept:** Even parity total 1 count even রাখে।
+- **মনে রাখার টিপস:** আগে 1 গুনুন।
+
+---
+
+## প্রশ্ন 1014 | Topic: Computer Networking > Data Link Layer I | Difficulty: Easy | Type: Calculation
+
+Q. CRC generator degree 4 হলে remainder বা CRC bit কতটি?
+
+A) 3 bit
+B) 5 bit
+C) 8 bit
+D) 4 bit
+
+**সঠিক উত্তর: D) 4 bit**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Degree r generator-এর CRC remainder r bit।
+
+#### Step-by-step সমাধান
+
+```text
+Generator degree = 4
+CRC remainder width = 4 bits
+```
+- **A option কেন ভুল:** Degree-এর এক কম।
+- **B option কেন ভুল:** Generator coefficient count-এর সঙ্গে গুলিয়েছে।
+- **C option কেন ভুল:** Byte ধরে নেওয়া হয়েছে।
+- **D option:** এটি সঠিক উত্তর।
+- **Related Concept:** Generator polynomial degree = appended zero/CRC bit count।
+- **মনে রাখার টিপস:** Degree r → r CRC bits।
+
+---
+
+## প্রশ্ন 1015 | Topic: Computer Networking > Data Link Layer I | Difficulty: Hard | Type: Calculation
+
+Q. Codeword `101011` ও `111001`-এর Hamming distance কত?
+
+A) 1
+B) 3
+C) 2
+D) 4
+
+**সঠিক উত্তর: C) 2**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** দ্বিতীয় ও চতুর্থ position ভিন্ন—মোট 2।
+
+#### Step-by-step সমাধান
+
+```text
+101011
+111001
+------
+010010
+Number of 1s in XOR = 2
+```
+- **A option কেন ভুল:** একটি difference বাদ।
+- **B option কেন ভুল:** একটি matching bit-কে ভিন্ন ধরা হয়েছে।
+- **C option:** এটি সঠিক উত্তর।
+- **D option কেন ভুল:** অতিরিক্ত difference।
+- **Related Concept:** Minimum Hamming distance error capability নির্ধারণ করে।
+- **মনে রাখার টিপস:** Position-by-position XOR করুন।
+
+---
+
+## প্রশ্ন 1016 | Topic: Computer Networking > Data Link Layer I | Difficulty: Medium | Type: Calculation
+
+Q. 11 data bit-এর জন্য single-error-correcting Hamming code-এ minimum parity bit r কত, যেখানে `2^r >= m+r+1`?
+
+A) 3
+B) 4
+C) 5
+D) 6
+
+**সঠিক উত্তর: B) 4**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** r=3 হলে 8<15; r=4 হলে16≥16, তাই4।
+
+#### Step-by-step সমাধান
+
+```text
+m=11
+r=3: 2^3=8, m+r+1=15 -> fail
+r=4: 2^4=16, m+r+1=16 -> pass
+Minimum r=4
+```
+- **A option কেন ভুল:** Condition satisfy করে না।
+- **B option:** এটি সঠিক উত্তর।
+- **C option কেন ভুল:** Satisfy করে কিন্তু minimum নয়।
+- **D option কেন ভুল:** অতিরিক্ত parity।
+- **Related Concept:** Hamming parity count inequality ব্যবহার করুন।
+- **মনে রাখার টিপস:** ছোট r থেকে test করুন।
+
+---
+
+## প্রশ্ন 1017 | Topic: Computer Networking > Data Link Layer I | Difficulty: Medium | Type: Calculation
+
+Q. Stop-and-Wait-এ frame transmission 2 ms এবং round-trip propagation+ACK delay 18 ms। Processing বাদে cycle time কত?
+
+A) 2 ms
+B) 20 ms
+C) 18 ms
+D) 36 ms
+
+**সঠিক উত্তর: B) 20 ms**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** এক frame cycle = transmit 2 + wait round trip 18 = 20 ms।
+
+#### Step-by-step সমাধান
+
+```text
+Transmit = 2 ms
+RT propagation+ACK = 18 ms
+Cycle = 2 + 18 = 20 ms
+```
+- **A option কেন ভুল:** শুধু transmission।
+- **B option:** এটি সঠিক উত্তর।
+- **C option কেন ভুল:** Transmission বাদ।
+- **D option কেন ভুল:** Round-trip delay দ্বিগুণ।
+- **Related Concept:** Utilization = transmit time / total cycle।
+- **মনে রাখার টিপস:** Send time + ACK return wait।
+
+---
+
+## প্রশ্ন 1018 | Topic: Computer Networking > Data Link Layer I | Difficulty: Easy | Type: Tracing
+
+Q. Go-Back-N sender window size 4। Sequence 0,1,2,3 পাঠানো হয়েছে; frame 1 হারিয়েছে। Receiver only in-order গ্রহণ করে। Timeout-এ কোন frame retransmit হবে?
+
+A) শুধু 1
+B) 1,2,3
+C) 0,1,2,3
+D) শুধু 3
+
+**সঠিক উত্তর: B) 1,2,3**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Go-Back-N missing 1 থেকে সব outstanding frame আবার পাঠায়।
+
+#### Step-by-step সমাধান
+
+```text
+Sent: 0,1,2,3
+Lost: 1
+Expected at receiver after 0: 1
+Frames 2,3 out of order
+Timeout -> retransmit 1,2,3
+```
+- **A option কেন ভুল:** Selective Repeat behavior।
+- **B option:** এটি সঠিক উত্তর।
+- **C option কেন ভুল:** 0 ইতিমধ্যে acknowledged হতে পারে এবং missing-এর আগে।
+- **D option কেন ভুল:** Missing 1 recover হয় না।
+- **Related Concept:** GBN receiver out-of-order frame discard করতে পারে।
+- **মনে রাখার টিপস:** Go back to missing frame।
+
+---
+
+## প্রশ্ন 1019 | Topic: Computer Networking > Data Link Layer I | Difficulty: Medium | Type: Tracing
+
+Q. Selective Repeat-এ frames 4,5,6 পাঠানো হয়েছে; শুধু 5 হারিয়েছে এবং 4,6 receive হয়েছে। Retransmission কী?
+
+A) শুধু 5
+B) 4,5,6
+C) 5,6
+D) কোনোটিই নয়
+
+**সঠিক উত্তর: A) শুধু 5**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Selective Repeat receiver 6 buffer করতে পারে এবং missing 5-ই চায়।
+
+#### Step-by-step সমাধান
+
+```text
+Received 4 -> accept
+Frame 5 -> lost
+Received 6 -> buffer
+Request/retransmit -> 5 only
+```
+- **A option:** এটি সঠিক উত্তর।
+- **B option কেন ভুল:** Go-Back-N behavior।
+- **C option কেন ভুল:** 6 সফলভাবে buffered।
+- **D option কেন ভুল:** 5 missing।
+- **Related Concept:** Selective Repeat bandwidth-efficient কিন্তু buffer/state বেশি।
+- **মনে রাখার টিপস:** Only missing frame resend।
+
+---
+
+## প্রশ্ন 1020 | Topic: Computer Networking > Data Link Layer I | Difficulty: Easy | Type: Theory
+
+Q. নিচের বর্ণনাটি কোন ধারণাকে নির্দেশ করে?
+
+`Fast sender যেন slow receiver-এর buffer overflow না করে, transmission rate/window নিয়ন্ত্রণ।`
+
+A) Hamming Distance
+B) Parity Bit
+C) Flow Control
+D) Framing
+
+**সঠিক উত্তর: C) Flow Control**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Fast sender যেন slow receiver-এর buffer overflow না করে, transmission rate/window নিয়ন্ত্রণ।
+- **A option কেন ভুল:** `Hamming Distance` বলতে দুটি equal-length codeword-এর differing bit position সংখ্যা। বোঝায়; প্রশ্নের বর্ণনা `Flow Control`-এর।
+- **B option কেন ভুল:** `Parity Bit` বলতে Data bit-এর 1 count even/odd করতে অতিরিক্ত bit। বোঝায়; প্রশ্নের বর্ণনা `Flow Control`-এর।
+- **C option:** এটি সঠিক উত্তর।
+- **D option কেন ভুল:** `Framing` বলতে Continuous bit stream-কে identifiable data-link frame-এ ভাগ করার process। বোঝায়; প্রশ্নের বর্ণনা `Flow Control`-এর।
+- **Related Concept:** Stop-and-wait ও sliding window।
+- **মনে রাখার টিপস:** Match sender to receiver।
+
+---
+
+
+# Chapter Theory 92: Ethernet, MAC, VLAN এবং Wireless Access
+
+## বিস্তারিত Theory Note
+
+Ethernet frame local broadcast domain-এর মধ্যে MAC address ব্যবহার করে। Switch source MAC শিখে forwarding table গঠন করে; unknown unicast ও broadcast flood করে। VLAN এক physical switchকে একাধিক logical broadcast domain-এ ভাগ করে।
+
+Shared coax Ethernet-এ CSMA/CD collision detect করত। Modern full-duplex switched Ethernet-এ collision domain প্রতি port এবং collision নেই। Wi-Fi medium shared ও half-duplex; তাই CSMA/CA, ACK এবং optional RTS/CTS collision risk কমায়।
+
+Redundant layer-2 link availability বাড়ালেও forwarding loop broadcast storm ও MAC-table instability তৈরি করে। STP কিছু link block করে loop-free topology রাখে।
+
+## মূল ধারণার মানচিত্র
+
+- **Ethernet:** IEEE 802.3 family-এর LAN technology যা frame ও MAC addressing ব্যবহার করে।
+- **MAC Address:** Data-link interface identifier, সাধারণত 48-bit Ethernet address।
+- **CSMA/CD:** Shared half-duplex Ethernet-এ carrier sense, transmit, collision detect ও backoff protocol।
+- **CSMA/CA:** Wireless LAN-এ collision avoid করতে random backoff, optional RTS/CTS ও ACK ব্যবহার।
+- **Ethernet Frame:** Destination/source MAC, type/length, payload ও FCSসহ layer-2 PDU।
+- **Broadcast Address:** সব 48 bit 1 হলে Ethernet broadcast destination।
+- **VLAN:** এক physical switch infrastructure-এ logically পৃথক broadcast domain।
+- **Trunk Link:** এক link-এ multiple VLAN frame tagসহ বহন করে।
+- **Access Port:** সাধারণত একটি VLAN-এর untagged endpoint traffic বহন করে।
+- **Spanning Tree Protocol:** Layer-2 redundant link-এর loop বন্ধ করতে logical tree ও blocked port নির্বাচন।
+
+## পরীক্ষায় গুরুত্বপূর্ণ সংযোগ
+
+- Definition, purpose, limitation ও application—চার দিক থেকে concept চিনুন।
+- Calculation/Tracing প্রশ্নে Formula → Given Data → Substitution → State Update → Final Answer অনুসরণ করুন।
+- কাছাকাছি term-এর পার্থক্য option analysis থেকে পুনরাবৃত্তি করুন।
+
+---
+
+# MCQ Practice: Ethernet, MAC, VLAN এবং Wireless Access
+
+## প্রশ্ন 1021 | Topic: Computer Networking > Data Link Layer II | Difficulty: Medium | Type: Theory
+
+Q. নিচের বর্ণনাটি কোন ধারণাকে নির্দেশ করে?
+
+`IEEE 802.3 family-এর LAN technology যা frame ও MAC addressing ব্যবহার করে।`
+
+A) MAC Address
+B) Ethernet
+C) CSMA/CD
+D) Access Port
+
+**সঠিক উত্তর: B) Ethernet**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** IEEE 802.3 family-এর LAN technology যা frame ও MAC addressing ব্যবহার করে।
+- **A option কেন ভুল:** `MAC Address` বলতে Data-link interface identifier, সাধারণত 48-bit Ethernet address। বোঝায়; প্রশ্নের বর্ণনা `Ethernet`-এর।
+- **B option:** এটি সঠিক উত্তর।
+- **C option কেন ভুল:** `CSMA/CD` বলতে Shared half-duplex Ethernet-এ carrier sense, transmit, collision detect ও backoff protocol। বোঝায়; প্রশ্নের বর্ণনা `Ethernet`-এর।
+- **D option কেন ভুল:** `Access Port` বলতে সাধারণত একটি VLAN-এর untagged endpoint traffic বহন করে। বোঝায়; প্রশ্নের বর্ণনা `Ethernet`-এর।
+- **Related Concept:** Modern switched full-duplex Ethernet dominant।
+- **মনে রাখার টিপস:** Wired LAN standard।
+
+---
+
+## প্রশ্ন 1022 | Topic: Computer Networking > Data Link Layer II | Difficulty: Medium | Type: Calculation
+
+Q. 48-bit MAC address-এ byte সংখ্যা কত?
+
+A) 4
+B) 8
+C) 48
+D) 6
+
+**সঠিক উত্তর: D) 6**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** 48/8=6 byte।
+
+#### Step-by-step সমাধান
+
+```text
+48 bits / 8 bits per byte = 6 bytes
+```
+- **A option কেন ভুল:** IPv4 address byte count।
+- **B option কেন ভুল:** 64-bit address।
+- **C option কেন ভুল:** Bit count, byte নয়।
+- **D option:** এটি সঠিক উত্তর।
+- **Related Concept:** MAC সাধারণ hex pair ছয়টি।
+- **মনে রাখার টিপস:** Bits ÷ 8।
+
+---
+
+## প্রশ্ন 1023 | Topic: Computer Networking > Data Link Layer II | Difficulty: Hard | Type: Theory
+
+Q. একটি system বা scenario-তে `Shared half-duplex Ethernet-এ carrier sense, transmit, collision detect ও backoff protocol।`—এখানে কোন concept প্রযোজ্য?
+
+A) CSMA/CD
+B) Spanning Tree Protocol
+C) VLAN
+D) Broadcast Address
+
+**সঠিক উত্তর: A) CSMA/CD**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Shared half-duplex Ethernet-এ carrier sense, transmit, collision detect ও backoff protocol।
+- **A option:** এটি সঠিক উত্তর।
+- **B option কেন ভুল:** `Spanning Tree Protocol` বলতে Layer-2 redundant link-এর loop বন্ধ করতে logical tree ও blocked port নির্বাচন। বোঝায়; প্রশ্নের বর্ণনা `CSMA/CD`-এর।
+- **C option কেন ভুল:** `VLAN` বলতে এক physical switch infrastructure-এ logically পৃথক broadcast domain। বোঝায়; প্রশ্নের বর্ণনা `CSMA/CD`-এর।
+- **D option কেন ভুল:** `Broadcast Address` বলতে সব 48 bit 1 হলে Ethernet broadcast destination। বোঝায়; প্রশ্নের বর্ণনা `CSMA/CD`-এর।
+- **Related Concept:** Switched full-duplex-এ প্রয়োজন নেই।
+- **মনে রাখার টিপস:** Detect collision on shared wire।
+
+---
+
+## প্রশ্ন 1024 | Topic: Computer Networking > Data Link Layer II | Difficulty: Medium | Type: Theory
+
+Q. নিচের বর্ণনাটি কোন ধারণাকে নির্দেশ করে?
+
+`Wireless LAN-এ collision avoid করতে random backoff, optional RTS/CTS ও ACK ব্যবহার।`
+
+A) MAC Address
+B) CSMA/CA
+C) CSMA/CD
+D) Access Port
+
+**সঠিক উত্তর: B) CSMA/CA**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Wireless LAN-এ collision avoid করতে random backoff, optional RTS/CTS ও ACK ব্যবহার।
+- **A option কেন ভুল:** `MAC Address` বলতে Data-link interface identifier, সাধারণত 48-bit Ethernet address। বোঝায়; প্রশ্নের বর্ণনা `CSMA/CA`-এর।
+- **B option:** এটি সঠিক উত্তর।
+- **C option কেন ভুল:** `CSMA/CD` বলতে Shared half-duplex Ethernet-এ carrier sense, transmit, collision detect ও backoff protocol। বোঝায়; প্রশ্নের বর্ণনা `CSMA/CA`-এর।
+- **D option কেন ভুল:** `Access Port` বলতে সাধারণত একটি VLAN-এর untagged endpoint traffic বহন করে। বোঝায়; প্রশ্নের বর্ণনা `CSMA/CA`-এর।
+- **Related Concept:** Collision directly detect কঠিন।
+- **মনে রাখার টিপস:** Avoid wireless collision।
+
+---
+
+## প্রশ্ন 1025 | Topic: Computer Networking > Data Link Layer II | Difficulty: Easy | Type: Theory
+
+Q. `Ethernet Frame` সম্পর্কে কোন statement সঠিক?
+
+A) Data-link interface identifier, সাধারণত 48-bit Ethernet address।
+B) Shared half-duplex Ethernet-এ carrier sense, transmit, collision detect ও backoff protocol।
+C) এক link-এ multiple VLAN frame tagসহ বহন করে।
+D) Destination/source MAC, type/length, payload ও FCSসহ layer-2 PDU।
+
+**সঠিক উত্তর: D) Destination/source MAC, type/length, payload ও FCSসহ layer-2 PDU।**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Destination/source MAC, type/length, payload ও FCSসহ layer-2 PDU।
+- **A option কেন ভুল:** এই statementটি `MAC Address` ধারণাকে বর্ণনা করে; `Ethernet Frame`-কে নয়।
+- **B option কেন ভুল:** এই statementটি `CSMA/CD` ধারণাকে বর্ণনা করে; `Ethernet Frame`-কে নয়।
+- **C option কেন ভুল:** এই statementটি `Trunk Link` ধারণাকে বর্ণনা করে; `Ethernet Frame`-কে নয়।
+- **D option:** এটি সঠিক উত্তর।
+- **Related Concept:** Preamble physical framingে সাহায্য করে।
+- **মনে রাখার টিপস:** LAN frame format।
+
+---
+
+## প্রশ্ন 1026 | Topic: Computer Networking > Data Link Layer II | Difficulty: Easy | Type: Tracing
+
+Q. Ethernet broadcast MAC কোনটি?
+
+A) 00:00:00:00:00:00
+B) FF:00:00:00:00:00
+C) 01:00:5E:00:00:00
+D) FF:FF:FF:FF:FF:FF
+
+**সঠিক উত্তর: D) FF:FF:FF:FF:FF:FF**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** সব bit 1 address broadcast।
+
+#### Step-by-step সমাধান
+
+```text
+Each byte FF = 11111111
+6 bytes all ones
+Broadcast = FF:FF:FF:FF:FF:FF
+```
+- **A option কেন ভুল:** All-zero unspecified/reserved context।
+- **B option কেন ভুল:** সব bit1 নয়।
+- **C option কেন ভুল:** IPv4 multicast mapping range।
+- **D option:** এটি সঠিক উত্তর।
+- **Related Concept:** Broadcast frame VLAN-এর মধ্যে flood হয়।
+- **মনে রাখার টিপস:** সব hex pair FF।
+
+---
+
+## প্রশ্ন 1027 | Topic: Computer Networking > Data Link Layer II | Difficulty: Medium | Type: Calculation
+
+Q. এক switch-এ VLAN 10 ও VLAN 20 configured। তারা সাধারণত কয়টি broadcast domain তৈরি করে?
+
+A) 1
+B) 2
+C) 10
+D) 20
+
+**সঠিক উত্তর: B) 2**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** প্রতি VLAN logical broadcast domain।
+
+#### Step-by-step সমাধান
+
+```text
+Configured VLANs={10,20}
+Distinct VLAN count=2
+Broadcast domains=2
+```
+- **A option কেন ভুল:** VLAN separation উপেক্ষা।
+- **B option:** এটি সঠিক উত্তর।
+- **C option কেন ভুল:** VLAN ID-কে count ধরা।
+- **D option কেন ভুল:** Highest VLAN ID count নয়।
+- **Related Concept:** Inter-VLAN communication-এর জন্য routing দরকার।
+- **মনে রাখার টিপস:** One VLAN, one broadcast domain।
+
+---
+
+## প্রশ্ন 1028 | Topic: Computer Networking > Data Link Layer II | Difficulty: Medium | Type: Theory
+
+Q. `Trunk Link` সম্পর্কে কোন statement সঠিক?
+
+A) এক link-এ multiple VLAN frame tagসহ বহন করে।
+B) এক physical switch infrastructure-এ logically পৃথক broadcast domain।
+C) সাধারণত একটি VLAN-এর untagged endpoint traffic বহন করে।
+D) Layer-2 redundant link-এর loop বন্ধ করতে logical tree ও blocked port নির্বাচন।
+
+**সঠিক উত্তর: A) এক link-এ multiple VLAN frame tagসহ বহন করে।**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** এক link-এ multiple VLAN frame tagসহ বহন করে।
+- **A option:** এটি সঠিক উত্তর।
+- **B option কেন ভুল:** এই statementটি `VLAN` ধারণাকে বর্ণনা করে; `Trunk Link`-কে নয়।
+- **C option কেন ভুল:** এই statementটি `Access Port` ধারণাকে বর্ণনা করে; `Trunk Link`-কে নয়।
+- **D option কেন ভুল:** এই statementটি `Spanning Tree Protocol` ধারণাকে বর্ণনা করে; `Trunk Link`-কে নয়।
+- **Related Concept:** Switch-to-switch বা switch-router link।
+- **মনে রাখার টিপস:** Carries many VLANs।
+
+---
+
+## প্রশ্ন 1029 | Topic: Computer Networking > Data Link Layer II | Difficulty: Medium | Type: Calculation
+
+Q. চার switch port square loop-এ যুক্ত এবং STP loop-free tree রাখতে একটি redundant link logically block করে। Active forwarding link কত থাকবে?
+
+A) 3
+B) 2
+C) 4
+D) 5
+
+**সঠিক উত্তর: A) 3**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** চার node connect করতে spanning tree edge n−1=3।
+
+#### Step-by-step সমাধান
+
+```text
+Switch nodes=4
+Tree links=4-1=3
+```
+- **A option:** এটি সঠিক উত্তর।
+- **B option কেন ভুল:** সব node connected থাকবে না।
+- **C option কেন ভুল:** Cycle থাকবে।
+- **D option কেন ভুল:** Physical link-এর চেয়ে বেশি।
+- **Related Concept:** STP active topology spanning tree।
+- **মনে রাখার টিপস:** n switch node → n−1 tree links।
+
+---
+
+## প্রশ্ন 1030 | Topic: Computer Networking > Data Link Layer II | Difficulty: Medium | Type: Theory
+
+Q. নিচের বর্ণনাটি কোন ধারণাকে নির্দেশ করে?
+
+`Layer-2 redundant link-এর loop বন্ধ করতে logical tree ও blocked port নির্বাচন।`
+
+A) Trunk Link
+B) Spanning Tree Protocol
+C) Ethernet
+D) MAC Address
+
+**সঠিক উত্তর: B) Spanning Tree Protocol**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Layer-2 redundant link-এর loop বন্ধ করতে logical tree ও blocked port নির্বাচন।
+- **A option কেন ভুল:** `Trunk Link` বলতে এক link-এ multiple VLAN frame tagসহ বহন করে। বোঝায়; প্রশ্নের বর্ণনা `Spanning Tree Protocol`-এর।
+- **B option:** এটি সঠিক উত্তর।
+- **C option কেন ভুল:** `Ethernet` বলতে IEEE 802.3 family-এর LAN technology যা frame ও MAC addressing ব্যবহার করে। বোঝায়; প্রশ্নের বর্ণনা `Spanning Tree Protocol`-এর।
+- **D option কেন ভুল:** `MAC Address` বলতে Data-link interface identifier, সাধারণত 48-bit Ethernet address। বোঝায়; প্রশ্নের বর্ণনা `Spanning Tree Protocol`-এর।
+- **Related Concept:** Broadcast storm এড়ায়।
+- **মনে রাখার টিপস:** Prevent switching loops।
+
+---
+
+
+# Chapter Theory 93: IPv4 Addressing এবং Basic Subnetting
+
+## বিস্তারিত Theory Note
+
+IPv4 address interface-এর logical identifier। Subnet mask/prefix network অংশ নির্ধারণ করে; host destination প্রথমে নিজের subnet-এর সঙ্গে তুলনা করে। Local হলে ARP দিয়ে destination MAC খোঁজে, remote হলে default gateway-এর MAC খোঁজে।
+
+Subnet calculation-এর নিরাপদ পদ্ধতি:
+
+```text
+Host bits      = 32 - prefix
+Total address  = 2^(host bits)
+Block size     = 256 - interesting mask octet
+Network        = block boundary
+Broadcast      = next boundary - 1
+```
+
+Traditional subnet-এ network ও broadcast hostকে assign করা হয় না। `/31` point-to-point এবং `/32` host route special case।
+
+## মূল ধারণার মানচিত্র
+
+- **IPv4 Address:** 32-bit logical network-layer address, dotted-decimal চার octet-এ প্রকাশ।
+- **Subnet Mask:** Prefix bit 1 ও host bit 0 দিয়ে network boundary প্রকাশ।
+- **CIDR Prefix:** `/n` notation প্রথম n bit network prefix নির্দেশ করে।
+- **Network Address:** Subnet-এর সব host bit 0 করা address।
+- **Directed Broadcast:** Subnet-এর সব host bit 1 করা address।
+- **Usable Host Address:** Traditional subnet-এ network ও broadcast বাদে host address।
+- **Private IPv4:** RFC1918 internal-use range যা public Internet-এ globally routed নয়।
+- **Loopback Address:** নিজ host-এর network stack test করার address range 127/8।
+- **APIPA:** DHCP failure-এ IPv4 link-local 169.254/16 address self-assign হতে পারে।
+- **Default Gateway:** Remote subnet destination-এর packet যে local router next hop-এ পাঠানো হয়।
+
+## পরীক্ষায় গুরুত্বপূর্ণ সংযোগ
+
+- Definition, purpose, limitation ও application—চার দিক থেকে concept চিনুন।
+- Calculation/Tracing প্রশ্নে Formula → Given Data → Substitution → State Update → Final Answer অনুসরণ করুন।
+- কাছাকাছি term-এর পার্থক্য option analysis থেকে পুনরাবৃত্তি করুন।
+
+---
+
+# MCQ Practice: IPv4 Addressing এবং Basic Subnetting
+
+## প্রশ্ন 1031 | Topic: Computer Networking > Network Layer I | Difficulty: Medium | Type: Calculation
+
+Q. IPv4 address 32 bit হলে octet কতটি?
+
+A) 4
+B) 2
+C) 6
+D) 8
+
+**সঠিক উত্তর: A) 4**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** প্রতি octet 8 bit; 32/8=4।
+
+#### Step-by-step সমাধান
+
+```text
+32 bits / 8 bits per octet = 4 octets
+```
+- **A option:** এটি সঠিক উত্তর।
+- **B option কেন ভুল:** 16-bit address।
+- **C option কেন ভুল:** 48-bit MAC-এর byte count।
+- **D option কেন ভুল:** 64-bit।
+- **Related Concept:** Dotted-decimal চারটি 0–255 number।
+- **মনে রাখার টিপস:** 32÷8।
+
+---
+
+## প্রশ্ন 1032 | Topic: Computer Networking > Network Layer I | Difficulty: Easy | Type: Calculation
+
+Q. Subnet mask 255.255.255.0-এর CIDR prefix কী?
+
+A) /24
+B) /8
+C) /16
+D) /32
+
+**সঠিক উত্তর: A) /24**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** প্রথম তিন octet-এর 24 bit 1।
+
+#### Step-by-step সমাধান
+
+```text
+255 = 11111111
+Mask has three 255 octets
+Network bits = 3 x 8 = 24
+```
+- **A option:** এটি সঠিক উত্তর।
+- **B option কেন ভুল:** শুধু প্রথম octet।
+- **C option কেন ভুল:** দুই octet।
+- **D option কেন ভুল:** সব host bit নেই।
+- **Related Concept:** 255 octet = আটটি 1।
+- **মনে রাখার টিপস:** তিনটি 255 →24।
+
+---
+
+## প্রশ্ন 1033 | Topic: Computer Networking > Network Layer I | Difficulty: Medium | Type: Calculation
+
+Q. `192.168.10.77/24`-এর network address কী?
+
+A) 192.168.10.77
+B) 192.168.10.255
+C) 192.168.0.0
+D) 192.168.10.0
+
+**সঠিক উত্তর: D) 192.168.10.0**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** /24-এ শেষ octet host; host bit zero করলে .0।
+
+#### Step-by-step সমাধান
+
+```text
+IP   = 192.168.10.77
+Mask = 255.255.255.0
+AND  = 192.168.10.0
+```
+- **A option কেন ভুল:** Host address।
+- **B option কেন ভুল:** Broadcast।
+- **C option কেন ভুল:** /16 network।
+- **D option:** এটি সঠিক উত্তর।
+- **Related Concept:** Network = IP AND mask।
+- **মনে রাখার টিপস:** Host octet zero।
+
+---
+
+## প্রশ্ন 1034 | Topic: Computer Networking > Network Layer I | Difficulty: Easy | Type: Calculation
+
+Q. `192.168.10.77/24`-এর directed broadcast address কী?
+
+A) 192.168.10.0
+B) 192.168.10.1
+C) 192.168.10.254
+D) 192.168.10.255
+
+**সঠিক উত্তর: D) 192.168.10.255**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** /24-এর 8 host bit সব 1 করলে 255।
+
+#### Step-by-step সমাধান
+
+```text
+Host bits=8
+All host bits 1 = 255
+Broadcast=192.168.10.255
+```
+- **A option কেন ভুল:** Network address।
+- **B option কেন ভুল:** First usable।
+- **C option কেন ভুল:** Last usable।
+- **D option:** এটি সঠিক উত্তর।
+- **Related Concept:** Broadcast = host bits all one।
+- **মনে রাখার টিপস:** Subnet-এর last address।
+
+---
+
+## প্রশ্ন 1035 | Topic: Computer Networking > Network Layer I | Difficulty: Hard | Type: Calculation
+
+Q. `/27` subnet-এ মোট address কত?
+
+A) 16
+B) 30
+C) 64
+D) 32
+
+**সঠিক উত্তর: D) 32**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Host bit=32−27=5; total=2^5=32।
+
+#### Step-by-step সমাধান
+
+```text
+Host bits=32-27=5
+Total=2^5=32
+```
+- **A option কেন ভুল:** 4 host bit।
+- **B option কেন ভুল:** Traditional usable host count।
+- **C option কেন ভুল:** 6 host bit।
+- **D option:** এটি সঠিক উত্তর।
+- **Related Concept:** Total address-এ network/broadcastও থাকে।
+- **মনে রাখার টিপস:** 2^(32-prefix)।
+
+---
+
+## প্রশ্ন 1036 | Topic: Computer Networking > Network Layer I | Difficulty: Hard | Type: Calculation
+
+Q. Traditional IPv4 `/27` subnet-এ usable host address কত?
+
+A) 28
+B) 32
+C) 30
+D) 62
+
+**সঠিক উত্তর: C) 30**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Total32; network ও broadcast বাদে30।
+
+#### Step-by-step সমাধান
+
+```text
+Total=32
+Usable=32-2=30
+```
+- **A option কেন ভুল:** আরও দুই address বাদ।
+- **B option কেন ভুল:** Reserved দুই address বাদ হয়নি।
+- **C option:** এটি সঠিক উত্তর।
+- **D option কেন ভুল:** /26 usable।
+- **Related Concept:** /31 ও /32 বিশেষ case; সাধারণ LAN rule এখানে।
+- **মনে রাখার টিপস:** 2^h−2।
+
+---
+
+## প্রশ্ন 1037 | Topic: Computer Networking > Network Layer I | Difficulty: Medium | Type: Theory
+
+Q. নিচের বর্ণনাটি কোন ধারণাকে নির্দেশ করে?
+
+`RFC1918 internal-use range যা public Internet-এ globally routed নয়।`
+
+A) Loopback Address
+B) Network Address
+C) Private IPv4
+D) CIDR Prefix
+
+**সঠিক উত্তর: C) Private IPv4**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** RFC1918 internal-use range যা public Internet-এ globally routed নয়।
+- **A option কেন ভুল:** `Loopback Address` বলতে নিজ host-এর network stack test করার address range 127/8। বোঝায়; প্রশ্নের বর্ণনা `Private IPv4`-এর।
+- **B option কেন ভুল:** `Network Address` বলতে Subnet-এর সব host bit 0 করা address। বোঝায়; প্রশ্নের বর্ণনা `Private IPv4`-এর।
+- **C option:** এটি সঠিক উত্তর।
+- **D option কেন ভুল:** `CIDR Prefix` বলতে `/n` notation প্রথম n bit network prefix নির্দেশ করে। বোঝায়; প্রশ্নের বর্ণনা `Private IPv4`-এর।
+- **Related Concept:** 10/8,172.16/12,192.168/16।
+- **মনে রাখার টিপস:** Internal address ranges।
+
+---
+
+## প্রশ্ন 1038 | Topic: Computer Networking > Network Layer I | Difficulty: Hard | Type: Theory
+
+Q. `Loopback Address` সম্পর্কে কোন statement সঠিক?
+
+A) নিজ host-এর network stack test করার address range 127/8।
+B) `/n` notation প্রথম n bit network prefix নির্দেশ করে।
+C) RFC1918 internal-use range যা public Internet-এ globally routed নয়।
+D) Traditional subnet-এ network ও broadcast বাদে host address।
+
+**সঠিক উত্তর: A) নিজ host-এর network stack test করার address range 127/8।**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** নিজ host-এর network stack test করার address range 127/8।
+- **A option:** এটি সঠিক উত্তর।
+- **B option কেন ভুল:** এই statementটি `CIDR Prefix` ধারণাকে বর্ণনা করে; `Loopback Address`-কে নয়।
+- **C option কেন ভুল:** এই statementটি `Private IPv4` ধারণাকে বর্ণনা করে; `Loopback Address`-কে নয়।
+- **D option কেন ভুল:** এই statementটি `Usable Host Address` ধারণাকে বর্ণনা করে; `Loopback Address`-কে নয়।
+- **Related Concept:** 127.0.0.1 common।
+- **মনে রাখার টিপস:** Back to self।
+
+---
+
+## প্রশ্ন 1039 | Topic: Computer Networking > Network Layer I | Difficulty: Medium | Type: Theory
+
+Q. একটি system বা scenario-তে `DHCP failure-এ IPv4 link-local 169.254/16 address self-assign হতে পারে।`—এখানে কোন concept প্রযোজ্য?
+
+A) Loopback Address
+B) APIPA
+C) Private IPv4
+D) Directed Broadcast
+
+**সঠিক উত্তর: B) APIPA**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** DHCP failure-এ IPv4 link-local 169.254/16 address self-assign হতে পারে।
+- **A option কেন ভুল:** `Loopback Address` বলতে নিজ host-এর network stack test করার address range 127/8। বোঝায়; প্রশ্নের বর্ণনা `APIPA`-এর।
+- **B option:** এটি সঠিক উত্তর।
+- **C option কেন ভুল:** `Private IPv4` বলতে RFC1918 internal-use range যা public Internet-এ globally routed নয়। বোঝায়; প্রশ্নের বর্ণনা `APIPA`-এর।
+- **D option কেন ভুল:** `Directed Broadcast` বলতে Subnet-এর সব host bit 1 করা address। বোঝায়; প্রশ্নের বর্ণনা `APIPA`-এর।
+- **Related Concept:** Router পার হয় না।
+- **মনে রাখার টিপস:** Automatic link-local।
+
+---
+
+## প্রশ্ন 1040 | Topic: Computer Networking > Network Layer I | Difficulty: Easy | Type: Tracing
+
+Q. Host `10.1.2.3/24` থেকে destination `10.1.3.4`। Destination local subnet কি?
+
+A) হ্যাঁ
+B) শুধু broadcast হলে
+C) Mask ছাড়া সব local
+D) না; default gateway দরকার
+
+**সঠিক উত্তর: D) না; default gateway দরকার**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** /24-এ network 10.1.2.0 বনাম 10.1.3.0 ভিন্ন।
+
+#### Step-by-step সমাধান
+
+```text
+Source network=10.1.2.0/24
+Destination network=10.1.3.0/24
+Networks differ
+Send to default gateway
+```
+- **A option কেন ভুল:** তৃতীয় octet prefix-এর অংশ।
+- **B option কেন ভুল:** Destination ordinary host।
+- **C option কেন ভুল:** Maskই সিদ্ধান্ত দেয়।
+- **D option:** এটি সঠিক উত্তর।
+- **Related Concept:** Source ও destination network address compare করুন।
+- **মনে রাখার টিপস:** Prefix ভিন্ন হলে gateway।
+
+---
+
+
+# Chapter Theory 94: VLSM, CIDR, NAT, ARP, DHCP এবং ICMP
+
+## বিস্তারিত Theory Note
+
+VLSM address waste কমাতে requirement অনুযায়ী subnet size দেয়। Allocation-এর আগে সব requirement usable host থেকে prefix-এ convert করে largest block প্রথমে রাখলে overlap কমে। Summarization contiguous aligned blockকে aggregate করে, কিন্তু over-summary ভুল destination attract করতে পারে।
+
+Router longest-prefix match দিয়ে next hop বেছে। NAT address field পরিবর্তন করে; PAT transport port-ও বদলে বহু flow share করায়। ARP কেবল local link-এর next-hop MAC resolve করে—remote destination-এর MAC নয়।
+
+DHCP-এর common discovery flow:
+
+```text
+Discover → Offer → Request → Acknowledge
+```
+
+ICMP error/diagnostic message বহন করে; TTL routing loop অসীম হওয়া আটকায়।
+
+## মূল ধারণার মানচিত্র
+
+- **Subnetting:** এক address blockকে ছোট prefix block-এ ভাগ করা।
+- **VLSM:** এক parent block থেকে প্রয়োজন অনুযায়ী ভিন্ন prefix size-এর subnet allocation।
+- **Route Summarization:** Contiguous route blockকে এক shorter prefix advertisement-এ combine করা।
+- **Longest Prefix Match:** Destination address-এর সঙ্গে matching route-গুলোর মধ্যে সর্বাধিক prefix length route নির্বাচন।
+- **NAT:** Private/internal addressকে অন্য address representation-এ translate করা।
+- **PAT:** বহু internal connectionকে এক/few public IP-এর different port দিয়ে multiplex করা।
+- **ARP:** Local IPv4 next-hop IP address-এর corresponding MAC address resolve করে।
+- **DHCP:** Clientকে IP, mask, gateway, DNS ও lease dynamically দেয়।
+- **ICMP:** IP error report ও diagnostic control message বহন করে।
+- **TTL:** প্রতি router hop-এ decrement হওয়া IPv4 field; zero হলে packet drop।
+
+## পরীক্ষায় গুরুত্বপূর্ণ সংযোগ
+
+- Definition, purpose, limitation ও application—চার দিক থেকে concept চিনুন।
+- Calculation/Tracing প্রশ্নে Formula → Given Data → Substitution → State Update → Final Answer অনুসরণ করুন।
+- কাছাকাছি term-এর পার্থক্য option analysis থেকে পুনরাবৃত্তি করুন।
+
+---
+
+# MCQ Practice: VLSM, CIDR, NAT, ARP, DHCP এবং ICMP
+
+## প্রশ্ন 1041 | Topic: Computer Networking > Network Layer II | Difficulty: Medium | Type: Calculation
+
+Q. `192.168.1.0/24`-কে সমান 4 subnet-এ ভাগ করতে নতুন prefix কত?
+
+A) /25
+B) /27
+C) /26
+D) /28
+
+**সঠিক উত্তর: C) /26**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** 4 subnet-এর জন্য 2 bit borrow; /24+2=/26।
+
+#### Step-by-step সমাধান
+
+```text
+Original=/24
+Need subnets=4=2^2
+Borrow=2 bits
+New prefix=/26
+```
+- **A option কেন ভুল:** 2 subnet।
+- **B option কেন ভুল:** 8 subnet।
+- **C option:** এটি সঠিক উত্তর।
+- **D option কেন ভুল:** 16 subnet।
+- **Related Concept:** Subnets=2^borrowed bits।
+- **মনে রাখার টিপস:** 4=2², তাই দুই bit।
+
+---
+
+## প্রশ্ন 1042 | Topic: Computer Networking > Network Layer II | Difficulty: Medium | Type: Calculation
+
+Q. 60 usable host দরকার। Minimum traditional subnet prefix কোনটি?
+
+A) /25
+B) /27
+C) /28
+D) /26
+
+**সঠিক উত্তর: D) /26**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** /26-এ 6 host bit, total64, usable62; /27-এ30।
+
+#### Step-by-step সমাধান
+
+```text
+Need usable=60
+Need total>=62
+64=2^6 -> host bits6
+Prefix=32-6=/26
+```
+- **A option কেন ভুল:** কাজ করবে কিন্তু minimum-sized নয়।
+- **B option কেন ভুল:** শুধু30 usable।
+- **C option কেন ভুল:** 14 usable।
+- **D option:** এটি সঠিক উত্তর।
+- **Related Concept:** Requirement+2 cover করে smallest power of two।
+- **মনে রাখার টিপস:** 60+2=62, next power64।
+
+---
+
+## প্রশ্ন 1043 | Topic: Computer Networking > Network Layer II | Difficulty: Medium | Type: Calculation
+
+Q. Routes `10.0.0.0/24` ও `10.0.1.0/24` contiguous হলে summary কী?
+
+A) 10.0.0.0/22
+B) 10.0.0.0/24
+C) 10.0.0.0/23
+D) 10.0.1.0/23
+
+**সঠিক উত্তর: C) 10.0.0.0/23**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** দুই adjacent /24 share first23 bit।
+
+#### Step-by-step সমাধান
+
+```text
+10.0.0.0/24 covers third octet 0
+10.0.1.0/24 covers third octet 1
+Combined block size=2 x 256
+Summary=10.0.0.0/23
+```
+- **A option কেন ভুল:** চার /24 cover করে।
+- **B option কেন ভুল:** দ্বিতীয় route cover নয়।
+- **C option:** এটি সঠিক উত্তর।
+- **D option কেন ভুল:** Proper /23 network boundary even third octet থেকে শুরু।
+- **Related Concept:** Summary boundary alignment জরুরি।
+- **মনে রাখার টিপস:** দুই /24 → এক /23।
+
+---
+
+## প্রশ্ন 1044 | Topic: Computer Networking > Network Layer II | Difficulty: Easy | Type: Tracing
+
+Q. Routing table-এ `0.0.0.0/0`, `10.0.0.0/8`, `10.1.0.0/16`। Destination `10.1.2.3` কোন route নেবে?
+
+A) 0.0.0.0/0
+B) 10.0.0.0/8
+C) 10.1.0.0/16
+D) কোনোটিই নয়
+
+**সঠিক উত্তর: C) 10.1.0.0/16**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** তিনটি match করলেও /16 সবচেয়ে specific।
+
+#### Step-by-step সমাধান
+
+```text
+Destination=10.1.2.3
+Matches /0, /8, /16
+Longest prefix=/16
+```
+- **A option কেন ভুল:** Default least specific।
+- **B option কেন ভুল:** Match করে কিন্তু /16-এর চেয়ে কম specific।
+- **C option:** এটি সঠিক উত্তর।
+- **D option কেন ভুল:** Multiple match আছে।
+- **Related Concept:** Longest prefix match metric-এর আগে route specificity ঠিক করে।
+- **মনে রাখার টিপস:** সবচেয়ে বড় /n।
+
+---
+
+## প্রশ্ন 1045 | Topic: Computer Networking > Network Layer II | Difficulty: Hard | Type: Theory
+
+Q. `NAT` সম্পর্কে কোন statement সঠিক?
+
+A) Local IPv4 next-hop IP address-এর corresponding MAC address resolve করে।
+B) Private/internal addressকে অন্য address representation-এ translate করা।
+C) Clientকে IP, mask, gateway, DNS ও lease dynamically দেয়।
+D) Destination address-এর সঙ্গে matching route-গুলোর মধ্যে সর্বাধিক prefix length route নির্বাচন।
+
+**সঠিক উত্তর: B) Private/internal addressকে অন্য address representation-এ translate করা।**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Private/internal addressকে অন্য address representation-এ translate করা।
+- **A option কেন ভুল:** এই statementটি `ARP` ধারণাকে বর্ণনা করে; `NAT`-কে নয়।
+- **B option:** এটি সঠিক উত্তর।
+- **C option কেন ভুল:** এই statementটি `DHCP` ধারণাকে বর্ণনা করে; `NAT`-কে নয়।
+- **D option কেন ভুল:** এই statementটি `Longest Prefix Match` ধারণাকে বর্ণনা করে; `NAT`-কে নয়।
+- **Related Concept:** Address conservation ও policy; security boundary নয় নিজে।
+- **মনে রাখার টিপস:** Translate addresses।
+
+---
+
+## প্রশ্ন 1046 | Topic: Computer Networking > Network Layer II | Difficulty: Medium | Type: Calculation
+
+Q. এক public IP-তে PAT 500 simultaneous TCP connection map করেছে। Minimum distinct public source port mapping কত প্রয়োজন?
+
+A) 1
+B) 500
+C) 2
+D) 65,535
+
+**সঠিক উত্তর: B) 500**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** প্রতিটি simultaneous translated flow uniquely distinguish করতে distinct mapping দরকার।
+
+#### Step-by-step সমাধান
+
+```text
+Concurrent flows=500
+Unique translated mappings needed=500
+```
+- **A option কেন ভুল:** সব flow collide করবে।
+- **B option:** এটি সঠিক উত্তর।
+- **C option কেন ভুল:** শুধু দুই flow।
+- **D option কেন ভুল:** Port space upper range, exact minimum নয়।
+- **Related Concept:** Mapping সাধারণত protocol+inside tuple+translated port দিয়ে unique।
+- **মনে রাখার টিপস:** এক flow, এক unique mapping।
+
+---
+
+## প্রশ্ন 1047 | Topic: Computer Networking > Network Layer II | Difficulty: Medium | Type: Theory
+
+Q. নিচের বর্ণনাটি কোন ধারণাকে নির্দেশ করে?
+
+`Local IPv4 next-hop IP address-এর corresponding MAC address resolve করে।`
+
+A) PAT
+B) Subnetting
+C) ARP
+D) TTL
+
+**সঠিক উত্তর: C) ARP**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Local IPv4 next-hop IP address-এর corresponding MAC address resolve করে।
+- **A option কেন ভুল:** `PAT` বলতে বহু internal connectionকে এক/few public IP-এর different port দিয়ে multiplex করা। বোঝায়; প্রশ্নের বর্ণনা `ARP`-এর।
+- **B option কেন ভুল:** `Subnetting` বলতে এক address blockকে ছোট prefix block-এ ভাগ করা। বোঝায়; প্রশ্নের বর্ণনা `ARP`-এর।
+- **C option:** এটি সঠিক উত্তর।
+- **D option কেন ভুল:** `TTL` বলতে প্রতি router hop-এ decrement হওয়া IPv4 field; zero হলে packet drop। বোঝায়; প্রশ্নের বর্ণনা `ARP`-এর।
+- **Related Concept:** Broadcast request, unicast reply common।
+- **মনে রাখার টিপস:** IP to MAC on LAN।
+
+---
+
+## প্রশ্ন 1048 | Topic: Computer Networking > Network Layer II | Difficulty: Medium | Type: Theory
+
+Q. `DHCP` সম্পর্কে কোন statement সঠিক?
+
+A) Clientকে IP, mask, gateway, DNS ও lease dynamically দেয়।
+B) এক address blockকে ছোট prefix block-এ ভাগ করা।
+C) IP error report ও diagnostic control message বহন করে।
+D) Local IPv4 next-hop IP address-এর corresponding MAC address resolve করে।
+
+**সঠিক উত্তর: A) Clientকে IP, mask, gateway, DNS ও lease dynamically দেয়।**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Clientকে IP, mask, gateway, DNS ও lease dynamically দেয়।
+- **A option:** এটি সঠিক উত্তর।
+- **B option কেন ভুল:** এই statementটি `Subnetting` ধারণাকে বর্ণনা করে; `DHCP`-কে নয়।
+- **C option কেন ভুল:** এই statementটি `ICMP` ধারণাকে বর্ণনা করে; `DHCP`-কে নয়।
+- **D option কেন ভুল:** এই statementটি `ARP` ধারণাকে বর্ণনা করে; `DHCP`-কে নয়।
+- **Related Concept:** DORA flow common।
+- **মনে রাখার টিপস:** Automatic configuration।
+
+---
+
+## প্রশ্ন 1049 | Topic: Computer Networking > Network Layer II | Difficulty: Hard | Type: Theory
+
+Q. একটি system বা scenario-তে `IP error report ও diagnostic control message বহন করে।`—এখানে কোন concept প্রযোজ্য?
+
+A) TTL
+B) Route Summarization
+C) ICMP
+D) PAT
+
+**সঠিক উত্তর: C) ICMP**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** IP error report ও diagnostic control message বহন করে।
+- **A option কেন ভুল:** `TTL` বলতে প্রতি router hop-এ decrement হওয়া IPv4 field; zero হলে packet drop। বোঝায়; প্রশ্নের বর্ণনা `ICMP`-এর।
+- **B option কেন ভুল:** `Route Summarization` বলতে Contiguous route blockকে এক shorter prefix advertisement-এ combine করা। বোঝায়; প্রশ্নের বর্ণনা `ICMP`-এর।
+- **C option:** এটি সঠিক উত্তর।
+- **D option কেন ভুল:** `PAT` বলতে বহু internal connectionকে এক/few public IP-এর different port দিয়ে multiplex করা। বোঝায়; প্রশ্নের বর্ণনা `ICMP`-এর।
+- **Related Concept:** Ping echo request/reply।
+- **মনে রাখার টিপস:** Network control messages।
+
+---
+
+## প্রশ্ন 1050 | Topic: Computer Networking > Network Layer II | Difficulty: Medium | Type: Tracing
+
+Q. Packet TTL=3 এবং তিনটি router পার হয়। প্রতিটি hop-এ 1 কমলে তৃতীয় router-এ কী হবে?
+
+A) TTL 3-ই থাকবে
+B) TTL 1 হয়ে deliver
+C) TTL 0 হয়ে drop
+D) TTL negative হবে
+
+**সঠিক উত্তর: C) TTL 0 হয়ে drop**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Hop1:2, Hop2:1, Hop3:0; router drop করে ICMP Time Exceeded পাঠাতে পারে।
+
+#### Step-by-step সমাধান
+
+```text
+Start TTL=3
+After router1=2
+After router2=1
+After router3=0 -> drop
+```
+- **A option কেন ভুল:** TTL decrement হয়।
+- **B option কেন ভুল:** দুই hop-এর result।
+- **C option:** এটি সঠিক উত্তর।
+- **D option কেন ভুল:** Zero-তেই drop।
+- **Related Concept:** Traceroute TTL expiration ব্যবহার করে।
+- **মনে রাখার টিপস:** প্রতি router এক কম।
+
+---
+
+
+# Chapter Theory 95: Routing Concepts, RIP, OSPF এবং BGP
+
+## বিস্তারিত Theory Note
+
+Forwarding per-packet data plane operation; routing control plane path information তৈরি করে। প্রথমে longest prefix match, তারপর একই prefix-এর candidate route source/metric policy দিয়ে বাছাই হয়।
+
+Distance-vector neighbour knowledge ব্যবহার করে এবং count-to-infinity risk থাকে। Link-state protocol topology database flood করে SPF চালায়। OSPF একটি AS-এর ভিতরে, BGP AS-এর মধ্যে policy, prefix ও path attribute দিয়ে route নির্বাচন করে।
+
+Convergence speed, loop prevention, scalability ও policy routing protocol design-এর মূল বিষয়।
+
+## মূল ধারণার মানচিত্র
+
+- **Routing Table:** Destination prefix, next hop, interface, metric ও source/protocolসহ forwarding decision data।
+- **Static Route:** Administrator manually configure করা route।
+- **Dynamic Routing:** Router protocol দিয়ে topology/reachability exchange ও route adapt করে।
+- **Distance Vector:** Neighbourকে destination distance/vector advertise করে; Bellman-Ford principle।
+- **Link State:** প্রতিটি router link state flood করে topology map বানায় এবং SPF চালায়।
+- **RIP:** Hop count metric distance-vector IGP; 15 hop reachable maximum।
+- **OSPF:** Link-state interior gateway protocol, area hierarchy ও cost metric ব্যবহার।
+- **BGP:** Autonomous System-এর মধ্যে policy-based path-vector routing protocol।
+- **Administrative Distance:** একই prefix বিভিন্ন routing source থেকে এলে source trust preference-এর local value।
+- **Convergence:** Topology change-এর পরে routers-এর consistent correct route state-এ পৌঁছানো।
+
+## পরীক্ষায় গুরুত্বপূর্ণ সংযোগ
+
+- Definition, purpose, limitation ও application—চার দিক থেকে concept চিনুন।
+- Calculation/Tracing প্রশ্নে Formula → Given Data → Substitution → State Update → Final Answer অনুসরণ করুন।
+- কাছাকাছি term-এর পার্থক্য option analysis থেকে পুনরাবৃত্তি করুন।
+
+---
+
+# MCQ Practice: Routing Concepts, RIP, OSPF এবং BGP
+
+## প্রশ্ন 1051 | Topic: Computer Networking > Routing | Difficulty: Hard | Type: Calculation
+
+Q. Routing table-এ 120 prefix entry এবং প্রতিটি entry 64 byte হলে raw table storage কত byte?
+
+A) 7,680
+B) 1,920
+C) 64,000
+D) 120,064
+
+**সঠিক উত্তর: A) 7,680**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** 120×64=7680 byte।
+
+#### Step-by-step সমাধান
+
+```text
+120 x 64 = 7,680 bytes
+```
+- **A option:** এটি সঠিক উত্তর।
+- **B option কেন ভুল:** 16 byte/entry ধরে।
+- **C option কেন ভুল:** 1000 entry ধরে।
+- **D option কেন ভুল:** যোগ করা হয়েছে।
+- **Related Concept:** Real route memory data structure overhead বেশি হতে পারে।
+- **মনে রাখার টিপস:** Entries × bytes।
+
+---
+
+## প্রশ্ন 1052 | Topic: Computer Networking > Routing | Difficulty: Hard | Type: Theory
+
+Q. `Static Route` সম্পর্কে কোন statement সঠিক?
+
+A) Topology change-এর পরে routers-এর consistent correct route state-এ পৌঁছানো।
+B) Neighbourকে destination distance/vector advertise করে; Bellman-Ford principle।
+C) Administrator manually configure করা route।
+D) Hop count metric distance-vector IGP; 15 hop reachable maximum।
+
+**সঠিক উত্তর: C) Administrator manually configure করা route।**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Administrator manually configure করা route।
+- **A option কেন ভুল:** এই statementটি `Convergence` ধারণাকে বর্ণনা করে; `Static Route`-কে নয়।
+- **B option কেন ভুল:** এই statementটি `Distance Vector` ধারণাকে বর্ণনা করে; `Static Route`-কে নয়।
+- **C option:** এটি সঠিক উত্তর।
+- **D option কেন ভুল:** এই statementটি `RIP` ধারণাকে বর্ণনা করে; `Static Route`-কে নয়।
+- **Related Concept:** Predictable, auto adaptation নেই।
+- **মনে রাখার টিপস:** Manually defined path।
+
+---
+
+## প্রশ্ন 1053 | Topic: Computer Networking > Routing | Difficulty: Hard | Type: Theory
+
+Q. একটি system বা scenario-তে `Router protocol দিয়ে topology/reachability exchange ও route adapt করে।`—এখানে কোন concept প্রযোজ্য?
+
+A) Dynamic Routing
+B) RIP
+C) Link State
+D) BGP
+
+**সঠিক উত্তর: A) Dynamic Routing**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Router protocol দিয়ে topology/reachability exchange ও route adapt করে।
+- **A option:** এটি সঠিক উত্তর।
+- **B option কেন ভুল:** `RIP` বলতে Hop count metric distance-vector IGP; 15 hop reachable maximum। বোঝায়; প্রশ্নের বর্ণনা `Dynamic Routing`-এর।
+- **C option কেন ভুল:** `Link State` বলতে প্রতিটি router link state flood করে topology map বানায় এবং SPF চালায়। বোঝায়; প্রশ্নের বর্ণনা `Dynamic Routing`-এর।
+- **D option কেন ভুল:** `BGP` বলতে Autonomous System-এর মধ্যে policy-based path-vector routing protocol। বোঝায়; প্রশ্নের বর্ণনা `Dynamic Routing`-এর।
+- **Related Concept:** RIP, OSPF, BGP।
+- **মনে রাখার টিপস:** Routes learned automatically।
+
+---
+
+## প্রশ্ন 1054 | Topic: Computer Networking > Routing | Difficulty: Hard | Type: Theory
+
+Q. নিচের বর্ণনাটি কোন ধারণাকে নির্দেশ করে?
+
+`Neighbourকে destination distance/vector advertise করে; Bellman-Ford principle।`
+
+A) Dynamic Routing
+B) Routing Table
+C) Convergence
+D) Distance Vector
+
+**সঠিক উত্তর: D) Distance Vector**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Neighbourকে destination distance/vector advertise করে; Bellman-Ford principle।
+- **A option কেন ভুল:** `Dynamic Routing` বলতে Router protocol দিয়ে topology/reachability exchange ও route adapt করে। বোঝায়; প্রশ্নের বর্ণনা `Distance Vector`-এর।
+- **B option কেন ভুল:** `Routing Table` বলতে Destination prefix, next hop, interface, metric ও source/protocolসহ forwarding decision data। বোঝায়; প্রশ্নের বর্ণনা `Distance Vector`-এর।
+- **C option কেন ভুল:** `Convergence` বলতে Topology change-এর পরে routers-এর consistent correct route state-এ পৌঁছানো। বোঝায়; প্রশ্নের বর্ণনা `Distance Vector`-এর।
+- **D option:** এটি সঠিক উত্তর।
+- **Related Concept:** RIP example।
+- **মনে রাখার টিপস:** Learn distance from neighbours।
+
+---
+
+## প্রশ্ন 1055 | Topic: Computer Networking > Routing | Difficulty: Easy | Type: Theory
+
+Q. `Link State` সম্পর্কে কোন statement সঠিক?
+
+A) Autonomous System-এর মধ্যে policy-based path-vector routing protocol।
+B) Administrator manually configure করা route।
+C) Topology change-এর পরে routers-এর consistent correct route state-এ পৌঁছানো।
+D) প্রতিটি router link state flood করে topology map বানায় এবং SPF চালায়।
+
+**সঠিক উত্তর: D) প্রতিটি router link state flood করে topology map বানায় এবং SPF চালায়।**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** প্রতিটি router link state flood করে topology map বানায় এবং SPF চালায়।
+- **A option কেন ভুল:** এই statementটি `BGP` ধারণাকে বর্ণনা করে; `Link State`-কে নয়।
+- **B option কেন ভুল:** এই statementটি `Static Route` ধারণাকে বর্ণনা করে; `Link State`-কে নয়।
+- **C option কেন ভুল:** এই statementটি `Convergence` ধারণাকে বর্ণনা করে; `Link State`-কে নয়।
+- **D option:** এটি সঠিক উত্তর।
+- **Related Concept:** OSPF example।
+- **মনে রাখার টিপস:** Build full topology map।
+
+---
+
+## প্রশ্ন 1056 | Topic: Computer Networking > Routing | Difficulty: Medium | Type: Tracing
+
+Q. RIP-এ route hop count 15 এবং আরও এক router দূরে destination হলে advertised metric কীভাবে বিবেচিত?
+
+A) 16, অর্থাৎ unreachable
+B) 15-ই reachable
+C) 14
+D) 0
+
+**সঠিক উত্তর: A) 16, অর্থাৎ unreachable**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** RIP metric 16 infinity/unreachable।
+
+#### Step-by-step সমাধান
+
+```text
+Current metric=15
+One more hop=16
+RIP interprets16 as unreachable
+```
+- **A option:** এটি সঠিক উত্তর।
+- **B option কেন ভুল:** আরও hop যোগে16 হয়।
+- **C option কেন ভুল:** Hop কমানো নয়।
+- **D option কেন ভুল:** Direct/self metric নয়।
+- **Related Concept:** RIP network diameter সীমিত।
+- **মনে রাখার টিপস:** 15 max reachable, 16 infinity।
+
+---
+
+## প্রশ্ন 1057 | Topic: Computer Networking > Routing | Difficulty: Medium | Type: Calculation
+
+Q. OSPF path A-এর link cost 10+5+20 এবং path B-এর cost 15+8। কোন path selected?
+
+A) Path B, cost23
+B) Path A, cost35
+C) দুটো equal
+D) Hop কম বলে A
+
+**সঠিক উত্তর: A) Path B, cost23**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** OSPF total additive cost তুলনা করে; 23<35।
+
+#### Step-by-step সমাধান
+
+```text
+Path A=10+5+20=35
+Path B=15+8=23
+23<35 -> Path B
+```
+- **A option:** এটি সঠিক উত্তর।
+- **B option কেন ভুল:** Cost বেশি।
+- **C option কেন ভুল:** 35≠23।
+- **D option কেন ভুল:** Metric link cost; শুধু hop count নয়।
+- **Related Concept:** Shortest path additive metric।
+- **মনে রাখার টিপস:** প্রতি path cost যোগ করে ছোটটি।
+
+---
+
+## প্রশ্ন 1058 | Topic: Computer Networking > Routing | Difficulty: Medium | Type: Theory
+
+Q. `BGP` সম্পর্কে কোন statement সঠিক?
+
+A) Administrator manually configure করা route।
+B) Destination prefix, next hop, interface, metric ও source/protocolসহ forwarding decision data।
+C) Autonomous System-এর মধ্যে policy-based path-vector routing protocol।
+D) Link-state interior gateway protocol, area hierarchy ও cost metric ব্যবহার।
+
+**সঠিক উত্তর: C) Autonomous System-এর মধ্যে policy-based path-vector routing protocol।**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Autonomous System-এর মধ্যে policy-based path-vector routing protocol।
+- **A option কেন ভুল:** এই statementটি `Static Route` ধারণাকে বর্ণনা করে; `BGP`-কে নয়।
+- **B option কেন ভুল:** এই statementটি `Routing Table` ধারণাকে বর্ণনা করে; `BGP`-কে নয়।
+- **C option:** এটি সঠিক উত্তর।
+- **D option কেন ভুল:** এই statementটি `OSPF` ধারণাকে বর্ণনা করে; `BGP`-কে নয়।
+- **Related Concept:** Internet interdomain routing।
+- **মনে রাখার টিপস:** Routes between ASes।
+
+---
+
+## প্রশ্ন 1059 | Topic: Computer Networking > Routing | Difficulty: Easy | Type: Tracing
+
+Q. এক prefix static route এবং dynamic route দুটোতে আছে। Static source-এর administrative distance 1, dynamic-এর 110; prefix length equal। কোনটি নির্বাচিত?
+
+A) Dynamic 110
+B) Static 1
+C) দুটো load balance বাধ্যতামূলক
+D) Longest prefix rule route sourceকে ignore করে
+
+**সঠিক উত্তর: B) Static 1**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Equal prefix-এ lower administrative distance preferred।
+
+#### Step-by-step সমাধান
+
+```text
+Prefix length: equal
+Static AD=1
+Dynamic AD=110
+Lower AD=1 -> static route
+```
+- **A option কেন ভুল:** Higher AD কম trusted।
+- **B option:** এটি সঠিক উত্তর।
+- **C option কেন ভুল:** Different AD হলে নয়।
+- **D option কেন ভুল:** Prefix equal হলে source preference প্রযোজ্য।
+- **Related Concept:** AD path metric নয়; routing source preference।
+- **মনে রাখার টিপস:** Lower AD wins।
+
+---
+
+## প্রশ্ন 1060 | Topic: Computer Networking > Routing | Difficulty: Medium | Type: Theory
+
+Q. নিচের বর্ণনাটি কোন ধারণাকে নির্দেশ করে?
+
+`Topology change-এর পরে routers-এর consistent correct route state-এ পৌঁছানো।`
+
+A) Dynamic Routing
+B) RIP
+C) BGP
+D) Convergence
+
+**সঠিক উত্তর: D) Convergence**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Topology change-এর পরে routers-এর consistent correct route state-এ পৌঁছানো।
+- **A option কেন ভুল:** `Dynamic Routing` বলতে Router protocol দিয়ে topology/reachability exchange ও route adapt করে। বোঝায়; প্রশ্নের বর্ণনা `Convergence`-এর।
+- **B option কেন ভুল:** `RIP` বলতে Hop count metric distance-vector IGP; 15 hop reachable maximum। বোঝায়; প্রশ্নের বর্ণনা `Convergence`-এর।
+- **C option কেন ভুল:** `BGP` বলতে Autonomous System-এর মধ্যে policy-based path-vector routing protocol। বোঝায়; প্রশ্নের বর্ণনা `Convergence`-এর।
+- **D option:** এটি সঠিক উত্তর।
+- **Related Concept:** Loop/blackhole transient হতে পারে।
+- **মনে রাখার টিপস:** Network agrees again।
+
+---
+
+# Chapter Theory 96: Transport Layer, TCP/UDP এবং Ports
+
+## বিস্তারিত Theory Note
+
+Network layer host-to-host packet delivery দেয়; transport layer process-to-process delivery দেয়। Port number একই host-এর application আলাদা করে। UDP datagram boundary রাখে, TCP application write boundary নয়—ordered byte stream দেয়।
+
+TCP connection সাধারণত source IP, source port, destination IP, destination port এবং protocol context দিয়ে unique। UDP receiver destination endpoint দিয়ে datagram demultiplex করে এবং প্রতিটি datagram independent।
+
+Transport checksum accidental corruption detect করে; cryptographic integrity বা authentication দেয় না।
+
+## মূল ধারণার মানচিত্র
+
+- **Transport Layer:** End host process-এর মধ্যে logical communication, segmentation, multiplexing ও reliability/flow service প্রদান।
+- **Port Number:** Transport endpoint-এর 16-bit application/process identifier।
+- **Socket:** IP address, transport protocol ও port-এর endpoint abstraction।
+- **UDP:** Connectionless, message-oriented, low-overhead transport protocol; reliability/order guarantee দেয় না।
+- **TCP:** Connection-oriented reliable byte-stream transport, sequencing, ACK, retransmission, flow ও congestion control দেয়।
+- **Multiplexing:** এক host-এর বহু application data source portসহ transport segment-এ combine করা।
+- **Demultiplexing:** Destination port ও connection identifier দেখে incoming segment সঠিক socket/process-এ দেওয়া।
+- **Checksum:** Header ও data corruption detect করার end-to-end field।
+- **Connectionless Service:** Prior handshake ছাড়াই independent message পাঠানো service।
+- **Connection-oriented Service:** Data transfer-এর আগে endpoint state/connection establish করা service।
+
+## পরীক্ষায় গুরুত্বপূর্ণ সংযোগ
+
+- Definition, purpose, limitation ও application—চার দিক থেকে concept চিনুন।
+- Calculation/Tracing প্রশ্নে Formula → Given Data → Substitution → State Update → Final Answer অনুসরণ করুন।
+- কাছাকাছি term-এর পার্থক্য option analysis থেকে পুনরাবৃত্তি করুন।
+
+---
+
+# MCQ Practice: Transport Layer, TCP/UDP এবং Ports
+
+## প্রশ্ন 1061 | Topic: Computer Networking > Transport Layer I | Difficulty: Medium | Type: Theory
+
+Q. নিচের বর্ণনাটি কোন ধারণাকে নির্দেশ করে?
+
+`End host process-এর মধ্যে logical communication, segmentation, multiplexing ও reliability/flow service প্রদান।`
+
+A) Transport Layer
+B) Multiplexing
+C) Checksum
+D) Demultiplexing
+
+**সঠিক উত্তর: A) Transport Layer**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** End host process-এর মধ্যে logical communication, segmentation, multiplexing ও reliability/flow service প্রদান।
+- **A option:** এটি সঠিক উত্তর।
+- **B option কেন ভুল:** `Multiplexing` বলতে এক host-এর বহু application data source portসহ transport segment-এ combine করা। বোঝায়; প্রশ্নের বর্ণনা `Transport Layer`-এর।
+- **C option কেন ভুল:** `Checksum` বলতে Header ও data corruption detect করার end-to-end field। বোঝায়; প্রশ্নের বর্ণনা `Transport Layer`-এর।
+- **D option কেন ভুল:** `Demultiplexing` বলতে Destination port ও connection identifier দেখে incoming segment সঠিক socket/process-এ দেওয়া। বোঝায়; প্রশ্নের বর্ণনা `Transport Layer`-এর।
+- **Related Concept:** TCP ও UDP প্রধান Internet protocol।
+- **মনে রাখার টিপস:** Process-to-process delivery।
+
+---
+
+## প্রশ্ন 1062 | Topic: Computer Networking > Transport Layer I | Difficulty: Medium | Type: Calculation
+
+Q. Transport port field 16 bit হলে সম্ভাব্য numeric port value কতটি?
+
+A) 256
+B) 65,536
+C) 1,024
+D) 131,072
+
+**সঠিক উত্তর: B) 65,536**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** 16 bit-এ 2^16 = 65,536 distinct value, 0–65,535।
+
+#### Step-by-step সমাধান
+
+```text
+Port bits = 16
+Values = 2^16
+       = 65,536
+```
+- **A option কেন ভুল:** 8-bit range।
+- **B option:** এটি সঠিক উত্তর।
+- **C option কেন ভুল:** 10-bit range।
+- **D option কেন ভুল:** 17-bit range।
+- **Related Concept:** Well-known port সাধারণত 0–1023 range।
+- **মনে রাখার টিপস:** 2^number-of-bits।
+
+---
+
+## প্রশ্ন 1063 | Topic: Computer Networking > Transport Layer I | Difficulty: Medium | Type: Theory
+
+Q. একটি system বা scenario-তে `IP address, transport protocol ও port-এর endpoint abstraction।`—এখানে কোন concept প্রযোজ্য?
+
+A) Connectionless Service
+B) Connection-oriented Service
+C) Checksum
+D) Socket
+
+**সঠিক উত্তর: D) Socket**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** IP address, transport protocol ও port-এর endpoint abstraction।
+- **A option কেন ভুল:** `Connectionless Service` বলতে Prior handshake ছাড়াই independent message পাঠানো service। বোঝায়; প্রশ্নের বর্ণনা `Socket`-এর।
+- **B option কেন ভুল:** `Connection-oriented Service` বলতে Data transfer-এর আগে endpoint state/connection establish করা service। বোঝায়; প্রশ্নের বর্ণনা `Socket`-এর।
+- **C option কেন ভুল:** `Checksum` বলতে Header ও data corruption detect করার end-to-end field। বোঝায়; প্রশ্নের বর্ণনা `Socket`-এর।
+- **D option:** এটি সঠিক উত্তর।
+- **Related Concept:** TCP connection দুই endpoint pair দিয়ে নির্ধারিত।
+- **মনে রাখার টিপস:** Network communication endpoint।
+
+---
+
+## প্রশ্ন 1064 | Topic: Computer Networking > Transport Layer I | Difficulty: Easy | Type: Calculation
+
+Q. UDP payload 1000 byte এবং UDP header 8 byte। IP payload হিসেবে UDP datagram length কত?
+
+A) 1,000 byte
+B) 1,020 byte
+C) 1,008 byte
+D) 8,000 byte
+
+**সঠিক উত্তর: C) 1,008 byte**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** UDP length header+data = 8+1000 = 1008 byte।
+
+#### Step-by-step সমাধান
+
+```text
+UDP payload = 1000 bytes
+UDP header  = 8 bytes
+UDP length  = 1000 + 8
+            = 1008 bytes
+```
+- **A option কেন ভুল:** Header বাদ।
+- **B option কেন ভুল:** 20-byte IP header অপ্রয়োজনে UDP length-এ যোগ।
+- **C option:** এটি সঠিক উত্তর।
+- **D option কেন ভুল:** Byteকে bit করেও header বাদ।
+- **Related Concept:** UDP length field UDP header ও payload দুটোই count করে।
+- **মনে রাখার টিপস:** 8-byte header যোগ করুন।
+
+---
+
+## প্রশ্ন 1065 | Topic: Computer Networking > Transport Layer I | Difficulty: Hard | Type: Tracing
+
+Q. TCP connection setup-এর standard three-way handshake message order কোনটি?
+
+A) SYN → ACK → FIN
+B) ACK → SYN → RST
+C) SYN-ACK → SYN → ACK
+D) SYN → SYN-ACK → ACK
+
+**সঠিক উত্তর: D) SYN → SYN-ACK → ACK**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Client SYN, server SYN-ACK, client final ACK পাঠায়।
+
+#### Step-by-step সমাধান
+
+```text
+1. Client -> Server: SYN
+2. Server -> Client: SYN + ACK
+3. Client -> Server: ACK
+Connection established
+```
+- **A option কেন ভুল:** FIN connection close-এর জন্য।
+- **B option কেন ভুল:** Standard opening order নয়।
+- **C option কেন ভুল:** Server initial client SYN ছাড়া SYN-ACK পাঠায় না।
+- **D option:** এটি সঠিক উত্তর।
+- **Related Concept:** Handshake initial sequence number synchronize ও bidirectional readiness নিশ্চিত করে।
+- **মনে রাখার টিপস:** SYN, SYN-ACK, ACK।
+
+---
+
+## প্রশ্ন 1066 | Topic: Computer Networking > Transport Layer I | Difficulty: Medium | Type: Theory
+
+Q. একটি system বা scenario-তে `এক host-এর বহু application data source portসহ transport segment-এ combine করা।`—এখানে কোন concept প্রযোজ্য?
+
+A) Connectionless Service
+B) Multiplexing
+C) Connection-oriented Service
+D) Transport Layer
+
+**সঠিক উত্তর: B) Multiplexing**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** এক host-এর বহু application data source portসহ transport segment-এ combine করা।
+- **A option কেন ভুল:** `Connectionless Service` বলতে Prior handshake ছাড়াই independent message পাঠানো service। বোঝায়; প্রশ্নের বর্ণনা `Multiplexing`-এর।
+- **B option:** এটি সঠিক উত্তর।
+- **C option কেন ভুল:** `Connection-oriented Service` বলতে Data transfer-এর আগে endpoint state/connection establish করা service। বোঝায়; প্রশ্নের বর্ণনা `Multiplexing`-এর।
+- **D option কেন ভুল:** `Transport Layer` বলতে End host process-এর মধ্যে logical communication, segmentation, multiplexing ও reliability/flow service প্রদান। বোঝায়; প্রশ্নের বর্ণনা `Multiplexing`-এর।
+- **Related Concept:** Receiver demultiplexing করে।
+- **মনে রাখার টিপস:** Many apps share network।
+
+---
+
+## প্রশ্ন 1067 | Topic: Computer Networking > Transport Layer I | Difficulty: Medium | Type: Tracing
+
+Q. এক UDP server port 53-এ listen করে। Incoming datagram destination port 53 হলে কোন application family-তে deliver হবে?
+
+A) HTTP
+B) SSH
+C) SMTP
+D) DNS
+
+**সঠিক উত্তর: D) DNS**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Port 53 DNS-এর standard service port।
+
+#### Step-by-step সমাধান
+
+```text
+Destination port = 53
+Protocol = UDP
+Standard service mapping = DNS
+```
+- **A option কেন ভুল:** সাধারণত 80/443।
+- **B option কেন ভুল:** 22।
+- **C option কেন ভুল:** 25/587 context।
+- **D option:** এটি সঠিক উত্তর।
+- **Related Concept:** Port service convention; firewall ও configurationে override সম্ভব।
+- **মনে রাখার টিপস:** 53 = DNS।
+
+---
+
+## প্রশ্ন 1068 | Topic: Computer Networking > Transport Layer I | Difficulty: Easy | Type: Tracing
+
+Q. 16-bit one's-complement checksum verification-এ received wordsসহ sum সব bit 1 (`0xFFFF`) হলে result কী?
+
+A) Checksum always invalid
+B) Connection closed
+C) Checksum valid indication
+D) Port unavailable
+
+**সঠিক উত্তর: C) Checksum valid indication**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** One's-complement checksum verification expected all-ones sum দেয়।
+
+#### Step-by-step সমাধান
+
+```text
+Add header/data/checksum using one's complement
+Final sum = 0xFFFF
+Complement = 0x0000
+Verification passes
+```
+- **A option কেন ভুল:** All-ones expected successful pattern।
+- **B option কেন ভুল:** Checksum transport connection state বন্ধ করে না।
+- **C option:** এটি সঠিক উত্তর।
+- **D option কেন ভুল:** Demultiplexing issue নয়।
+- **Related Concept:** Checksum corruption detect করে, correction নয়।
+- **মনে রাখার টিপস:** All ones after addition means pass।
+
+---
+
+## প্রশ্ন 1069 | Topic: Computer Networking > Transport Layer I | Difficulty: Easy | Type: Theory
+
+Q. একটি system বা scenario-তে `Prior handshake ছাড়াই independent message পাঠানো service।`—এখানে কোন concept প্রযোজ্য?
+
+A) Multiplexing
+B) UDP
+C) Port Number
+D) Connectionless Service
+
+**সঠিক উত্তর: D) Connectionless Service**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Prior handshake ছাড়াই independent message পাঠানো service।
+- **A option কেন ভুল:** `Multiplexing` বলতে এক host-এর বহু application data source portসহ transport segment-এ combine করা। বোঝায়; প্রশ্নের বর্ণনা `Connectionless Service`-এর।
+- **B option কেন ভুল:** `UDP` বলতে Connectionless, message-oriented, low-overhead transport protocol; reliability/order guarantee দেয় না। বোঝায়; প্রশ্নের বর্ণনা `Connectionless Service`-এর।
+- **C option কেন ভুল:** `Port Number` বলতে Transport endpoint-এর 16-bit application/process identifier। বোঝায়; প্রশ্নের বর্ণনা `Connectionless Service`-এর।
+- **D option:** এটি সঠিক উত্তর।
+- **Related Concept:** UDP example।
+- **মনে রাখার টিপস:** No setup state।
+
+---
+
+## প্রশ্ন 1070 | Topic: Computer Networking > Transport Layer I | Difficulty: Hard | Type: Theory
+
+Q. নিচের বর্ণনাটি কোন ধারণাকে নির্দেশ করে?
+
+`Data transfer-এর আগে endpoint state/connection establish করা service।`
+
+A) Checksum
+B) Port Number
+C) Connection-oriented Service
+D) Demultiplexing
+
+**সঠিক উত্তর: C) Connection-oriented Service**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Data transfer-এর আগে endpoint state/connection establish করা service।
+- **A option কেন ভুল:** `Checksum` বলতে Header ও data corruption detect করার end-to-end field। বোঝায়; প্রশ্নের বর্ণনা `Connection-oriented Service`-এর।
+- **B option কেন ভুল:** `Port Number` বলতে Transport endpoint-এর 16-bit application/process identifier। বোঝায়; প্রশ্নের বর্ণনা `Connection-oriented Service`-এর।
+- **C option:** এটি সঠিক উত্তর।
+- **D option কেন ভুল:** `Demultiplexing` বলতে Destination port ও connection identifier দেখে incoming segment সঠিক socket/process-এ দেওয়া। বোঝায়; প্রশ্নের বর্ণনা `Connection-oriented Service`-এর।
+- **Related Concept:** TCP handshake example।
+- **মনে রাখার টিপস:** Setup before transfer।
+
+---
+
+
+# Chapter Theory 97: TCP Reliability, Flow এবং Congestion Control
+
+## বিস্তারিত Theory Note
+
+TCP reliability byte sequence, cumulative ACK, retransmission timer এবং duplicate ACK ব্যবহার করে। Receiver out-of-order byte buffer করতে পারে, কিন্তু applicationকে ordered stream দেয়।
+
+Sender outstanding data দুটি independent সীমার ছোটটি:
+
+```text
+Effective Window = min(Receiver Window, Congestion Window)
+```
+
+Flow control receiverকে রক্ষা করে; congestion control network pathকে রক্ষা করে। Slow Start দ্রুত capacity probe করে, Congestion Avoidance ধীরে বাড়ে, loss/ECN congestion signal হিসেবে window কমাতে পারে।
+
+Bandwidth-delay product বেশি হলে ছোট window link utilization সীমিত করে।
+
+## মূল ধারণার মানচিত্র
+
+- **TCP Sequence Number:** Byte stream-এ segment data-এর প্রথম byte position নির্দেশ করে।
+- **Acknowledgment Number:** Receiver পরবর্তী যে byte আশা করে তার sequence number; cumulative ACK।
+- **Retransmission Timeout:** ACK না এলে segment পুনরায় পাঠানোর timer, RTT estimate ও variation থেকে নির্ধারিত।
+- **Receiver Window:** Receiver advertised available buffer, TCP flow control limit।
+- **Congestion Window:** Sender network congestion estimate অনুযায়ী outstanding data limit।
+- **Slow Start:** Congestion window small থেকে ACK-এর সঙ্গে দ্রুত, আনুমানিক প্রতি RTT দ্বিগুণ বৃদ্ধি।
+- **Congestion Avoidance:** Threshold-এর পরে congestion window তুলনামূলক linear additive বৃদ্ধি।
+- **Fast Retransmit:** Multiple duplicate ACK পেলে timeout-এর আগে suspected missing segment resend।
+- **Flow Control:** Receiver capacity অনুযায়ী sender rate/outstanding bytes সীমিত।
+- **Congestion Control:** Network path capacity/queue condition অনুযায়ী sending rate নিয়ন্ত্রণ।
+
+## পরীক্ষায় গুরুত্বপূর্ণ সংযোগ
+
+- Definition, purpose, limitation ও application—চার দিক থেকে concept চিনুন।
+- Calculation/Tracing প্রশ্নে Formula → Given Data → Substitution → State Update → Final Answer অনুসরণ করুন।
+- কাছাকাছি term-এর পার্থক্য option analysis থেকে পুনরাবৃত্তি করুন।
+
+---
+
+# MCQ Practice: TCP Reliability, Flow এবং Congestion Control
+
+## প্রশ্ন 1071 | Topic: Computer Networking > Transport Layer II | Difficulty: Easy | Type: Calculation
+
+Q. TCP segment sequence number 1000 এবং payload 500 byte। সব byte receive হলে next ACK number কত?
+
+A) 1500
+B) 1000
+C) 1001
+D) 1499
+
+**সঠিক উত্তর: A) 1500**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Payload bytes 1000–1499; next expected byte 1500।
+
+#### Step-by-step সমাধান
+
+```text
+First byte sequence = 1000
+Payload length = 500
+Next expected = 1000 + 500
+              = 1500
+```
+- **A option:** এটি সঠিক উত্তর।
+- **B option কেন ভুল:** কোনো byte acknowledge হয়নি।
+- **C option কেন ভুল:** শুধু এক byte।
+- **D option কেন ভুল:** শেষ received byte, ACK next byte চায়।
+- **Related Concept:** TCP ACK cumulative এবং next expected position।
+- **মনে রাখার টিপস:** SEQ + payload length।
+
+---
+
+## প্রশ্ন 1072 | Topic: Computer Networking > Transport Layer II | Difficulty: Medium | Type: Theory
+
+Q. `Acknowledgment Number` সম্পর্কে কোন statement সঠিক?
+
+A) Sender network congestion estimate অনুযায়ী outstanding data limit।
+B) Congestion window small থেকে ACK-এর সঙ্গে দ্রুত, আনুমানিক প্রতি RTT দ্বিগুণ বৃদ্ধি।
+C) Network path capacity/queue condition অনুযায়ী sending rate নিয়ন্ত্রণ।
+D) Receiver পরবর্তী যে byte আশা করে তার sequence number; cumulative ACK।
+
+**সঠিক উত্তর: D) Receiver পরবর্তী যে byte আশা করে তার sequence number; cumulative ACK।**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Receiver পরবর্তী যে byte আশা করে তার sequence number; cumulative ACK।
+- **A option কেন ভুল:** এই statementটি `Congestion Window` ধারণাকে বর্ণনা করে; `Acknowledgment Number`-কে নয়।
+- **B option কেন ভুল:** এই statementটি `Slow Start` ধারণাকে বর্ণনা করে; `Acknowledgment Number`-কে নয়।
+- **C option কেন ভুল:** এই statementটি `Congestion Control` ধারণাকে বর্ণনা করে; `Acknowledgment Number`-কে নয়।
+- **D option:** এটি সঠিক উত্তর।
+- **Related Concept:** ACK n মানে n-এর আগের byte received।
+- **মনে রাখার টিপস:** Next expected byte।
+
+---
+
+## প্রশ্ন 1073 | Topic: Computer Networking > Transport Layer II | Difficulty: Easy | Type: Theory
+
+Q. একটি system বা scenario-তে `ACK না এলে segment পুনরায় পাঠানোর timer, RTT estimate ও variation থেকে নির্ধারিত।`—এখানে কোন concept প্রযোজ্য?
+
+A) Congestion Control
+B) Congestion Avoidance
+C) Acknowledgment Number
+D) Retransmission Timeout
+
+**সঠিক উত্তর: D) Retransmission Timeout**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** ACK না এলে segment পুনরায় পাঠানোর timer, RTT estimate ও variation থেকে নির্ধারিত।
+- **A option কেন ভুল:** `Congestion Control` বলতে Network path capacity/queue condition অনুযায়ী sending rate নিয়ন্ত্রণ। বোঝায়; প্রশ্নের বর্ণনা `Retransmission Timeout`-এর।
+- **B option কেন ভুল:** `Congestion Avoidance` বলতে Threshold-এর পরে congestion window তুলনামূলক linear additive বৃদ্ধি। বোঝায়; প্রশ্নের বর্ণনা `Retransmission Timeout`-এর।
+- **C option কেন ভুল:** `Acknowledgment Number` বলতে Receiver পরবর্তী যে byte আশা করে তার sequence number; cumulative ACK। বোঝায়; প্রশ্নের বর্ণনা `Retransmission Timeout`-এর।
+- **D option:** এটি সঠিক উত্তর।
+- **Related Concept:** Too short duplicate, too long slow recovery।
+- **মনে রাখার টিপস:** Wait before resend।
+
+---
+
+## প্রশ্ন 1074 | Topic: Computer Networking > Transport Layer II | Difficulty: Medium | Type: Calculation
+
+Q. Receiver window 12 KB এবং congestion window 8 KB। Sender-এর effective maximum unacknowledged data কত?
+
+A) 4 KB
+B) 8 KB
+C) 12 KB
+D) 20 KB
+
+**সঠিক উত্তর: B) 8 KB**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Effective send window = min(rwnd,cwnd) = 8 KB।
+
+#### Step-by-step সমাধান
+
+```text
+rwnd = 12 KB
+cwnd = 8 KB
+Effective = min(12,8) = 8 KB
+```
+- **A option কেন ভুল:** Difference নেওয়া হয়েছে।
+- **B option:** এটি সঠিক উত্তর।
+- **C option কেন ভুল:** Network congestion limit উপেক্ষা।
+- **D option কেন ভুল:** দুটি limit যোগ করা হয় না।
+- **Related Concept:** Flow ও congestion limit-এর ছোটটি বাধ্যতামূলক।
+- **মনে রাখার টিপস:** min(rwnd,cwnd)।
+
+---
+
+## প্রশ্ন 1075 | Topic: Computer Networking > Transport Layer II | Difficulty: Medium | Type: Theory
+
+Q. `Congestion Window` সম্পর্কে কোন statement সঠিক?
+
+A) Receiver পরবর্তী যে byte আশা করে তার sequence number; cumulative ACK।
+B) Multiple duplicate ACK পেলে timeout-এর আগে suspected missing segment resend।
+C) Sender network congestion estimate অনুযায়ী outstanding data limit।
+D) Network path capacity/queue condition অনুযায়ী sending rate নিয়ন্ত্রণ।
+
+**সঠিক উত্তর: C) Sender network congestion estimate অনুযায়ী outstanding data limit।**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Sender network congestion estimate অনুযায়ী outstanding data limit।
+- **A option কেন ভুল:** এই statementটি `Acknowledgment Number` ধারণাকে বর্ণনা করে; `Congestion Window`-কে নয়।
+- **B option কেন ভুল:** এই statementটি `Fast Retransmit` ধারণাকে বর্ণনা করে; `Congestion Window`-কে নয়।
+- **C option:** এটি সঠিক উত্তর।
+- **D option কেন ভুল:** এই statementটি `Congestion Control` ধারণাকে বর্ণনা করে; `Congestion Window`-কে নয়।
+- **Related Concept:** Receiver window-এর সঙ্গে minimum নেওয়া হয়।
+- **মনে রাখার টিপস:** Protect network।
+
+---
+
+## প্রশ্ন 1076 | Topic: Computer Networking > Transport Layer II | Difficulty: Easy | Type: Calculation
+
+Q. Slow Start-এ initial congestion window 1 MSS। Loss না হলে 4 RTT পরে আনুমানিক cwnd কত MSS?
+
+A) 16 MSS
+B) 4 MSS
+C) 8 MSS
+D) 32 MSS
+
+**সঠিক উত্তর: A) 16 MSS**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** প্রতি RTT দ্বিগুণ: 1→2→4→8→16।
+
+#### Step-by-step সমাধান
+
+```text
+Start = 1 MSS
+After RTT1 = 2
+After RTT2 = 4
+After RTT3 = 8
+After RTT4 = 16 MSS
+```
+- **A option:** এটি সঠিক উত্তর।
+- **B option কেন ভুল:** দুই RTT পরে।
+- **C option কেন ভুল:** তিন RTT পরে।
+- **D option কেন ভুল:** পাঁচ RTT পরে।
+- **Related Concept:** Exact modern TCP initial cwnd ভিন্ন হতে পারে; প্রশ্নে explicit 1 MSS।
+- **মনে রাখার টিপস:** প্রতি RTT ×2।
+
+---
+
+## প্রশ্ন 1077 | Topic: Computer Networking > Transport Layer II | Difficulty: Easy | Type: Calculation
+
+Q. Congestion Avoidance-এ cwnd প্রতি RTT 1 MSS করে বাড়ে। শুরু 10 MSS হলে 5 RTT পরে কত?
+
+A) 11 MSS
+B) 15 MSS
+C) 20 MSS
+D) 50 MSS
+
+**সঠিক উত্তর: B) 15 MSS**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Linear বৃদ্ধি 10+5×1=15।
+
+#### Step-by-step সমাধান
+
+```text
+Initial=10 MSS
+Increase=1 MSS/RTT x5=5 MSS
+Final=15 MSS
+```
+- **A option কেন ভুল:** এক RTT।
+- **B option:** এটি সঠিক উত্তর।
+- **C option কেন ভুল:** প্রতি RTT 2 MSS ধরে।
+- **D option কেন ভুল:** Multiplication।
+- **Related Concept:** Additive increase linear।
+- **মনে রাখার টিপস:** Start + RTT count।
+
+---
+
+## প্রশ্ন 1078 | Topic: Computer Networking > Transport Layer II | Difficulty: Easy | Type: Theory
+
+Q. `Fast Retransmit` সম্পর্কে কোন statement সঠিক?
+
+A) Sender network congestion estimate অনুযায়ী outstanding data limit।
+B) Congestion window small থেকে ACK-এর সঙ্গে দ্রুত, আনুমানিক প্রতি RTT দ্বিগুণ বৃদ্ধি।
+C) Multiple duplicate ACK পেলে timeout-এর আগে suspected missing segment resend।
+D) Receiver পরবর্তী যে byte আশা করে তার sequence number; cumulative ACK।
+
+**সঠিক উত্তর: C) Multiple duplicate ACK পেলে timeout-এর আগে suspected missing segment resend।**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Multiple duplicate ACK পেলে timeout-এর আগে suspected missing segment resend।
+- **A option কেন ভুল:** এই statementটি `Congestion Window` ধারণাকে বর্ণনা করে; `Fast Retransmit`-কে নয়।
+- **B option কেন ভুল:** এই statementটি `Slow Start` ধারণাকে বর্ণনা করে; `Fast Retransmit`-কে নয়।
+- **C option:** এটি সঠিক উত্তর।
+- **D option কেন ভুল:** এই statementটি `Acknowledgment Number` ধারণাকে বর্ণনা করে; `Fast Retransmit`-কে নয়।
+- **Related Concept:** Three duplicate ACK common trigger।
+- **মনে রাখার টিপস:** Resend before timeout।
+
+---
+
+## প্রশ্ন 1079 | Topic: Computer Networking > Transport Layer II | Difficulty: Medium | Type: Theory
+
+Q. একটি system বা scenario-তে `Receiver capacity অনুযায়ী sender rate/outstanding bytes সীমিত।`—এখানে কোন concept প্রযোজ্য?
+
+A) Congestion Avoidance
+B) Flow Control
+C) Acknowledgment Number
+D) Congestion Control
+
+**সঠিক উত্তর: B) Flow Control**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Receiver capacity অনুযায়ী sender rate/outstanding bytes সীমিত।
+- **A option কেন ভুল:** `Congestion Avoidance` বলতে Threshold-এর পরে congestion window তুলনামূলক linear additive বৃদ্ধি। বোঝায়; প্রশ্নের বর্ণনা `Flow Control`-এর।
+- **B option:** এটি সঠিক উত্তর।
+- **C option কেন ভুল:** `Acknowledgment Number` বলতে Receiver পরবর্তী যে byte আশা করে তার sequence number; cumulative ACK। বোঝায়; প্রশ্নের বর্ণনা `Flow Control`-এর।
+- **D option কেন ভুল:** `Congestion Control` বলতে Network path capacity/queue condition অনুযায়ী sending rate নিয়ন্ত্রণ। বোঝায়; প্রশ্নের বর্ণনা `Flow Control`-এর।
+- **Related Concept:** rwnd।
+- **মনে রাখার টিপস:** Do not overflow receiver।
+
+---
+
+## প্রশ্ন 1080 | Topic: Computer Networking > Transport Layer II | Difficulty: Medium | Type: Calculation
+
+Q. Link RTT 50 ms এবং effective TCP window 100 KB। Loss/overhead বাদে window-limited throughput কত KB/s?
+
+A) 2,000 KB/s
+B) 500 KB/s
+C) 1,000 KB/s
+D) 5,000 KB/s
+
+**সঠিক উত্তর: A) 2,000 KB/s**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** 50 ms=0.05 s; throughput=100/0.05=2000 KB/s।
+
+#### Step-by-step সমাধান
+
+```text
+Window = 100 KB
+RTT = 50 ms = 0.05 s
+Throughput = 100 / 0.05
+           = 2,000 KB/s
+```
+- **A option:** এটি সঠিক উত্তর।
+- **B option কেন ভুল:** 0.2 s RTT ধরে।
+- **C option কেন ভুল:** 0.1 s RTT ধরে।
+- **D option কেন ভুল:** Division ভুল।
+- **Related Concept:** Bandwidth-delay product path পূর্ণ রাখতে window নির্দেশ করে।
+- **মনে রাখার টিপস:** Window ÷ RTT।
+
+---
+
+
+# Chapter Theory 98: DNS, HTTP, Email এবং Management Protocols
+
+## বিস্তারিত Theory Note
+
+Application protocol user-visible service rule নির্ধারণ করে। DNS hierarchical distributed database; resolver cache TTL পর্যন্ত answer রাখে। HTTP resource transfer করে এবং persistent connection handshake/slow-start overhead কমাতে পারে।
+
+Email architecture-এ SMTP message পাঠায়; POP3/IMAP mailbox access করে। SNMP agent MIB object expose করে, NTP clock offset estimate করে, SSH encrypted remote administration দেয়।
+
+Port number মুখস্থের পাশাপাশি protocol-এর direction, state ও security property বুঝুন।
+
+## মূল ধারণার মানচিত্র
+
+- **DNS Resolver:** Client-এর হয়ে recursive/iterative lookup করে domain record resolve করা service।
+- **DNS Record:** Name-এর সঙ্গে typed data mapping যেমন A, AAAA, MX, CNAME, NS।
+- **HTTP Persistent Connection:** এক TCP connection-এ বহু HTTP request/response reuse।
+- **FTP:** Control ও data channel ব্যবহার করা file transfer protocol।
+- **SMTP:** Mail server-এ message submission ও server-to-server transfer protocol।
+- **POP3:** সাধারণত mailbox থেকে message download-oriented access protocol।
+- **IMAP:** Server mailbox, folder ও synchronization-oriented email access।
+- **SNMP:** Network device monitoring ও management protocol, manager-agent model।
+- **NTP:** Networked clock synchronization protocol।
+- **SSH:** Encrypted remote login, command execution ও tunneling protocol।
+
+## পরীক্ষায় গুরুত্বপূর্ণ সংযোগ
+
+- Definition, purpose, limitation ও application—চার দিক থেকে concept চিনুন।
+- Calculation/Tracing প্রশ্নে Formula → Given Data → Substitution → State Update → Final Answer অনুসরণ করুন।
+- কাছাকাছি term-এর পার্থক্য option analysis থেকে পুনরাবৃত্তি করুন।
+
+---
+
+# MCQ Practice: DNS, HTTP, Email এবং Management Protocols
+
+## প্রশ্ন 1081 | Topic: Computer Networking > Application Layer | Difficulty: Hard | Type: Theory
+
+Q. নিচের বর্ণনাটি কোন ধারণাকে নির্দেশ করে?
+
+`Client-এর হয়ে recursive/iterative lookup করে domain record resolve করা service।`
+
+A) POP3
+B) DNS Record
+C) IMAP
+D) DNS Resolver
+
+**সঠিক উত্তর: D) DNS Resolver**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Client-এর হয়ে recursive/iterative lookup করে domain record resolve করা service।
+- **A option কেন ভুল:** `POP3` বলতে সাধারণত mailbox থেকে message download-oriented access protocol। বোঝায়; প্রশ্নের বর্ণনা `DNS Resolver`-এর।
+- **B option কেন ভুল:** `DNS Record` বলতে Name-এর সঙ্গে typed data mapping যেমন A, AAAA, MX, CNAME, NS। বোঝায়; প্রশ্নের বর্ণনা `DNS Resolver`-এর।
+- **C option কেন ভুল:** `IMAP` বলতে Server mailbox, folder ও synchronization-oriented email access। বোঝায়; প্রশ্নের বর্ণনা `DNS Resolver`-এর।
+- **D option:** এটি সঠিক উত্তর।
+- **Related Concept:** Caching latency ও load কমায়।
+- **মনে রাখার টিপস:** Find DNS answers।
+
+---
+
+## প্রশ্ন 1082 | Topic: Computer Networking > Application Layer | Difficulty: Hard | Type: Tracing
+
+Q. DNS cache TTL 300 second। Record t=0-এ cache হলে t=250-এ সাধারণত cache valid কি?
+
+A) হ্যাঁ
+B) না, 250>300
+C) শুধু IPv6 হলে
+D) TTL minute-এ
+
+**সঠিক উত্তর: A) হ্যাঁ**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** 250 second TTL 300-এর কম, তাই expiry হয়নি।
+
+#### Step-by-step সমাধান
+
+```text
+TTL=300 s
+Elapsed=250 s
+250<300 -> cache entry valid
+```
+- **A option:** এটি সঠিক উত্তর।
+- **B option কেন ভুল:** Inequality ভুল।
+- **C option কেন ভুল:** TTL record family-independent।
+- **D option কেন ভুল:** TTL second unit।
+- **Related Concept:** Authoritative update TTL expiry পর্যন্ত cache-এ পুরোনো answer থাকতে পারে।
+- **মনে রাখার টিপস:** Elapsed < TTL হলে valid।
+
+---
+
+## প্রশ্ন 1083 | Topic: Computer Networking > Application Layer | Difficulty: Medium | Type: Calculation
+
+Q. Non-persistent HTTP-তে 3টি object আলাদা TCP connectionে fetch এবং প্রতি object setup+request মোট 2 RTT লাগে। Serial fetch-এ মোট RTT কত?
+
+A) 2 RTT
+B) 6 RTT
+C) 3 RTT
+D) 9 RTT
+
+**সঠিক উত্তর: B) 6 RTT**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** 3 object×2 RTT=6 RTT।
+
+#### Step-by-step সমাধান
+
+```text
+Objects=3
+Cost/object=2 RTT
+Total=3x2=6 RTT
+```
+- **A option কেন ভুল:** এক object।
+- **B option:** এটি সঠিক উত্তর।
+- **C option কেন ভুল:** প্রতি object 1 RTT।
+- **D option কেন ভুল:** প্রতি object 3 RTT।
+- **Related Concept:** DNS ও data transmission delay প্রশ্নে বাদ দেওয়া হয়েছে।
+- **মনে রাখার টিপস:** Objects × RTT per object।
+
+---
+
+## প্রশ্ন 1084 | Topic: Computer Networking > Application Layer | Difficulty: Easy | Type: Theory
+
+Q. নিচের বর্ণনাটি কোন ধারণাকে নির্দেশ করে?
+
+`Control ও data channel ব্যবহার করা file transfer protocol।`
+
+A) HTTP Persistent Connection
+B) FTP
+C) SMTP
+D) NTP
+
+**সঠিক উত্তর: B) FTP**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Control ও data channel ব্যবহার করা file transfer protocol।
+- **A option কেন ভুল:** `HTTP Persistent Connection` বলতে এক TCP connection-এ বহু HTTP request/response reuse। বোঝায়; প্রশ্নের বর্ণনা `FTP`-এর।
+- **B option:** এটি সঠিক উত্তর।
+- **C option কেন ভুল:** `SMTP` বলতে Mail server-এ message submission ও server-to-server transfer protocol। বোঝায়; প্রশ্নের বর্ণনা `FTP`-এর।
+- **D option কেন ভুল:** `NTP` বলতে Networked clock synchronization protocol। বোঝায়; প্রশ্নের বর্ণনা `FTP`-এর।
+- **Related Concept:** Active/passive mode।
+- **মনে রাখার টিপস:** File transfer service।
+
+---
+
+## প্রশ্ন 1085 | Topic: Computer Networking > Application Layer | Difficulty: Hard | Type: Theory
+
+Q. `SMTP` সম্পর্কে কোন statement সঠিক?
+
+A) সাধারণত mailbox থেকে message download-oriented access protocol।
+B) Encrypted remote login, command execution ও tunneling protocol।
+C) Mail server-এ message submission ও server-to-server transfer protocol।
+D) Server mailbox, folder ও synchronization-oriented email access।
+
+**সঠিক উত্তর: C) Mail server-এ message submission ও server-to-server transfer protocol।**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Mail server-এ message submission ও server-to-server transfer protocol।
+- **A option কেন ভুল:** এই statementটি `POP3` ধারণাকে বর্ণনা করে; `SMTP`-কে নয়।
+- **B option কেন ভুল:** এই statementটি `SSH` ধারণাকে বর্ণনা করে; `SMTP`-কে নয়।
+- **C option:** এটি সঠিক উত্তর।
+- **D option কেন ভুল:** এই statementটি `IMAP` ধারণাকে বর্ণনা করে; `SMTP`-কে নয়।
+- **Related Concept:** Store-and-forward।
+- **মনে রাখার টিপস:** Send email।
+
+---
+
+## প্রশ্ন 1086 | Topic: Computer Networking > Application Layer | Difficulty: Medium | Type: Theory
+
+Q. একটি system বা scenario-তে `সাধারণত mailbox থেকে message download-oriented access protocol।`—এখানে কোন concept প্রযোজ্য?
+
+A) SMTP
+B) DNS Record
+C) POP3
+D) SNMP
+
+**সঠিক উত্তর: C) POP3**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** সাধারণত mailbox থেকে message download-oriented access protocol।
+- **A option কেন ভুল:** `SMTP` বলতে Mail server-এ message submission ও server-to-server transfer protocol। বোঝায়; প্রশ্নের বর্ণনা `POP3`-এর।
+- **B option কেন ভুল:** `DNS Record` বলতে Name-এর সঙ্গে typed data mapping যেমন A, AAAA, MX, CNAME, NS। বোঝায়; প্রশ্নের বর্ণনা `POP3`-এর।
+- **C option:** এটি সঠিক উত্তর।
+- **D option কেন ভুল:** `SNMP` বলতে Network device monitoring ও management protocol, manager-agent model। বোঝায়; প্রশ্নের বর্ণনা `POP3`-এর।
+- **Related Concept:** Limited server organization।
+- **মনে রাখার টিপস:** Retrieve mail simply।
+
+---
+
+## প্রশ্ন 1087 | Topic: Computer Networking > Application Layer | Difficulty: Hard | Type: Theory
+
+Q. নিচের বর্ণনাটি কোন ধারণাকে নির্দেশ করে?
+
+`Server mailbox, folder ও synchronization-oriented email access।`
+
+A) FTP
+B) IMAP
+C) POP3
+D) HTTP Persistent Connection
+
+**সঠিক উত্তর: B) IMAP**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Server mailbox, folder ও synchronization-oriented email access।
+- **A option কেন ভুল:** `FTP` বলতে Control ও data channel ব্যবহার করা file transfer protocol। বোঝায়; প্রশ্নের বর্ণনা `IMAP`-এর।
+- **B option:** এটি সঠিক উত্তর।
+- **C option কেন ভুল:** `POP3` বলতে সাধারণত mailbox থেকে message download-oriented access protocol। বোঝায়; প্রশ্নের বর্ণনা `IMAP`-এর।
+- **D option কেন ভুল:** `HTTP Persistent Connection` বলতে এক TCP connection-এ বহু HTTP request/response reuse। বোঝায়; প্রশ্নের বর্ণনা `IMAP`-এর।
+- **Related Concept:** Multiple device-friendly।
+- **মনে রাখার টিপস:** Manage mail on server।
+
+---
+
+## প্রশ্ন 1088 | Topic: Computer Networking > Application Layer | Difficulty: Medium | Type: Theory
+
+Q. `SNMP` সম্পর্কে কোন statement সঠিক?
+
+A) Network device monitoring ও management protocol, manager-agent model।
+B) Server mailbox, folder ও synchronization-oriented email access।
+C) Client-এর হয়ে recursive/iterative lookup করে domain record resolve করা service।
+D) Control ও data channel ব্যবহার করা file transfer protocol।
+
+**সঠিক উত্তর: A) Network device monitoring ও management protocol, manager-agent model।**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Network device monitoring ও management protocol, manager-agent model।
+- **A option:** এটি সঠিক উত্তর।
+- **B option কেন ভুল:** এই statementটি `IMAP` ধারণাকে বর্ণনা করে; `SNMP`-কে নয়।
+- **C option কেন ভুল:** এই statementটি `DNS Resolver` ধারণাকে বর্ণনা করে; `SNMP`-কে নয়।
+- **D option কেন ভুল:** এই statementটি `FTP` ধারণাকে বর্ণনা করে; `SNMP`-কে নয়।
+- **Related Concept:** MIB object access।
+- **মনে রাখার টিপস:** Manage network devices।
+
+---
+
+## প্রশ্ন 1089 | Topic: Computer Networking > Application Layer | Difficulty: Easy | Type: Theory
+
+Q. একটি system বা scenario-তে `Networked clock synchronization protocol।`—এখানে কোন concept প্রযোজ্য?
+
+A) HTTP Persistent Connection
+B) POP3
+C) NTP
+D) DNS Record
+
+**সঠিক উত্তর: C) NTP**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Networked clock synchronization protocol।
+- **A option কেন ভুল:** `HTTP Persistent Connection` বলতে এক TCP connection-এ বহু HTTP request/response reuse। বোঝায়; প্রশ্নের বর্ণনা `NTP`-এর।
+- **B option কেন ভুল:** `POP3` বলতে সাধারণত mailbox থেকে message download-oriented access protocol। বোঝায়; প্রশ্নের বর্ণনা `NTP`-এর।
+- **C option:** এটি সঠিক উত্তর।
+- **D option কেন ভুল:** `DNS Record` বলতে Name-এর সঙ্গে typed data mapping যেমন A, AAAA, MX, CNAME, NS। বোঝায়; প্রশ্নের বর্ণনা `NTP`-এর।
+- **Related Concept:** Delay ও offset estimate করে।
+- **মনে রাখার টিপস:** Synchronize clocks।
+
+---
+
+## প্রশ্ন 1090 | Topic: Computer Networking > Application Layer | Difficulty: Medium | Type: Theory
+
+Q. নিচের বর্ণনাটি কোন ধারণাকে নির্দেশ করে?
+
+`Encrypted remote login, command execution ও tunneling protocol।`
+
+A) DNS Resolver
+B) SSH
+C) SNMP
+D) NTP
+
+**সঠিক উত্তর: B) SSH**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Encrypted remote login, command execution ও tunneling protocol।
+- **A option কেন ভুল:** `DNS Resolver` বলতে Client-এর হয়ে recursive/iterative lookup করে domain record resolve করা service। বোঝায়; প্রশ্নের বর্ণনা `SSH`-এর।
+- **B option:** এটি সঠিক উত্তর।
+- **C option কেন ভুল:** `SNMP` বলতে Network device monitoring ও management protocol, manager-agent model। বোঝায়; প্রশ্নের বর্ণনা `SSH`-এর।
+- **D option কেন ভুল:** `NTP` বলতে Networked clock synchronization protocol। বোঝায়; প্রশ্নের বর্ণনা `SSH`-এর।
+- **Related Concept:** Telnet-এর নিরাপদ বিকল্প।
+- **মনে রাখার টিপস:** Secure remote shell।
+
+---
+
+
+# Chapter Theory 99: Wireless, Cellular, Cloud এবং SDN
+
+## বিস্তারিত Theory Note
+
+Wireless medium shared ও interference-prone। Channel quality distance, obstacle, competing transmitter ও modulation/coding দ্বারা বদলায়। Mobility handover session continuity ও routing update প্রয়োজন করে।
+
+Cloud virtual network physical infrastructure-এর ওপর isolated address space, subnet, route ও policy দেয়। SDN control decision programmable করে; NFV dedicated appliance functionকে software-এ আনে। দুটো related হলেও এক নয়।
+
+Edge computing latency-sensitive processing source-এর কাছে করে, কিন্তু distributed management ও security surface বাড়ায়।
+
+## মূল ধারণার মানচিত্র
+
+- **Wi-Fi:** IEEE 802.11 wireless LAN family, shared radio medium ও access point infrastructure ব্যবহার করে।
+- **Bluetooth:** Short-range low-power personal-area wireless technology।
+- **Cellular Network:** Coverage cell, base station, mobility ও licensed spectrum ভিত্তিক wide-area mobile network।
+- **Handover:** Moving device-এর active connection এক cell/access point থেকে অন্যটিতে স্থানান্তর।
+- **MIMO:** Multiple antenna spatial diversity/multiplexing দিয়ে reliability বা throughput বাড়ায়।
+- **Cloud Computing:** On-demand shared compute, storage ও network resource service model।
+- **Virtual Private Cloud:** Public cloud-এর logically isolated virtual network environment।
+- **Software-Defined Networking:** Control plane logicকে programmable controller-এ centralize/abstract এবং forwarding deviceকে program করা architecture।
+- **Network Function Virtualization:** Firewall, load balancer ইত্যাদি appliance function software VM/containerে চালানো।
+- **Edge Computing:** Computation/data processing user/device-এর কাছাকাছি এনে latency ও backbone traffic কমানো।
+
+## পরীক্ষায় গুরুত্বপূর্ণ সংযোগ
+
+- Definition, purpose, limitation ও application—চার দিক থেকে concept চিনুন।
+- Calculation/Tracing প্রশ্নে Formula → Given Data → Substitution → State Update → Final Answer অনুসরণ করুন।
+- কাছাকাছি term-এর পার্থক্য option analysis থেকে পুনরাবৃত্তি করুন।
+
+---
+
+# MCQ Practice: Wireless, Cellular, Cloud এবং SDN
+
+## প্রশ্ন 1091 | Topic: Computer Networking > Modern Networking | Difficulty: Hard | Type: Theory
+
+Q. নিচের বর্ণনাটি কোন ধারণাকে নির্দেশ করে?
+
+`IEEE 802.11 wireless LAN family, shared radio medium ও access point infrastructure ব্যবহার করে।`
+
+A) MIMO
+B) Wi-Fi
+C) Cloud Computing
+D) Handover
+
+**সঠিক উত্তর: B) Wi-Fi**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** IEEE 802.11 wireless LAN family, shared radio medium ও access point infrastructure ব্যবহার করে।
+- **A option কেন ভুল:** `MIMO` বলতে Multiple antenna spatial diversity/multiplexing দিয়ে reliability বা throughput বাড়ায়। বোঝায়; প্রশ্নের বর্ণনা `Wi-Fi`-এর।
+- **B option:** এটি সঠিক উত্তর।
+- **C option কেন ভুল:** `Cloud Computing` বলতে On-demand shared compute, storage ও network resource service model। বোঝায়; প্রশ্নের বর্ণনা `Wi-Fi`-এর।
+- **D option কেন ভুল:** `Handover` বলতে Moving device-এর active connection এক cell/access point থেকে অন্যটিতে স্থানান্তর। বোঝায়; প্রশ্নের বর্ণনা `Wi-Fi`-এর।
+- **Related Concept:** CSMA/CA common access।
+- **মনে রাখার টিপস:** Wireless LAN।
+
+---
+
+## প্রশ্ন 1092 | Topic: Computer Networking > Modern Networking | Difficulty: Medium | Type: Theory
+
+Q. `Bluetooth` সম্পর্কে কোন statement সঠিক?
+
+A) Short-range low-power personal-area wireless technology।
+B) Public cloud-এর logically isolated virtual network environment।
+C) Firewall, load balancer ইত্যাদি appliance function software VM/containerে চালানো।
+D) Control plane logicকে programmable controller-এ centralize/abstract এবং forwarding deviceকে program করা architecture।
+
+**সঠিক উত্তর: A) Short-range low-power personal-area wireless technology।**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Short-range low-power personal-area wireless technology।
+- **A option:** এটি সঠিক উত্তর।
+- **B option কেন ভুল:** এই statementটি `Virtual Private Cloud` ধারণাকে বর্ণনা করে; `Bluetooth`-কে নয়।
+- **C option কেন ভুল:** এই statementটি `Network Function Virtualization` ধারণাকে বর্ণনা করে; `Bluetooth`-কে নয়।
+- **D option কেন ভুল:** এই statementটি `Software-Defined Networking` ধারণাকে বর্ণনা করে; `Bluetooth`-কে নয়।
+- **Related Concept:** Classic ও Low Energy variant।
+- **মনে রাখার টিপস:** Personal-area wireless।
+
+---
+
+## প্রশ্ন 1093 | Topic: Computer Networking > Modern Networking | Difficulty: Medium | Type: Theory
+
+Q. একটি system বা scenario-তে `Coverage cell, base station, mobility ও licensed spectrum ভিত্তিক wide-area mobile network।`—এখানে কোন concept প্রযোজ্য?
+
+A) Cloud Computing
+B) Handover
+C) Edge Computing
+D) Cellular Network
+
+**সঠিক উত্তর: D) Cellular Network**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Coverage cell, base station, mobility ও licensed spectrum ভিত্তিক wide-area mobile network।
+- **A option কেন ভুল:** `Cloud Computing` বলতে On-demand shared compute, storage ও network resource service model। বোঝায়; প্রশ্নের বর্ণনা `Cellular Network`-এর।
+- **B option কেন ভুল:** `Handover` বলতে Moving device-এর active connection এক cell/access point থেকে অন্যটিতে স্থানান্তর। বোঝায়; প্রশ্নের বর্ণনা `Cellular Network`-এর।
+- **C option কেন ভুল:** `Edge Computing` বলতে Computation/data processing user/device-এর কাছাকাছি এনে latency ও backbone traffic কমানো। বোঝায়; প্রশ্নের বর্ণনা `Cellular Network`-এর।
+- **D option:** এটি সঠিক উত্তর।
+- **Related Concept:** Handover ও core network।
+- **মনে রাখার টিপস:** Mobile wide-area access।
+
+---
+
+## প্রশ্ন 1094 | Topic: Computer Networking > Modern Networking | Difficulty: Easy | Type: Theory
+
+Q. নিচের বর্ণনাটি কোন ধারণাকে নির্দেশ করে?
+
+`Moving device-এর active connection এক cell/access point থেকে অন্যটিতে স্থানান্তর।`
+
+A) Network Function Virtualization
+B) Software-Defined Networking
+C) Handover
+D) Edge Computing
+
+**সঠিক উত্তর: C) Handover**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Moving device-এর active connection এক cell/access point থেকে অন্যটিতে স্থানান্তর।
+- **A option কেন ভুল:** `Network Function Virtualization` বলতে Firewall, load balancer ইত্যাদি appliance function software VM/containerে চালানো। বোঝায়; প্রশ্নের বর্ণনা `Handover`-এর।
+- **B option কেন ভুল:** `Software-Defined Networking` বলতে Control plane logicকে programmable controller-এ centralize/abstract এবং forwarding deviceকে program করা architecture। বোঝায়; প্রশ্নের বর্ণনা `Handover`-এর।
+- **C option:** এটি সঠিক উত্তর।
+- **D option কেন ভুল:** `Edge Computing` বলতে Computation/data processing user/device-এর কাছাকাছি এনে latency ও backbone traffic কমানো। বোঝায়; প্রশ্নের বর্ণনা `Handover`-এর।
+- **Related Concept:** Seamless mobility লক্ষ্য।
+- **মনে রাখার টিপস:** Move connection between cells।
+
+---
+
+## প্রশ্ন 1095 | Topic: Computer Networking > Modern Networking | Difficulty: Medium | Type: Calculation
+
+Q. 2×2 MIMO notation-এ transmit antenna ও receive antenna যথাক্রমে কত?
+
+A) 1 ও2
+B) 2 ও2
+C) 2 ও1
+D) 4 ও4
+
+**সঠিক উত্তর: B) 2 ও2**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** প্রথম সংখ্যা transmit stream/antenna side, দ্বিতীয় receive side।
+
+#### Step-by-step সমাধান
+
+```text
+MIMO notation = 2 x 2
+Transmit antennas = 2
+Receive antennas  = 2
+```
+- **A option কেন ভুল:** Transmit count কম।
+- **B option:** এটি সঠিক উত্তর।
+- **C option কেন ভুল:** Receive count কম।
+- **D option কেন ভুল:** Notation দ্বিগুণ করা হয়েছে।
+- **Related Concept:** Actual spatial stream channel condition ও device capability নির্ভর।
+- **মনে রাখার টিপস:** M×N = transmit×receive।
+
+---
+
+## প্রশ্ন 1096 | Topic: Computer Networking > Modern Networking | Difficulty: Medium | Type: Theory
+
+Q. একটি system বা scenario-তে `On-demand shared compute, storage ও network resource service model।`—এখানে কোন concept প্রযোজ্য?
+
+A) Cloud Computing
+B) MIMO
+C) Edge Computing
+D) Software-Defined Networking
+
+**সঠিক উত্তর: A) Cloud Computing**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** On-demand shared compute, storage ও network resource service model।
+- **A option:** এটি সঠিক উত্তর।
+- **B option কেন ভুল:** `MIMO` বলতে Multiple antenna spatial diversity/multiplexing দিয়ে reliability বা throughput বাড়ায়। বোঝায়; প্রশ্নের বর্ণনা `Cloud Computing`-এর।
+- **C option কেন ভুল:** `Edge Computing` বলতে Computation/data processing user/device-এর কাছাকাছি এনে latency ও backbone traffic কমানো। বোঝায়; প্রশ্নের বর্ণনা `Cloud Computing`-এর।
+- **D option কেন ভুল:** `Software-Defined Networking` বলতে Control plane logicকে programmable controller-এ centralize/abstract এবং forwarding deviceকে program করা architecture। বোঝায়; প্রশ্নের বর্ণনা `Cloud Computing`-এর।
+- **Related Concept:** IaaS, PaaS, SaaS।
+- **মনে রাখার টিপস:** Resources as services।
+
+---
+
+## প্রশ্ন 1097 | Topic: Computer Networking > Modern Networking | Difficulty: Hard | Type: Theory
+
+Q. নিচের বর্ণনাটি কোন ধারণাকে নির্দেশ করে?
+
+`Public cloud-এর logically isolated virtual network environment।`
+
+A) Edge Computing
+B) Virtual Private Cloud
+C) Software-Defined Networking
+D) MIMO
+
+**সঠিক উত্তর: B) Virtual Private Cloud**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Public cloud-এর logically isolated virtual network environment।
+- **A option কেন ভুল:** `Edge Computing` বলতে Computation/data processing user/device-এর কাছাকাছি এনে latency ও backbone traffic কমানো। বোঝায়; প্রশ্নের বর্ণনা `Virtual Private Cloud`-এর।
+- **B option:** এটি সঠিক উত্তর।
+- **C option কেন ভুল:** `Software-Defined Networking` বলতে Control plane logicকে programmable controller-এ centralize/abstract এবং forwarding deviceকে program করা architecture। বোঝায়; প্রশ্নের বর্ণনা `Virtual Private Cloud`-এর।
+- **D option কেন ভুল:** `MIMO` বলতে Multiple antenna spatial diversity/multiplexing দিয়ে reliability বা throughput বাড়ায়। বোঝায়; প্রশ্নের বর্ণনা `Virtual Private Cloud`-এর।
+- **Related Concept:** Subnet, route, security policy।
+- **মনে রাখার টিপস:** Private logical cloud network।
+
+---
+
+## প্রশ্ন 1098 | Topic: Computer Networking > Modern Networking | Difficulty: Medium | Type: Theory
+
+Q. `Software-Defined Networking` সম্পর্কে কোন statement সঠিক?
+
+A) Computation/data processing user/device-এর কাছাকাছি এনে latency ও backbone traffic কমানো।
+B) Public cloud-এর logically isolated virtual network environment।
+C) IEEE 802.11 wireless LAN family, shared radio medium ও access point infrastructure ব্যবহার করে।
+D) Control plane logicকে programmable controller-এ centralize/abstract এবং forwarding deviceকে program করা architecture।
+
+**সঠিক উত্তর: D) Control plane logicকে programmable controller-এ centralize/abstract এবং forwarding deviceকে program করা architecture।**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Control plane logicকে programmable controller-এ centralize/abstract এবং forwarding deviceকে program করা architecture।
+- **A option কেন ভুল:** এই statementটি `Edge Computing` ধারণাকে বর্ণনা করে; `Software-Defined Networking`-কে নয়।
+- **B option কেন ভুল:** এই statementটি `Virtual Private Cloud` ধারণাকে বর্ণনা করে; `Software-Defined Networking`-কে নয়।
+- **C option কেন ভুল:** এই statementটি `Wi-Fi` ধারণাকে বর্ণনা করে; `Software-Defined Networking`-কে নয়।
+- **D option:** এটি সঠিক উত্তর।
+- **Related Concept:** OpenFlow ঐতিহাসিক interface।
+- **মনে রাখার টিপস:** Programmable control plane।
+
+---
+
+## প্রশ্ন 1099 | Topic: Computer Networking > Modern Networking | Difficulty: Medium | Type: Theory
+
+Q. একটি system বা scenario-তে `Firewall, load balancer ইত্যাদি appliance function software VM/containerে চালানো।`—এখানে কোন concept প্রযোজ্য?
+
+A) Handover
+B) MIMO
+C) Network Function Virtualization
+D) Cellular Network
+
+**সঠিক উত্তর: C) Network Function Virtualization**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Firewall, load balancer ইত্যাদি appliance function software VM/containerে চালানো।
+- **A option কেন ভুল:** `Handover` বলতে Moving device-এর active connection এক cell/access point থেকে অন্যটিতে স্থানান্তর। বোঝায়; প্রশ্নের বর্ণনা `Network Function Virtualization`-এর।
+- **B option কেন ভুল:** `MIMO` বলতে Multiple antenna spatial diversity/multiplexing দিয়ে reliability বা throughput বাড়ায়। বোঝায়; প্রশ্নের বর্ণনা `Network Function Virtualization`-এর।
+- **C option:** এটি সঠিক উত্তর।
+- **D option কেন ভুল:** `Cellular Network` বলতে Coverage cell, base station, mobility ও licensed spectrum ভিত্তিক wide-area mobile network। বোঝায়; প্রশ্নের বর্ণনা `Network Function Virtualization`-এর।
+- **Related Concept:** Commodity hardware।
+- **মনে রাখার টিপস:** Network functions as software।
+
+---
+
+## প্রশ্ন 1100 | Topic: Computer Networking > Modern Networking | Difficulty: Medium | Type: Calculation
+
+Q. Edge processing latency 80 ms থেকে 25 ms-এ নামল। Latency reduction কত ms?
+
+A) 55 ms
+B) 25 ms
+C) 45 ms
+D) 105 ms
+
+**সঠিক উত্তর: A) 55 ms**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** 80−25=55 ms।
+
+#### Step-by-step সমাধান
+
+```text
+Old latency=80 ms
+New latency=25 ms
+Reduction=80-25=55 ms
+```
+- **A option:** এটি সঠিক উত্তর।
+- **B option কেন ভুল:** New latency।
+- **C option কেন ভুল:** Subtraction ভুল।
+- **D option কেন ভুল:** যোগ।
+- **Related Concept:** Percentage reduction চাইলে 55/80×100।
+- **মনে রাখার টিপস:** Old−new।
+
+---
+
+
+# Chapter Theory 100: Firewall, VPN এবং Network Security
+
+## বিস্তারিত Theory Note
+
+Network security confidentiality, integrity, availability ও authentic identity রক্ষা করে। Firewall policy traffic boundary control করে, কিন্তু allowed encrypted traffic-এর ভিতরের malicious content সবসময় দেখতে পারে না।
+
+VPN tunnel private reachability ও encryption দিতে পারে; endpoint compromise প্রতিরোধ করে না। TLS certificate validation বাদ দিলে encryption থাকলেও MITM সম্ভব। IDS visibility ও alert, IPS inline prevention।
+
+Segmentation least-trust connectivity প্রয়োগ করে এবং compromise-এর lateral movement সীমিত করে।
+
+## মূল ধারণার মানচিত্র
+
+- **Firewall:** Traffic rule অনুযায়ী packet/connection allow, deny বা inspect করা security control।
+- **Stateful Inspection:** Connection state table রেখে packet established flow-এর অংশ কি না যাচাই।
+- **VPN:** Untrusted network-এর ওপর authenticated/encrypted tunnel দিয়ে private connectivity।
+- **IPsec:** Network layer-এ authentication/integrity/encryption service suite।
+- **TLS:** Transport-এর ওপর application data encrypted, integrity-protected ও peer-authenticated channel।
+- **IDS:** Suspicious activity detect ও alert করে; inline blocking বাধ্যতামূলক নয়।
+- **IPS:** Inline traffic inspect করে malicious activity block/drop করতে পারে।
+- **DoS Attack:** Resource exhaust বা service disruption করে legitimate access অক্ষম করা attack।
+- **Man-in-the-Middle:** দুই party-এর মাঝখানে traffic intercept/alter করে উভয়ের সঙ্গে আলাদা relation তৈরি।
+- **Network Segmentation:** Systemকে পৃথক zone/VLAN/subnet-এ ভাগ করে lateral movement ও blast radius সীমিত।
+
+## পরীক্ষায় গুরুত্বপূর্ণ সংযোগ
+
+- Definition, purpose, limitation ও application—চার দিক থেকে concept চিনুন।
+- Calculation/Tracing প্রশ্নে Formula → Given Data → Substitution → State Update → Final Answer অনুসরণ করুন।
+- কাছাকাছি term-এর পার্থক্য option analysis থেকে পুনরাবৃত্তি করুন।
+
+---
+
+# MCQ Practice: Firewall, VPN এবং Network Security
+
+## প্রশ্ন 1101 | Topic: Computer Networking > Network Security | Difficulty: Easy | Type: Tracing
+
+Q. Firewall rule order: 1) allow TCP dst 443, 2) deny all। Incoming TCP dst 443 packet-এর action কী?
+
+A) Allow
+B) Deny
+C) Route loop
+D) Encrypt automatically
+
+**সঠিক উত্তর: A) Allow**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** First matching allow rule প্রয়োগ হয়।
+
+#### Step-by-step সমাধান
+
+```text
+Packet: TCP destination443
+Rule1 matches -> ALLOW
+Evaluation stops
+```
+- **A option:** এটি সঠিক উত্তর।
+- **B option কেন ভুল:** Rule2 পর্যন্ত পৌঁছায় না।
+- **C option কেন ভুল:** Firewall match routing loop নয়।
+- **D option কেন ভুল:** Allow rule TLS তৈরি করে না।
+- **Related Concept:** Rule ordering misconfiguration security impact তৈরি করে।
+- **মনে রাখার টিপস:** First match wins—যদি policy এমন হয়।
+
+---
+
+## প্রশ্ন 1102 | Topic: Computer Networking > Network Security | Difficulty: Medium | Type: Theory
+
+Q. `Stateful Inspection` সম্পর্কে কোন statement সঠিক?
+
+A) দুই party-এর মাঝখানে traffic intercept/alter করে উভয়ের সঙ্গে আলাদা relation তৈরি।
+B) Connection state table রেখে packet established flow-এর অংশ কি না যাচাই।
+C) Inline traffic inspect করে malicious activity block/drop করতে পারে।
+D) Transport-এর ওপর application data encrypted, integrity-protected ও peer-authenticated channel।
+
+**সঠিক উত্তর: B) Connection state table রেখে packet established flow-এর অংশ কি না যাচাই।**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Connection state table রেখে packet established flow-এর অংশ কি না যাচাই।
+- **A option কেন ভুল:** এই statementটি `Man-in-the-Middle` ধারণাকে বর্ণনা করে; `Stateful Inspection`-কে নয়।
+- **B option:** এটি সঠিক উত্তর।
+- **C option কেন ভুল:** এই statementটি `IPS` ধারণাকে বর্ণনা করে; `Stateful Inspection`-কে নয়।
+- **D option কেন ভুল:** এই statementটি `TLS` ধারণাকে বর্ণনা করে; `Stateful Inspection`-কে নয়।
+- **Related Concept:** Return traffic dynamic allow।
+- **মনে রাখার টিপস:** Track connection state।
+
+---
+
+## প্রশ্ন 1103 | Topic: Computer Networking > Network Security | Difficulty: Medium | Type: Calculation
+
+Q. VPN overhead 60 byte এবং original packet 1,200 byte। Encapsulated size কত?
+
+A) 1,140 byte
+B) 1,200 byte
+C) 1,260 byte
+D) 72,000 byte
+
+**সঠিক উত্তর: C) 1,260 byte**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** 1200+60=1260 byte।
+
+#### Step-by-step সমাধান
+
+```text
+Original=1200 bytes
+VPN overhead=60 bytes
+Total=1260 bytes
+```
+- **A option কেন ভুল:** Overhead subtract।
+- **B option কেন ভুল:** Overhead বাদ।
+- **C option:** এটি সঠিক উত্তর।
+- **D option কেন ভুল:** Multiply।
+- **Related Concept:** MTU ছাড়ালে fragmentation বা smaller MSS দরকার হতে পারে।
+- **মনে রাখার টিপস:** Original + tunnel overhead।
+
+---
+
+## প্রশ্ন 1104 | Topic: Computer Networking > Network Security | Difficulty: Hard | Type: Theory
+
+Q. নিচের বর্ণনাটি কোন ধারণাকে নির্দেশ করে?
+
+`Network layer-এ authentication/integrity/encryption service suite।`
+
+A) TLS
+B) DoS Attack
+C) Stateful Inspection
+D) IPsec
+
+**সঠিক উত্তর: D) IPsec**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Network layer-এ authentication/integrity/encryption service suite।
+- **A option কেন ভুল:** `TLS` বলতে Transport-এর ওপর application data encrypted, integrity-protected ও peer-authenticated channel। বোঝায়; প্রশ্নের বর্ণনা `IPsec`-এর।
+- **B option কেন ভুল:** `DoS Attack` বলতে Resource exhaust বা service disruption করে legitimate access অক্ষম করা attack। বোঝায়; প্রশ্নের বর্ণনা `IPsec`-এর।
+- **C option কেন ভুল:** `Stateful Inspection` বলতে Connection state table রেখে packet established flow-এর অংশ কি না যাচাই। বোঝায়; প্রশ্নের বর্ণনা `IPsec`-এর।
+- **D option:** এটি সঠিক উত্তর।
+- **Related Concept:** AH ও ESP, transport/tunnel mode।
+- **মনে রাখার টিপস:** Secure IP packets।
+
+---
+
+## প্রশ্ন 1105 | Topic: Computer Networking > Network Security | Difficulty: Easy | Type: Theory
+
+Q. `TLS` সম্পর্কে কোন statement সঠিক?
+
+A) Transport-এর ওপর application data encrypted, integrity-protected ও peer-authenticated channel।
+B) Systemকে পৃথক zone/VLAN/subnet-এ ভাগ করে lateral movement ও blast radius সীমিত।
+C) Traffic rule অনুযায়ী packet/connection allow, deny বা inspect করা security control।
+D) Network layer-এ authentication/integrity/encryption service suite।
+
+**সঠিক উত্তর: A) Transport-এর ওপর application data encrypted, integrity-protected ও peer-authenticated channel।**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Transport-এর ওপর application data encrypted, integrity-protected ও peer-authenticated channel।
+- **A option:** এটি সঠিক উত্তর।
+- **B option কেন ভুল:** এই statementটি `Network Segmentation` ধারণাকে বর্ণনা করে; `TLS`-কে নয়।
+- **C option কেন ভুল:** এই statementটি `Firewall` ধারণাকে বর্ণনা করে; `TLS`-কে নয়।
+- **D option কেন ভুল:** এই statementটি `IPsec` ধারণাকে বর্ণনা করে; `TLS`-কে নয়।
+- **Related Concept:** HTTPS-এ ব্যবহৃত।
+- **মনে রাখার টিপস:** Secure session।
+
+---
+
+## প্রশ্ন 1106 | Topic: Computer Networking > Network Security | Difficulty: Medium | Type: Theory
+
+Q. একটি system বা scenario-তে `Suspicious activity detect ও alert করে; inline blocking বাধ্যতামূলক নয়।`—এখানে কোন concept প্রযোজ্য?
+
+A) IPS
+B) IDS
+C) Firewall
+D) Network Segmentation
+
+**সঠিক উত্তর: B) IDS**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Suspicious activity detect ও alert করে; inline blocking বাধ্যতামূলক নয়।
+- **A option কেন ভুল:** `IPS` বলতে Inline traffic inspect করে malicious activity block/drop করতে পারে। বোঝায়; প্রশ্নের বর্ণনা `IDS`-এর।
+- **B option:** এটি সঠিক উত্তর।
+- **C option কেন ভুল:** `Firewall` বলতে Traffic rule অনুযায়ী packet/connection allow, deny বা inspect করা security control। বোঝায়; প্রশ্নের বর্ণনা `IDS`-এর।
+- **D option কেন ভুল:** `Network Segmentation` বলতে Systemকে পৃথক zone/VLAN/subnet-এ ভাগ করে lateral movement ও blast radius সীমিত। বোঝায়; প্রশ্নের বর্ণনা `IDS`-এর।
+- **Related Concept:** Signature/anomaly detection।
+- **মনে রাখার টিপস:** Detect attacks।
+
+---
+
+## প্রশ্ন 1107 | Topic: Computer Networking > Network Security | Difficulty: Medium | Type: Theory
+
+Q. নিচের বর্ণনাটি কোন ধারণাকে নির্দেশ করে?
+
+`Inline traffic inspect করে malicious activity block/drop করতে পারে।`
+
+A) Stateful Inspection
+B) VPN
+C) IPS
+D) Firewall
+
+**সঠিক উত্তর: C) IPS**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Inline traffic inspect করে malicious activity block/drop করতে পারে।
+- **A option কেন ভুল:** `Stateful Inspection` বলতে Connection state table রেখে packet established flow-এর অংশ কি না যাচাই। বোঝায়; প্রশ্নের বর্ণনা `IPS`-এর।
+- **B option কেন ভুল:** `VPN` বলতে Untrusted network-এর ওপর authenticated/encrypted tunnel দিয়ে private connectivity। বোঝায়; প্রশ্নের বর্ণনা `IPS`-এর।
+- **C option:** এটি সঠিক উত্তর।
+- **D option কেন ভুল:** `Firewall` বলতে Traffic rule অনুযায়ী packet/connection allow, deny বা inspect করা security control। বোঝায়; প্রশ্নের বর্ণনা `IPS`-এর।
+- **Related Concept:** False positive availability প্রভাবিত করতে পারে।
+- **মনে রাখার টিপস:** Detect and prevent।
+
+---
+
+## প্রশ্ন 1108 | Topic: Computer Networking > Network Security | Difficulty: Hard | Type: Calculation
+
+Q. Service প্রতি second-এ 10,000 request capacity; attack traffic 8,000 এবং legitimate 3,000 request/s। Total demand ও overload কত?
+
+A) 10,000 total, 0 overload
+B) 8,000 total, 2,000 spare
+C) 13,000 total, 3,000 overload
+D) 11,000 total, 1,000 overload
+
+**সঠিক উত্তর: D) 11,000 total, 1,000 overload**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Demand=8000+3000=11000; capacity excess=1000।
+
+#### Step-by-step সমাধান
+
+```text
+Attack=8000 req/s
+Legitimate=3000 req/s
+Total=11000 req/s
+Overload=11000-10000=1000 req/s
+```
+- **A option কেন ভুল:** Capacityকে demand ধরা।
+- **B option কেন ভুল:** Legitimate বাদ।
+- **C option কেন ভুল:** যোগ ভুল।
+- **D option:** এটি সঠিক উত্তর।
+- **Related Concept:** DoS availability impact capacity exhaustion।
+- **মনে রাখার টিপস:** Traffic যোগ, capacity বাদ।
+
+---
+
+## প্রশ্ন 1109 | Topic: Computer Networking > Network Security | Difficulty: Easy | Type: Theory
+
+Q. একটি system বা scenario-তে `দুই party-এর মাঝখানে traffic intercept/alter করে উভয়ের সঙ্গে আলাদা relation তৈরি।`—এখানে কোন concept প্রযোজ্য?
+
+A) Man-in-the-Middle
+B) Network Segmentation
+C) IPsec
+D) Firewall
+
+**সঠিক উত্তর: A) Man-in-the-Middle**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** দুই party-এর মাঝখানে traffic intercept/alter করে উভয়ের সঙ্গে আলাদা relation তৈরি।
+- **A option:** এটি সঠিক উত্তর।
+- **B option কেন ভুল:** `Network Segmentation` বলতে Systemকে পৃথক zone/VLAN/subnet-এ ভাগ করে lateral movement ও blast radius সীমিত। বোঝায়; প্রশ্নের বর্ণনা `Man-in-the-Middle`-এর।
+- **C option কেন ভুল:** `IPsec` বলতে Network layer-এ authentication/integrity/encryption service suite। বোঝায়; প্রশ্নের বর্ণনা `Man-in-the-Middle`-এর।
+- **D option কেন ভুল:** `Firewall` বলতে Traffic rule অনুযায়ী packet/connection allow, deny বা inspect করা security control। বোঝায়; প্রশ্নের বর্ণনা `Man-in-the-Middle`-এর।
+- **Related Concept:** Authentication ও certificate validation mitigation।
+- **মনে রাখার টিপস:** Attacker between endpoints।
+
+---
+
+## প্রশ্ন 1110 | Topic: Computer Networking > Network Security | Difficulty: Medium | Type: Theory
+
+Q. নিচের বর্ণনাটি কোন ধারণাকে নির্দেশ করে?
+
+`Systemকে পৃথক zone/VLAN/subnet-এ ভাগ করে lateral movement ও blast radius সীমিত।`
+
+A) IPS
+B) Network Segmentation
+C) IDS
+D) Stateful Inspection
+
+**সঠিক উত্তর: B) Network Segmentation**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Systemকে পৃথক zone/VLAN/subnet-এ ভাগ করে lateral movement ও blast radius সীমিত।
+- **A option কেন ভুল:** `IPS` বলতে Inline traffic inspect করে malicious activity block/drop করতে পারে। বোঝায়; প্রশ্নের বর্ণনা `Network Segmentation`-এর।
+- **B option:** এটি সঠিক উত্তর।
+- **C option কেন ভুল:** `IDS` বলতে Suspicious activity detect ও alert করে; inline blocking বাধ্যতামূলক নয়। বোঝায়; প্রশ্নের বর্ণনা `Network Segmentation`-এর।
+- **D option কেন ভুল:** `Stateful Inspection` বলতে Connection state table রেখে packet established flow-এর অংশ কি না যাচাই। বোঝায়; প্রশ্নের বর্ণনা `Network Segmentation`-এর।
+- **Related Concept:** Firewall policy between zones।
+- **মনে রাখার টিপস:** Divide trust zones।
+
+---
+
+
+# Chapter Theory 101: Network Monitoring এবং Troubleshooting
+
+## বিস্তারিত Theory Note
+
+Troubleshooting symptom থেকে root cause আলাদা করে। প্রথমে scope—এক host, এক subnet, এক application নাকি পুরো site—নির্ধারণ করুন। তারপর physical link, addressing, route, transport port, DNS/application ক্রমে evidence সংগ্রহ করুন।
+
+Ping reachability/RTT, traceroute hop path, interface counter loss/error, DNS query name resolution, packet capture protocol behavior এবং logs event timeline দেখায়। একসঙ্গে বহু পরিবর্তন না করে এক hypothesis test করলে cause isolate সহজ হয়।
+
+Monitoring baseline ছাড়া threshold misleading হতে পারে। Latency, loss, jitter, utilization, error counter ও application success rate একত্রে পর্যবেক্ষণ করুন।
+
+## মূল ধারণার মানচিত্র
+
+- **Ping:** ICMP Echo ব্যবহার করে reachability ও round-trip time পরীক্ষা করা diagnostic tool।
+- **Traceroute:** ক্রমবর্ধমান TTL/hop limit দিয়ে path-এর intermediate router response আবিষ্কার।
+- **Packet Loss:** Sent packet-এর যে fraction destination/response পর্যন্ত পৌঁছায় না।
+- **Jitter:** Packet delay-এর variation।
+- **SNMP Monitoring:** Counter, status ও notification দিয়ে managed device observe করা।
+- **Syslog:** Network/system event message central collector-এ পাঠানোর standard ecosystem।
+- **NetFlow:** Flow-level traffic metadata export করে source, destination, port, byte ও packet pattern বিশ্লেষণ।
+- **Baseline:** Normal performance ও traffic behavior-এর historical reference।
+- **MTU:** এক link-এ fragmentation ছাড়া বহনযোগ্য maximum network-layer packet size।
+- **Troubleshooting Method:** Scope identify, layer hypothesis, evidence collect, change isolate ও verify করা systematic process।
+
+## পরীক্ষায় গুরুত্বপূর্ণ সংযোগ
+
+- Definition, purpose, limitation ও application—চার দিক থেকে concept চিনুন।
+- Calculation/Tracing প্রশ্নে Formula → Given Data → Substitution → State Update → Final Answer অনুসরণ করুন।
+- কাছাকাছি term-এর পার্থক্য option analysis থেকে পুনরাবৃত্তি করুন।
+
+---
+
+# MCQ Practice: Network Monitoring এবং Troubleshooting
+
+## প্রশ্ন 1111 | Topic: Computer Networking > Operations and Troubleshooting | Difficulty: Medium | Type: Calculation
+
+Q. চারটি ping RTT: 20, 24, 22, 34 ms। Average RTT কত?
+
+A) 22 ms
+B) 24 ms
+C) 25 ms
+D) 34 ms
+
+**সঠিক উত্তর: C) 25 ms**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Sum100/4=25 ms।
+
+#### Step-by-step সমাধান
+
+```text
+Sum=20+24+22+34=100 ms
+Count=4
+Average=100/4=25 ms
+```
+- **A option কেন ভুল:** এক sample/median-like ভুল।
+- **B option কেন ভুল:** Sum ভুল।
+- **C option:** এটি সঠিক উত্তর।
+- **D option কেন ভুল:** Maximum RTT।
+- **Related Concept:** Average latency spike দ্বারা প্রভাবিত; medianও useful।
+- **মনে রাখার টিপস:** সব RTT যোগ করে count দিয়ে ভাগ।
+
+---
+
+## প্রশ্ন 1112 | Topic: Computer Networking > Operations and Troubleshooting | Difficulty: Hard | Type: Theory
+
+Q. `Traceroute` সম্পর্কে কোন statement সঠিক?
+
+A) এক link-এ fragmentation ছাড়া বহনযোগ্য maximum network-layer packet size।
+B) ICMP Echo ব্যবহার করে reachability ও round-trip time পরীক্ষা করা diagnostic tool।
+C) Sent packet-এর যে fraction destination/response পর্যন্ত পৌঁছায় না।
+D) ক্রমবর্ধমান TTL/hop limit দিয়ে path-এর intermediate router response আবিষ্কার।
+
+**সঠিক উত্তর: D) ক্রমবর্ধমান TTL/hop limit দিয়ে path-এর intermediate router response আবিষ্কার।**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** ক্রমবর্ধমান TTL/hop limit দিয়ে path-এর intermediate router response আবিষ্কার।
+- **A option কেন ভুল:** এই statementটি `MTU` ধারণাকে বর্ণনা করে; `Traceroute`-কে নয়।
+- **B option কেন ভুল:** এই statementটি `Ping` ধারণাকে বর্ণনা করে; `Traceroute`-কে নয়।
+- **C option কেন ভুল:** এই statementটি `Packet Loss` ধারণাকে বর্ণনা করে; `Traceroute`-কে নয়।
+- **D option:** এটি সঠিক উত্তর।
+- **Related Concept:** Load balancing-এ path variation।
+- **মনে রাখার টিপস:** Discover hops।
+
+---
+
+## প্রশ্ন 1113 | Topic: Computer Networking > Operations and Troubleshooting | Difficulty: Easy | Type: Calculation
+
+Q. 100 packet পাঠিয়ে 94 reply পাওয়া গেছে। Packet loss rate কত?
+
+A) 6%
+B) 4%
+C) 94%
+D) 100%
+
+**সঠিক উত্তর: A) 6%**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Lost=100−94=6; loss=6/100×100=6%।
+
+#### Step-by-step সমাধান
+
+```text
+Sent=100
+Received=94
+Lost=6
+Loss rate=6/100 x100=6%
+```
+- **A option:** এটি সঠিক উত্তর।
+- **B option কেন ভুল:** Loss count ভুল।
+- **C option কেন ভুল:** Success rate।
+- **D option কেন ভুল:** সব lost নয়।
+- **Related Concept:** Sent-received difference।
+- **মনে রাখার টিপস:** Loss = missing/sent।
+
+---
+
+## প্রশ্ন 1114 | Topic: Computer Networking > Operations and Troubleshooting | Difficulty: Medium | Type: Theory
+
+Q. নিচের বর্ণনাটি কোন ধারণাকে নির্দেশ করে?
+
+`Packet delay-এর variation।`
+
+A) Packet Loss
+B) Jitter
+C) MTU
+D) Ping
+
+**সঠিক উত্তর: B) Jitter**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Packet delay-এর variation।
+- **A option কেন ভুল:** `Packet Loss` বলতে Sent packet-এর যে fraction destination/response পর্যন্ত পৌঁছায় না। বোঝায়; প্রশ্নের বর্ণনা `Jitter`-এর।
+- **B option:** এটি সঠিক উত্তর।
+- **C option কেন ভুল:** `MTU` বলতে এক link-এ fragmentation ছাড়া বহনযোগ্য maximum network-layer packet size। বোঝায়; প্রশ্নের বর্ণনা `Jitter`-এর।
+- **D option কেন ভুল:** `Ping` বলতে ICMP Echo ব্যবহার করে reachability ও round-trip time পরীক্ষা করা diagnostic tool। বোঝায়; প্রশ্নের বর্ণনা `Jitter`-এর।
+- **Related Concept:** Voice/video quality-এ গুরুত্বপূর্ণ।
+- **মনে রাখার টিপস:** Variation in latency।
+
+---
+
+## প্রশ্ন 1115 | Topic: Computer Networking > Operations and Troubleshooting | Difficulty: Medium | Type: Theory
+
+Q. `SNMP Monitoring` সম্পর্কে কোন statement সঠিক?
+
+A) এক link-এ fragmentation ছাড়া বহনযোগ্য maximum network-layer packet size।
+B) Sent packet-এর যে fraction destination/response পর্যন্ত পৌঁছায় না।
+C) Counter, status ও notification দিয়ে managed device observe করা।
+D) Packet delay-এর variation।
+
+**সঠিক উত্তর: C) Counter, status ও notification দিয়ে managed device observe করা।**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Counter, status ও notification দিয়ে managed device observe করা।
+- **A option কেন ভুল:** এই statementটি `MTU` ধারণাকে বর্ণনা করে; `SNMP Monitoring`-কে নয়।
+- **B option কেন ভুল:** এই statementটি `Packet Loss` ধারণাকে বর্ণনা করে; `SNMP Monitoring`-কে নয়।
+- **C option:** এটি সঠিক উত্তর।
+- **D option কেন ভুল:** এই statementটি `Jitter` ধারণাকে বর্ণনা করে; `SNMP Monitoring`-কে নয়।
+- **Related Concept:** Polling ও trap/inform।
+- **মনে রাখার টিপস:** Collect device metrics।
+
+---
+
+## প্রশ্ন 1116 | Topic: Computer Networking > Operations and Troubleshooting | Difficulty: Hard | Type: Theory
+
+Q. একটি system বা scenario-তে `Network/system event message central collector-এ পাঠানোর standard ecosystem।`—এখানে কোন concept প্রযোজ্য?
+
+A) Packet Loss
+B) NetFlow
+C) Baseline
+D) Syslog
+
+**সঠিক উত্তর: D) Syslog**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Network/system event message central collector-এ পাঠানোর standard ecosystem।
+- **A option কেন ভুল:** `Packet Loss` বলতে Sent packet-এর যে fraction destination/response পর্যন্ত পৌঁছায় না। বোঝায়; প্রশ্নের বর্ণনা `Syslog`-এর।
+- **B option কেন ভুল:** `NetFlow` বলতে Flow-level traffic metadata export করে source, destination, port, byte ও packet pattern বিশ্লেষণ। বোঝায়; প্রশ্নের বর্ণনা `Syslog`-এর।
+- **C option কেন ভুল:** `Baseline` বলতে Normal performance ও traffic behavior-এর historical reference। বোঝায়; প্রশ্নের বর্ণনা `Syslog`-এর।
+- **D option:** এটি সঠিক উত্তর।
+- **Related Concept:** Severity ও facility field।
+- **মনে রাখার টিপস:** Central event logs।
+
+---
+
+## প্রশ্ন 1117 | Topic: Computer Networking > Operations and Troubleshooting | Difficulty: Easy | Type: Theory
+
+Q. নিচের বর্ণনাটি কোন ধারণাকে নির্দেশ করে?
+
+`Flow-level traffic metadata export করে source, destination, port, byte ও packet pattern বিশ্লেষণ।`
+
+A) NetFlow
+B) Traceroute
+C) Packet Loss
+D) Jitter
+
+**সঠিক উত্তর: A) NetFlow**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Flow-level traffic metadata export করে source, destination, port, byte ও packet pattern বিশ্লেষণ।
+- **A option:** এটি সঠিক উত্তর।
+- **B option কেন ভুল:** `Traceroute` বলতে ক্রমবর্ধমান TTL/hop limit দিয়ে path-এর intermediate router response আবিষ্কার। বোঝায়; প্রশ্নের বর্ণনা `NetFlow`-এর।
+- **C option কেন ভুল:** `Packet Loss` বলতে Sent packet-এর যে fraction destination/response পর্যন্ত পৌঁছায় না। বোঝায়; প্রশ্নের বর্ণনা `NetFlow`-এর।
+- **D option কেন ভুল:** `Jitter` বলতে Packet delay-এর variation। বোঝায়; প্রশ্নের বর্ণনা `NetFlow`-এর।
+- **Related Concept:** Full packet content নয়।
+- **মনে রাখার টিপস:** Summarize traffic flows।
+
+---
+
+## প্রশ্ন 1118 | Topic: Computer Networking > Operations and Troubleshooting | Difficulty: Medium | Type: Theory
+
+Q. `Baseline` সম্পর্কে কোন statement সঠিক?
+
+A) Network/system event message central collector-এ পাঠানোর standard ecosystem।
+B) Normal performance ও traffic behavior-এর historical reference।
+C) ICMP Echo ব্যবহার করে reachability ও round-trip time পরীক্ষা করা diagnostic tool।
+D) Sent packet-এর যে fraction destination/response পর্যন্ত পৌঁছায় না।
+
+**সঠিক উত্তর: B) Normal performance ও traffic behavior-এর historical reference।**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Normal performance ও traffic behavior-এর historical reference।
+- **A option কেন ভুল:** এই statementটি `Syslog` ধারণাকে বর্ণনা করে; `Baseline`-কে নয়।
+- **B option:** এটি সঠিক উত্তর।
+- **C option কেন ভুল:** এই statementটি `Ping` ধারণাকে বর্ণনা করে; `Baseline`-কে নয়।
+- **D option কেন ভুল:** এই statementটি `Packet Loss` ধারণাকে বর্ণনা করে; `Baseline`-কে নয়।
+- **Related Concept:** Anomaly detect করতে comparison।
+- **মনে রাখার টিপস:** Know normal first।
+
+---
+
+## প্রশ্ন 1119 | Topic: Computer Networking > Operations and Troubleshooting | Difficulty: Medium | Type: Calculation
+
+Q. Path link MTU যথাক্রমে 1500, 1400, 9000 byte। Path MTU কত?
+
+A) 9000
+B) 2900
+C) 1400
+D) 1500
+
+**সঠিক উত্তর: C) 1400**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Path MTU হলো path-এর minimum link MTU।
+
+#### Step-by-step সমাধান
+
+```text
+Link MTUs={1500,1400,9000}
+Minimum=1400 bytes
+Path MTU=1400
+```
+- **A option কেন ভুল:** Maximum নেওয়া হয়েছে।
+- **B option কেন ভুল:** দুটি value যোগ।
+- **C option:** এটি সঠিক উত্তর।
+- **D option কেন ভুল:** Smallest নয়।
+- **Related Concept:** এক oversized packet bottleneck link পার হতে পারে না।
+- **মনে রাখার টিপস:** Minimum of all link MTUs।
+
+---
+
+## প্রশ্ন 1120 | Topic: Computer Networking > Operations and Troubleshooting | Difficulty: Hard | Type: Theory
+
+Q. নিচের বর্ণনাটি কোন ধারণাকে নির্দেশ করে?
+
+`Scope identify, layer hypothesis, evidence collect, change isolate ও verify করা systematic process।`
+
+A) Traceroute
+B) Ping
+C) Syslog
+D) Troubleshooting Method
+
+**সঠিক উত্তর: D) Troubleshooting Method**
+
+### বিস্তারিত বিশ্লেষণ
+
+- **সঠিক উত্তর কেন:** Scope identify, layer hypothesis, evidence collect, change isolate ও verify করা systematic process।
+- **A option কেন ভুল:** `Traceroute` বলতে ক্রমবর্ধমান TTL/hop limit দিয়ে path-এর intermediate router response আবিষ্কার। বোঝায়; প্রশ্নের বর্ণনা `Troubleshooting Method`-এর।
+- **B option কেন ভুল:** `Ping` বলতে ICMP Echo ব্যবহার করে reachability ও round-trip time পরীক্ষা করা diagnostic tool। বোঝায়; প্রশ্নের বর্ণনা `Troubleshooting Method`-এর।
+- **C option কেন ভুল:** `Syslog` বলতে Network/system event message central collector-এ পাঠানোর standard ecosystem। বোঝায়; প্রশ্নের বর্ণনা `Troubleshooting Method`-এর।
+- **D option:** এটি সঠিক উত্তর।
+- **Related Concept:** OSI bottom-up/top-down approaches।
+- **মনে রাখার টিপস:** Measure before changing।
+
+---
+
+
+# Networking Section Completion Audit
+
+```text
+Question numbering         : Passed (981–1120)
+Question total             : Passed (140)
+Theory target              : Passed (80)
+Calculation target         : Passed (60)
+Difficulty target          : Passed (35/70/35)
+Answer-position balance    : Passed
+Plain-text Math alignment  : Passed
+Networking syllabus        : Complete
+```
